@@ -19,7 +19,8 @@ Please see the [license agreement](https://github.com/julianomacielferreira/Algo
 # References
 
 - ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)
-- [Netbeans IDE 8.2](https://netbeans.org/)
 - [Wikipedia - Algorithm](https://en.wikipedia.org/wiki/Algorithm)
 - [Wikipedia - Computer science](https://en.wikipedia.org/wiki/Computer_science)
 - [Wikipedia - Computation](https://en.wikipedia.org/wiki/Computation)
+- [Java&trade; Platform, Standard Edition 8 API Specification](https://docs.oracle.com/javase/8/docs/api/)
+- [Netbeans IDE 8.2](https://netbeans.org/)
