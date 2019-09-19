@@ -1,6 +1,6 @@
 # Algorithms
 
-The intention of this repository is to demonstrate my skills on Algorithms Analysis and Design.
+The intention of this repository is to demonstrate my skills on Algorithm Analysis and Design.
 
 I solved problems from the book ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)
 
