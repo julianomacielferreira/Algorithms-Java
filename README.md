@@ -8,9 +8,11 @@ I'm using [Netbeans IDE 8.2](https://netbeans.org/) and [Java 8](https://www.jav
 
 # Disclaimer
 
-This project has **<ins>my own solutions</ins>** for the problems proposed in the book ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/), **my purpose is only for learning**.
+This project has **<ins>my own solutions</ins>** for the problems proposed in the book ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/):
 
 - "Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne: [https://algs4.cs.princeton.edu/home/](https://algs4.cs.princeton.edu/home/)
+
+ **and my purpose is only for the learning**.
 
 # License
 
