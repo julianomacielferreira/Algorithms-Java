@@ -6,11 +6,9 @@ I'm solving problems from the book ["Algorithms, 4th Edition" by Robert Sedgewic
 
 # Disclaimer
 
-This project has **<ins>my own solutions</ins>** for the problems proposed in the book ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/):
+**This repository DOES NOT CONTAIN any copy / reproduction of the content available in the book ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)**. 
 
-- "Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne: [https://algs4.cs.princeton.edu/home/](https://algs4.cs.princeton.edu/home/)
-
- **and my purpose is only for the learning**.
+**It has <ins>my own solutions</ins> for the problems proposed in the book chapters only with purpose of learning, not comercial**.
 
 # License
 
