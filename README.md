@@ -6,9 +6,12 @@ I'm solving problems from the book ["Algorithms, 4th Edition" by Robert Sedgewic
 
 # Disclaimer
 
-**This repository DOES NOT CONTAIN any copy / reproduction of the content available in the book ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)**. 
+**This repository DOES NOT CONTAIN any copy / reproduction of the content available in the book ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/) for commercial interest.** 
 
-**It has <ins>my own solutions</ins> for the problems proposed in the book chapters only with purpose of learning, not comercial**.
+**It has only <ins>my own solutions for the problems proposed in the book chapters</ins> with purpose of learning and enhancing my skill set.**
+
+# Table of contents
+
 
 # License
 
