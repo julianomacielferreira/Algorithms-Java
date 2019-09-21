@@ -18,6 +18,20 @@ for commercial purposes.**
 
 @TODO - Define the roadmap for the topics covered
 
+## Data Sets
+
+The files contained data used to test the algorithms are not versioned in this repository (with git lfs), but can be downloaded from the ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/) website.
+
+Click on the [Section Data](https://introcs.cs.princeton.edu/java/data/) to get one by one or download them all zipped as one big file (1GB approx.) [introcs-data.zip](https://introcs.cs.princeton.edu/java/code/introcs-data.zip).
+
+After download the file, unzip in a folder called **data** in project root folder:
+
+```bash
+$ unzip introcs-data.zip -d project-root-folder/data
+```  
+
+Obs.: In my case **project-root-folder** is _~/Projects/Java/Algorithms_.
+
 # License
 
 Please see the [license agreement](https://github.com/julianomacielferreira/Algorithms/blob/master/LICENSE).
