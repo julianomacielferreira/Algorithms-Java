@@ -38,7 +38,7 @@ $ unzip introcs-data.zip -d project-root-folder/data
 
 **Obs.:**  In my case **project-root-folder** is _~/Projects/Java/Algorithms_.
 
-Follow this steps to setup git lfs (in the project root folder):
+Follow this steps in the project root folder to setup git lfs (the same as [git lfs](https://git-lfs.github.com/) site):
 
 [Download](https://github.com/git-lfs/git-lfs/releases/download/v2.8.0/git-lfs-linux-amd64-v2.8.0.tar.gz) and install the Git command line extension. 
 
