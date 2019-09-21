@@ -49,7 +49,7 @@ Obs.: When using another IDE than Netbeans, see the instructions of the IDE choo
 
 With [Netbeans IDE 8.2](https://netbeans.org/) the process is very simple:
 
-1. In the tab Projects, click in the project folder with the mouse right button at __Properties__:
+1. In the tab **Projects**, click in the project folder with the mouse right button at _Properties_:
 
 ![](assets/screenshots/1.png)
 
