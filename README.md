@@ -41,5 +41,8 @@ Please see the [license agreement](https://github.com/julianomacielferreira/Algo
 - [Stanford Online Lagunita](https://lagunita.stanford.edu)
     - [Algorithms: Design and Analysis](https://lagunita.stanford.edu/courses/course-v1:Engineering+Algorithms1+SelfPaced/about)
     - [Algorithms: Design and Analysis, Part 2](https://lagunita.stanford.edu/courses/course-v1:Engineering+Algorithms2+SelfPaced/about)
+- [MIT OCW](https://ocw.mit.edu/index.htm)
+    - [Introduction to Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm)
+    - [Design and Analysis of Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/index.htm)
 - [Java&trade; Platform, Standard Edition 8 API Specification](https://docs.oracle.com/javase/8/docs/api/)
 - [Netbeans IDE 8.2](https://netbeans.org/)
