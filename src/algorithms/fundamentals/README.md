@@ -19,7 +19,7 @@ Read carefully:
 - [1. Fundamentals](https://algs4.cs.princeton.edu/10fundamentals/)
     - [1.1 Programming Model](https://algs4.cs.princeton.edu/11model/)
 
-- [Learning the Java Language](https://docs.oracle.com/javase/tutorial/java/index.html)
+- [The Java Tutorials: _Learning the Java Language_](https://docs.oracle.com/javase/tutorial/java/index.html)
     - [Language Basics](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html)
         - [Variables](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html)
         - [Operators](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html)
