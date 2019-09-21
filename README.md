@@ -53,7 +53,7 @@ With [Netbeans IDE 8.2](https://netbeans.org/) the process is very simple:
 
 ![](assets/screenshots/1.png)
 
-2. After, just include the jar file in the **Libraries** section:
+2. After, just include the jar file in the **Libraries** section clicking on **Add/JAR/Folder** button:
  
 ![](assets/screenshots/2.png)
 
