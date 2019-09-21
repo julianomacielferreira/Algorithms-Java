@@ -43,9 +43,19 @@ Obs.: In my case **project-root-folder** is _~/Projects/Java/Algorithms_.
 
 A great portion of the code uses the books standard library [algs4.jar](https://algs4.cs.princeton.edu/code/algs4.jar) that is versioned in the repository under [lib](https://github.com/julianomacielferreira/Algorithms/tree/master/lib/) folder.
 
-If using another IDE than Netbeans, see the instructions of the IDE choosen on how to add to classpath for access the library on the code.
+To get more information about its code, access the section [Code](https://algs4.cs.princeton.edu/code/) of the booksite.
 
-More information on the section [Code](https://algs4.cs.princeton.edu/code/) of the booksite.
+Obs.: When using another IDE than Netbeans, see the instructions of the IDE choosen on how to add the library to the classpath.
+
+With [Netbeans IDE 8.2](https://netbeans.org/) the proceed is very simple:
+
+1. In the tab Projects, click in the project folder with the mouse right button at __Properties__:
+
+![](assets/screenshots/1.png)
+
+2. After, just include the jar file:
+ 
+![](assets/screenshots/2.png)
 
 # License
 
