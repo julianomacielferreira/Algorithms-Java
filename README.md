@@ -24,20 +24,45 @@ for commercial purposes.**
 @TODO - Define the roadmap for the topics covered
 
 
-
 ## Data Sets
 
-The files contained data used to test the algorithms are not versioned in this repository (with git lfs), but can be downloaded from the ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/) website.
+Data files used to test the algorithms have not been versioned in this repository, but this can be done with [Git Large File Storage (LFS)](https://git-lfs.github.com/). 
 
-Click on the section [Data](https://introcs.cs.princeton.edu/java/data/) to get one by one or download them all zipped as one big file (1GB approx.) [introcs-data.zip](https://introcs.cs.princeton.edu/java/code/introcs-data.zip).
+Click on the section [Data](https://introcs.cs.princeton.edu/java/data/) in the booksite to get one by one or download them all as one zipped big file (1GB approx.) [introcs-data.zip](https://introcs.cs.princeton.edu/java/code/introcs-data.zip).
 
-After download the file, unzip in a folder called **data** in the project root folder:
+After download the file, unzip it in a folder called **data** in the project root folder:
 
 ```bash
 $ unzip introcs-data.zip -d project-root-folder/data
 ```  
 
 **Obs.:**  In my case **project-root-folder** is _~/Projects/Java/Algorithms_.
+
+Follow this steps to setup git lfs (in the project root folder):
+
+[Download](https://github.com/git-lfs/git-lfs/releases/download/v2.8.0/git-lfs-linux-amd64-v2.8.0.tar.gz) and install the Git command line extension. 
+
+Once downloaded and installed, set up Git LFS and its respective hooks by running:
+
+```bash
+$ git lfs install
+```
+
+Select the file types you'd like Git LFS to manage (or directly edit your .gitattributes). You can configure additional file extensions at anytime.
+
+```bash
+git lfs track "*.txt"
+```
+
+Make sure .gitattributes is tracked
+
+```bash
+git add .gitattributes
+```
+
+Finally, commit and push to GitHub as you normally would.
+
+**Obs.:** See [Git Large File Storage (LFS)](https://git-lfs.github.com/) to know more.
 
 ## Book Standard Library
 
