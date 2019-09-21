@@ -24,7 +24,7 @@ The files contained data used to test the algorithms are not versioned in this r
 
 Click on the [Section Data](https://introcs.cs.princeton.edu/java/data/) to get one by one or download them all zipped as one big file (1GB approx.) [introcs-data.zip](https://introcs.cs.princeton.edu/java/code/introcs-data.zip).
 
-After download the file, unzip in a folder called **data** in project root folder:
+After download the file, unzip in a folder called **data** in the project root folder:
 
 ```bash
 $ unzip introcs-data.zip -d project-root-folder/data
