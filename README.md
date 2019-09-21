@@ -8,7 +8,8 @@ I'm solving problems from the book ["Algorithms, 4th Edition" by Robert Sedgewic
 
 **This repository DOES NOT CONTAIN any copy / reproduction of the content available in the books ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/), 
 [Algorithms Illuminated: Part 1: The Basics](https://www.amazon.com/dp/0999282905), [Algorithms Illuminated (Part 2): Graph Algorithms and Data Structures (Volume 2)](https://www.amazon.com/gp/product/0999282921/ref=dbs_a_def_rwt_bibl_vppi_i2),
-[Algorithm Complexity 3th Edition (Brazilian portuguese)](https://www.grupoa.com.br/complexidade-de-algoritmos-vol13-p990429) and [Discrete Mathematics for Computing and Informatics (Brazilian portuguese)](https://www.grupoa.com.br/matematica-discreta-para-computacao-e-informatica-vol16-p990393)
+[Algorithm Complexity 3th Edition (Brazilian portuguese)](https://www.grupoa.com.br/complexidade-de-algoritmos-vol13-p990429), [Discrete Mathematics for Computing and Informatics (Brazilian portuguese)](https://www.grupoa.com.br/matematica-discreta-para-computacao-e-informatica-vol16-p990393),
+[Learning Discrete Math with Exercise (Brazilian portuguese)](https://www.grupoa.com.br/aprendendo-matematica-discreta-com-exercicios-vol19-ebook-p987217?tsid=34) and [Refactoring - Improving the Design of Existing Code](https://martinfowler.com/books/refactoring.html)
 for commercial purposes.** 
 
 **It has only <ins>my own solutions for the proposed problems in the books chapters</ins> with the intention of learning and enhancing my skill set.**
@@ -27,7 +28,9 @@ Please see the [license agreement](https://github.com/julianomacielferreira/Algo
 - [Algorithms Illuminated: Part 1: The Basics](https://www.amazon.com/dp/0999282905)
 - [Algorithms Illuminated (Part 2): Graph Algorithms and Data Structures (Volume 2)](https://www.amazon.com/gp/product/0999282921/ref=dbs_a_def_rwt_bibl_vppi_i2)
 - [Algorithm Complexity 3th Edition (Brazilian portuguese)](https://www.grupoa.com.br/complexidade-de-algoritmos-vol13-p990429)
+- [Refactoring - Improving the Design of Existing Code](https://martinfowler.com/books/refactoring.html)
 - [Discrete Mathematics for Computing and Informatics (Brazilian portuguese)](https://www.grupoa.com.br/matematica-discreta-para-computacao-e-informatica-vol16-p990393)
+- [Learning Discrete Math with Exercise (Brazilian portuguese)](https://www.grupoa.com.br/aprendendo-matematica-discreta-com-exercicios-vol19-ebook-p987217?tsid=34)
 - [Wikipedia](https://en.wikipedia.org/)
     - [Algorithm](https://en.wikipedia.org/wiki/Algorithm)
     - [Computer science](https://en.wikipedia.org/wiki/Computer_science)
