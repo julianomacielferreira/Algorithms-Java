@@ -51,13 +51,13 @@ $ git lfs install
 Select the file types you'd like Git LFS to manage (or directly edit your .gitattributes). You can configure additional file extensions at anytime.
 
 ```bash
-git lfs track "*.txt"
+$ git lfs track "*.txt"
 ```
 
 Make sure .gitattributes is tracked
 
 ```bash
-git add .gitattributes
+$ git add .gitattributes
 ```
 
 Finally, commit and push to GitHub as you normally would.
