@@ -40,21 +40,21 @@ $ unzip introcs-data.zip -d project-root-folder/data
 
 Follow this steps in the project root folder to setup git lfs (the same as [git lfs](https://git-lfs.github.com/) site):
 
-[Download](https://github.com/git-lfs/git-lfs/releases/download/v2.8.0/git-lfs-linux-amd64-v2.8.0.tar.gz) and install the Git command line extension. 
+- [Download](https://github.com/git-lfs/git-lfs/releases/download/v2.8.0/git-lfs-linux-amd64-v2.8.0.tar.gz) and install the Git command line extension. 
 
-Once downloaded and installed, set up Git LFS and its respective hooks by running:
+- Once downloaded and installed, set up Git LFS and its respective hooks by running:
 
 ```bash
 $ git lfs install
 ```
 
-Select the file types you'd like Git LFS to manage (or directly edit your .gitattributes). You can configure additional file extensions at anytime.
+- Select the file types you'd like Git LFS to manage (or directly edit your .gitattributes). You can configure additional file extensions at anytime.
 
 ```bash
 $ git lfs track "*.txt"
 ```
 
-Make sure .gitattributes is tracked
+- Make sure .gitattributes is tracked
 
 ```bash
 $ git add .gitattributes
