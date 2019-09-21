@@ -47,7 +47,7 @@ To get more information about its code, access the section [Code](https://algs4.
 
 Obs.: When using another IDE than Netbeans, see the instructions of the IDE choosen on how to add the library to the classpath.
 
-With [Netbeans IDE 8.2](https://netbeans.org/) the proceed is very simple:
+With [Netbeans IDE 8.2](https://netbeans.org/) the process is very simple:
 
 1. In the tab Projects, click in the project folder with the mouse right button at __Properties__:
 
