@@ -11,6 +11,7 @@
 .mtj.tmp/
 
 # Package Files #
+!lib/algs4.jar
 *.jar
 *.war
 *.nar

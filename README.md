@@ -17,6 +17,7 @@ for commercial purposes.**
 # Table of contents
 
 - [Data Sets](data-sets)
+- [Book Standard Library]
 - [License](#license)
 - [References](#references)
 
@@ -37,6 +38,14 @@ $ unzip introcs-data.zip -d project-root-folder/data
 ```  
 
 Obs.: In my case **project-root-folder** is _~/Projects/Java/Algorithms_.
+
+## Book Standard Library
+
+A great portion of the code uses the books standard library [algs4.jar](https://algs4.cs.princeton.edu/code/algs4.jar) that is versioned in the repository.
+
+If using another IDE than Netbeans, see the instructions of the IDE choosen on how to add to classpath for access the library on the code.
+
+More information on the section [Code](https://algs4.cs.princeton.edu/code/) of the booksite.
 
 # License
 
