@@ -5,7 +5,7 @@ It's really complete with detailed information about the Java programming fundam
 
 Must read:
 
-[1. Fundamentals](https://algs4.cs.princeton.edu/10fundamentals/)
+- [1. Fundamentals](https://algs4.cs.princeton.edu/10fundamentals/)
     - [1.1 Programming Model](https://algs4.cs.princeton.edu/11model/)
 
 @TODO - Define content, link to booksite that has the material, select the problems and solutions.
