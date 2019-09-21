@@ -36,5 +36,5 @@ public class Algorithms {
         // TODO code application logic here
         System.out.println("Hello Algorithms!");
     }
-    
+
 }
