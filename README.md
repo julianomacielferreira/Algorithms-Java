@@ -45,7 +45,7 @@ A great portion of the code uses the books standard library [algs4.jar](https://
 
 To get more information about its code, access the section [Code](https://algs4.cs.princeton.edu/code/) of the booksite.
 
-Obs.: When using another IDE than Netbeans, see the instructions of the IDE choosen on how to add the library to the classpath.
+**Obs.:** When using another IDE than Netbeans, see the instructions of the IDE choosen on how to add the library to the classpath.
 
 With [Netbeans IDE 8.2](https://netbeans.org/) the process is very simple:
 
