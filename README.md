@@ -16,9 +16,9 @@ for commercial purposes.**
 
 # Table of contents
 
-- Data Sets
-- License
-- References
+- [Data Sets](data-sets)
+- [License](#license)
+- [References](#references)
 
 @TODO - Define the roadmap for the topics covered
 
