@@ -17,7 +17,7 @@ for commercial purposes.**
 # Table of contents
 
 - [Data Sets](data-sets)
-- [Book Standard Library]
+- [Book Standard Library](#book-standard-library)
 - [License](#license)
 - [References](#references)
 
