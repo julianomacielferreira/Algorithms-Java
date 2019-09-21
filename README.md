@@ -11,7 +11,7 @@ I'm solving problems from the book ["Algorithms, 4th Edition" by Robert Sedgewic
 [Algorithm Complexity 3th Edition (Brazilian portuguese)](https://www.grupoa.com.br/complexidade-de-algoritmos-vol13-p990429) and [Discrete Mathematics for Computing and Informatics (Brazilian portuguese)](https://www.grupoa.com.br/matematica-discreta-para-computacao-e-informatica-vol16-p990393)
 for commercial purposes.** 
 
-**It has only <ins>my own solutions for the problems proposed in the book chapters</ins> with the intention of learning and enhancing my skill set.**
+**It has only <ins>my own solutions for the proposed problems in the books chapters</ins> with the intention of learning and enhancing my skill set.**
 
 # Table of contents
 
