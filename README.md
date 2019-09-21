@@ -8,7 +8,7 @@ I'm going to implement classic and advanced algorithms for solving proposed prob
 
 **This repository DOES NOT CONTAIN any copy / reproduction of the content available in the books ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/), 
 [Algorithms Illuminated: Part 1: The Basics](https://www.amazon.com/dp/0999282905), [Algorithms Illuminated (Part 2): Graph Algorithms and Data Structures (Volume 2)](https://www.amazon.com/gp/product/0999282921/ref=dbs_a_def_rwt_bibl_vppi_i2),
-[Algorithm Complexity 3th Edition (Brazilian portuguese)](https://www.grupoa.com.br/complexidade-de-algoritmos-vol13-p990429), [Discrete Mathematics for Computing and Informatics (Brazilian portuguese)](https://www.grupoa.com.br/matematica-discreta-para-computacao-e-informatica-vol16-p990393),
+[Introduction to Algorithms, 3rd Edition (The MIT Press) 3rd Edition](https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844), [Algorithm Complexity 3th Edition (Brazilian portuguese)](https://www.grupoa.com.br/complexidade-de-algoritmos-vol13-p990429), [Discrete Mathematics for Computing and Informatics (Brazilian portuguese)](https://www.grupoa.com.br/matematica-discreta-para-computacao-e-informatica-vol16-p990393),
 [Learning Discrete Math with Exercise (Brazilian portuguese)](https://www.grupoa.com.br/aprendendo-matematica-discreta-com-exercicios-vol19-ebook-p987217?tsid=34) and [Refactoring - Improving the Design of Existing Code](https://martinfowler.com/books/refactoring.html)
 for commercial purposes.** 
 
@@ -27,6 +27,7 @@ Please see the [license agreement](https://github.com/julianomacielferreira/Algo
 - ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)
 - [Algorithms Illuminated: Part 1: The Basics](https://www.amazon.com/dp/0999282905)
 - [Algorithms Illuminated (Part 2): Graph Algorithms and Data Structures (Volume 2)](https://www.amazon.com/gp/product/0999282921/ref=dbs_a_def_rwt_bibl_vppi_i2)
+- [Introduction to Algorithms, 3rd Edition (The MIT Press) 3rd Edition](https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844)
 - [Algorithm Complexity 3th Edition (Brazilian portuguese)](https://www.grupoa.com.br/complexidade-de-algoritmos-vol13-p990429)
 - [Refactoring - Improving the Design of Existing Code](https://martinfowler.com/books/refactoring.html)
 - [Discrete Mathematics for Computing and Informatics (Brazilian portuguese)](https://www.grupoa.com.br/matematica-discreta-para-computacao-e-informatica-vol16-p990393)
