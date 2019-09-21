@@ -37,7 +37,7 @@ After download the file, unzip in a folder called **data** in the project root f
 $ unzip introcs-data.zip -d project-root-folder/data
 ```  
 
-Obs.: In my case **project-root-folder** is _~/Projects/Java/Algorithms_.
+**Obs.:**  In my case **project-root-folder** is _~/Projects/Java/Algorithms_.
 
 ## Book Standard Library
 
