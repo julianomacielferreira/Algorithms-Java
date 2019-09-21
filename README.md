@@ -31,6 +31,7 @@ Please see the [license agreement](https://github.com/julianomacielferreira/Algo
 - [Refactoring - Improving the Design of Existing Code](https://martinfowler.com/books/refactoring.html)
 - [Discrete Mathematics for Computing and Informatics (Brazilian portuguese)](https://www.grupoa.com.br/matematica-discreta-para-computacao-e-informatica-vol16-p990393)
 - [Learning Discrete Math with Exercise (Brazilian portuguese)](https://www.grupoa.com.br/aprendendo-matematica-discreta-com-exercicios-vol19-ebook-p987217?tsid=34)
+- ["Mathematics for Computer Science" by Lehman and Leighton](https://courses.csail.mit.edu/6.042/spring17/mcs.pdf)
 - [Wikipedia](https://en.wikipedia.org/)
     - [Algorithm](https://en.wikipedia.org/wiki/Algorithm)
     - [Computer science](https://en.wikipedia.org/wiki/Computer_science)
