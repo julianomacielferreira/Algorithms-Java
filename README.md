@@ -18,7 +18,8 @@ for commercial purposes.**
 
 - [Data Sets](data-sets)
 - [Book Standard Library](#book-standard-library)
-- [Fundamentals Problem Set](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/#README)
+- [Algorithms](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms#README)
+    - [Fundamentals Problem Set](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/#README)
 - [License](#license)
 - [References](#references)
 
