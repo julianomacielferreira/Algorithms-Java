@@ -28,6 +28,12 @@ Read carefully:
 
 ## Problems
 
+I choose some problems that in my opinion would be nice to solve and explain the solution.
+
+The first is:
+
+**1.1.9:** Write a code fragment that puts the binary representation of a positive integer N into a **String s**. 
+
 @TODO - Define content, link to booksite that has the material, select the problems and solutions.
 
 # References

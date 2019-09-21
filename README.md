@@ -4,6 +4,8 @@ The intention of this repository is to demonstrate my skills on Algorithm Analys
 
 I'm going to implement classic and advanced algorithms for solving proposed problems from the books.
 
+I choose Java&trade; as the implementation language because I purchase a copy of the book ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/).
+
 # Disclaimer
 
 **This repository DOES NOT CONTAIN any copy / reproduction of the content available in the books ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/), 
