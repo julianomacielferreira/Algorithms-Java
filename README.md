@@ -24,5 +24,8 @@ Please see the [license agreement](https://github.com/julianomacielferreira/Algo
     - [Algorithm](https://en.wikipedia.org/wiki/Algorithm)
     - [Computer science](https://en.wikipedia.org/wiki/Computer_science)
     - [Computational complexity theory](https://en.wikipedia.org/wiki/Computational_complexity_theory)
+- [Stanford Online Lagunita](https://lagunita.stanford.edu)
+    - [Algorithms: Design and Analysis](https://lagunita.stanford.edu/courses/course-v1:Engineering+Algorithms1+SelfPaced/about)
+    - [Algorithms: Design and Analysis, Part 2](https://lagunita.stanford.edu/courses/course-v1:Engineering+Algorithms2+SelfPaced/about)
 - [Java&trade; Platform, Standard Edition 8 API Specification](https://docs.oracle.com/javase/8/docs/api/)
 - [Netbeans IDE 8.2](https://netbeans.org/)
