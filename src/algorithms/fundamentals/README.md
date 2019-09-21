@@ -12,7 +12,7 @@ The basic knowledge necessary is:
 - Strings
 - Input and output
 
-It's really complete with detailed information about the Java programming fundamentals that is familiar in a whole bunch of other languages.
+It's really complete with detailed (and others summarized) information about the Java programming fundamentals that is familiar in a whole bunch of other languages.
 
 Read carefully:
 
