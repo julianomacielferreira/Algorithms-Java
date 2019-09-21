@@ -43,7 +43,7 @@ $ unzip introcs-data.zip -d project-root-folder/data
 
 A great portion of the code uses the books standard library [algs4.jar](https://algs4.cs.princeton.edu/code/algs4.jar) that is versioned in the repository under [lib](https://github.com/julianomacielferreira/Algorithms/tree/master/lib/) folder.
 
-To get more information about its code, access the section [Code](https://algs4.cs.princeton.edu/code/) of the booksite.
+To get more details about it, access the section [Code](https://algs4.cs.princeton.edu/code/) of the booksite or the complete [javadoc](https://algs4.cs.princeton.edu/code/javadoc/) documentation.
 
 **Obs.:** When using another IDE than Netbeans, see the instructions of the IDE choosen on how to add the library to the classpath.
 
