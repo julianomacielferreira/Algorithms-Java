@@ -23,7 +23,11 @@
  */
 package algorithms;
 
+import algorithms.fundamentals.Drawing;
+
 /**
+ * Entry point class (contains the main() method). It could be called Main.java,
+ * Bootstrap.java, etc.
  *
  * @author juliano
  */
@@ -33,8 +37,12 @@ public class Algorithms {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        System.out.println("Hello Algorithms!");
+
+//        Drawing.points(100);
+
+//        Drawing.random(50);
+        
+        Drawing.random(50, true);
     }
 
 }
