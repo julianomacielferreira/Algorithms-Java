@@ -16,7 +16,13 @@ for commercial purposes.**
 
 # Table of contents
 
+- Data Sets
+- License
+- References
+
 @TODO - Define the roadmap for the topics covered
+
+
 
 ## Data Sets
 
