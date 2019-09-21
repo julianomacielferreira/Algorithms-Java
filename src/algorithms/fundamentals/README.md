@@ -1,10 +1,9 @@
 # Fundamentals Problem Set
 
-The [book site](https://algs4.cs.princeton.edu/home/) has the pre-requirements to going deep and solve the problems of the book (I'm not going to copy here).
+The [book site](https://algs4.cs.princeton.edu/home/) has the pre-requirements (I'm not going to copy here) to going deep and 
+solve the problems of the first chapter _1.1 Basic Programming Fundamentals_.
 
-It's really complete with detailed information about the Java programming fundamentals that is familiar in a whole bunch of other languages.
-
-The main parts are:
+The basic knowledge necessary is:
 - Primitive data types and expressions
 - Statements
 - Arrays
@@ -13,7 +12,9 @@ The main parts are:
 - Strings
 - Input and output
 
-Must read:
+It's really complete with detailed information about the Java programming fundamentals that is familiar in a whole bunch of other languages.
+
+Read carefully:
 
 - [1. Fundamentals](https://algs4.cs.princeton.edu/10fundamentals/)
     - [1.1 Programming Model](https://algs4.cs.princeton.edu/11model/)
