@@ -28,7 +28,7 @@ for commercial purposes.**
 
 Data files used to test the algorithms have not been versioned in this repository, but this can be done with [Git Large File Storage (LFS)](https://git-lfs.github.com/). 
 
-Click on the section [Data](https://introcs.cs.princeton.edu/java/data/) in the booksite to get one by one or download them all as one zipped big file (1GB approx.) [introcs-data.zip](https://introcs.cs.princeton.edu/java/code/introcs-data.zip).
+Click on the section [Data](https://introcs.cs.princeton.edu/java/data/) in the booksite to get one by one or download them all as one zipped big file (1GB approx.): [introcs-data.zip](https://introcs.cs.princeton.edu/java/code/introcs-data.zip).
 
 After download the file, unzip it in a folder called **data** in the project root folder:
 
