@@ -22,3 +22,8 @@ Read carefully:
 ## Problems
 
 @TODO - Define content, link to booksite that has the material, select the problems and solutions.
+
+# References
+
+- ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)
+- [The Java Tutorials](https://docs.oracle.com/javase/tutorial/tutorialLearningPaths.html)
