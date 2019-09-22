@@ -61,7 +61,7 @@ From right to left direction increases the power of the base (starting from 10 r
  
 > 36 = (6 x 10<sup>0</sup>) + (3 x 10<sup>1</sup>) = (6 x 1) + (3 x 10) = 6 + 30 = 36
 
-The quantity of numerals (symbols) is the same as the base. The base ten has 10 digits => {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}.
+The quantity of numerals (symbols) is the same as the base. The base ten has 10 digits -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}.
 
 The rule for the symbols is: start from 0 until _base - 1_.
  
@@ -90,7 +90,9 @@ So, summarizing the above there's a theorem specifying that:
 Let's plug numbers to see that:
 
 When _n_ = 73 and _m_ = 5:<br> 
-( _m_ * q ) <= _n_ < _m_ * (q + 1) => (5 * q) <= 73 < 5 * (q + 1)
+( _m_ * q ) <= _n_ < _m_ * (q + 1) => (5 * q) <= 73 < 5 * (q + 1)<br> 
+With q = 14, so (5 * 14) <= 73 < 5 * (14 + 1 = 15) -> 70 <= 72 < 75<br>   
+So q = 14 and r = 73 - (5 * 14) = 3 (remember, r = _n_ - ( _m_ * q )).
  
 
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
