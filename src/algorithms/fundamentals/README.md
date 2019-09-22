@@ -89,9 +89,9 @@ So, summarizing the above there's a theorem specifying that:
 
 Let's plug numbers to see that:
 
-> When _n_ = 73 and _m_ = 5:<br> 
+> When _n_ = 73 and _m_ = 5,<br> 
 > We have ( _m_ * q ) <= _n_ < _m_ * (q + 1) is (5 * q) <= 73 < 5 * (q + 1).<br> 
-> Then q = 14 and (5 * 14) <= 73 < 5 * (14 + 1) is 70 <= 73 < 75.<br>   
+> Then, q = 14 and (5 * 14) <= 73 < 5 * (14 + 1) is 70 <= 73 < 75.<br>   
 > The natural numbers to represent the inequality are q = 14 and r = 73 - (5 * 14) = 3 (remember, r = _n_ - ( _m_ * q )).<br> 
 > So 73 = (5 * 14) + 3.
 
