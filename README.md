@@ -19,15 +19,18 @@ for commercial purposes.**
 
 # Table of contents
 
-- [Data Sets](data-sets)
+- [Technologies](#technologies)
+- [Data Sets](#data-sets)
 - [Book Standard Library](#book-standard-library)
 - [Algorithms](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms#README)
     - [Fundamentals Problem Set](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/#README)
 - [License](#license)
 - [References](#references)
 
-@TODO - Define the roadmap for the topics covered
 
+## Technologies
+
+I opted to use [Java&trade; Platform, Standard Edition 8 API Specification](https://docs.oracle.com/javase/8/docs/api/) and [Netbeans IDE 8.2](https://netbeans.org/)
 
 ## Data Sets
 
