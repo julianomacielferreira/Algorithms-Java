@@ -42,7 +42,7 @@ In summary, the approach is:
 **_Solution:_** 
     
     1 - Decomposing the problem is very easy, it's giving us the input and output:
-        - Inputs: an integer (int type) variable N.
+        - Inputs: an integer (int) variable N.
         - Output: a String s representing the binary form of the decimal number.
         
 To define the _Procedure_  it's necessary to understand some fundamentals about Positional Number Systems. 
