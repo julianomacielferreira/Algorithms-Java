@@ -28,12 +28,16 @@ Read carefully:
 
 ## Problems
 
-I choose some problems that, in my opinion, would be nice to solve and explain the solution. 
-They are not hard to solve, but I'll try to explain in detail the process followed.
+I choose some problems that, in my opinion, are not hard to solve but would be nice to explain the solution and the process followed. 
 
-The problems are:
+In summary, the approach is:
 
-__**1.1.9: Write a code fragment that puts the binary representation of a positive integer N into a _String s_.**__
+1 - Decompose the problem in its related inputs and outputs.
+2 - Determine (if it's not already in the statement) the procedure.
+3 - Gather some references if the problem involves related knowledge of other areas.  
+
+
+**1.1.9: Write a code fragment that puts the binary representation of a positive <u>integer N</u> into a <u>String s</u>.**
 
 **_Solution:_** 
 First, decompose the problem and see if all parts were understood (the explicit and implicit, ones).
