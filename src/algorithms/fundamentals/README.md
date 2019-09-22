@@ -33,7 +33,7 @@ They are not hard to solve, but I'll try to explain in detail the process follow
 
 The problems are:
 
-### **1.1.9:** Write a code fragment that puts the binary representation of a positive integer N into a **String s**.
+__**1.1.9: Write a code fragment that puts the binary representation of a positive integer N into a _String s_.**__
 
 **_Solution:_** 
 First, decompose the problem and see if all parts were understood (the explicit and implicit, ones).
@@ -45,20 +45,20 @@ It's necessary to create a method with the input and output:
 - _Output:_ a String representing the binary form of the decimal number;
 - _Procedure:_ 
 
-### **1.1.11** Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
+**1.1.11** Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
 Include row and column numbers.
 
 **Solution:** @TODO - Solve it
 
-### **1.1.13** Write a code fragment to print the tranposition (rows and columns changed) of a two-dimensional array with M rows and N columns.
-
-### **Solution:** @TODO - Solve it
-
-### **1.1.14** Write a static method **lg()** that takes an **int** value as argument and returns the largest int not larger than the base-2 logarithm of N. Do not use **Math**.
+**1.1.13** Write a code fragment to print the tranposition (rows and columns changed) of a two-dimensional array with M rows and N columns.
 
 **Solution:** @TODO - Solve it
 
-### **1.1.15** Write a static method **histogram()** that takes an array a[] of **int** values and an integer M as argument and returns an array of length M whose ith entry is the number of times
+**1.1.14** Write a static method **lg()** that takes an **int** value as argument and returns the largest int not larger than the base-2 logarithm of N. Do not use **Math**.
+
+**Solution:** @TODO - Solve it
+
+**1.1.15** Write a static method **histogram()** that takes an array a[] of **int** values and an integer M as argument and returns an array of length M whose ith entry is the number of times
 the integer i appeared in the argument array. If the values in a[] are all between 0 and M-1, the sum of the values int the returned array should be equal to a.length.
 
 **Solution:** @TODO - Solve it
