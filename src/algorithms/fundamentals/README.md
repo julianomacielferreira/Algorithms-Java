@@ -59,7 +59,7 @@ In a straightforward manner it's saying that a decimal number, for example 36, i
 
 From right to left direction increases the power of the base (starting from 10 raised to 0):
  
-> 36 = (6 * 10 ^ 0) + (3 * 10 ^ 1) = (6 * 1) + (3 * 10) = 6 + 30 = 36
+> 36 = (6 * 10<sup>0</sup>) + (3 * 10<sup>1</sup>) = (6 * 1) + (3 * 10) = 6 + 30 = 36
 
 The quantity of numerals (symbols) is the same as the base. The base ten has 10 digits => {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}.
 
@@ -67,9 +67,9 @@ The rule for the symbols is: start from 0 until _base - 1_.
  
 So the base two, starting from 0 until (2 - 1) has only the symbols {0, 1}.
 
-From right to left, the representation of the binary number 1010 in base ten is:
+From right to left, the representation of the binary number 1010<sub>2</sub> in base ten is:
 
-> 1010 = (0 * 2 ^ 0) + (1 * 2 ^ 1) + (0 * 2 ^ 2) + (1 ^ 2 ^ 3) = (0 * 1) + (1 * 2) + (0 * 4) + (1 * 8) = 0 + 2 + 0 + 8 = 10
+> 1010 = (0 * 2 <sup>0</sup>) + (1 * 2<sup>1</sup>) + (0 * 2<sup>2</sup>) + (1 ^ 2<sup>3</sup>) = (0 * 1) + (1 * 2) + (0 * 4) + (1 * 8) = 0 + 2 + 0 + 8 = 10
 
 With all said, the problem is asking us to implement the algorithm to make the inverse path, i.e, given a number in base ten (in the example above, 36), convert it to binary.
 
