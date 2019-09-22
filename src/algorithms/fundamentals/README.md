@@ -95,8 +95,7 @@ Let's plug numbers to see that:
 > The natural numbers to represent the inequality are q = 14 and r = 73 - (5 * 14) = 3 (remember, r = _n_ - ( _m_ * q )).<br> 
 > So 73 = (5 * 14) + 3.
 
-The two concepts tell us that any number __n__ (n > 1) in a base __b__ and __m__ being the numerals {0, 1, 2, ..., (b - 1)} 
-can be represented uniquely as: 
+The concepts shows that any number __n__ (n > 1) in a base __b__, with __m__ being the numerals {0, 1, 2, ..., (b - 1)}, can be represented uniquely as: 
 
 > __n__ = m<sub>0</sub> + m<sub>1</sub> * __b__<sup>1</sup> + m<sub>2</sub> * __b__<sup>2</sup> + ... + m<sub>i</sub> * __b__<sup>i</sup> ( i >= 0 and m<sub>i</sub> != 0)
 
@@ -111,6 +110,8 @@ using the distributive property:
 and then:
 
 > __n__ = __b__ * (m<sub>1</sub> + m<sub>2</sub> * __b__<sup>1</sup> + m<sub>3</sub> * __b__<sup>2</sup> + ... + m<sub>i</sub> * __b__<sup>i - 1</sup>) + m<sub>0</sub>
+
+@TODO - Continue Here
 
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
 Include row and column numbers.**
