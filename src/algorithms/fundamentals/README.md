@@ -45,7 +45,14 @@ In summary, the approach is:
         - Inputs: an integer (int type) variable N.
         - Output: a String s representing the binary form of the decimal number.
         
-To define the _Procedure_  it's necessary to understand some fundamental about Positional Number Systems.
+To define the _Procedure_  it's necessary to understand some fundamentals about Positional Number Systems. 
+
+The definition is taken from [Quora](https://www.quora.com) question ["What is a positional number system?"](https://www.quora.com/What-is-a-positional-number-system)
+
+    - A positional (numeral) system is a system for representation of numbers by an ordered set of numerals symbols (called digits) in which the value of a numeral symbol depends on its position
+
+Exemplifying:
+
 
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
 Include row and column numbers.**
