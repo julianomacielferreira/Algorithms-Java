@@ -45,7 +45,7 @@ In summary, the approach is:
         - Inputs: an integer (int) variable N.
         - Output: a String s representing the binary form of the decimal number.
         
-To define the _Procedure_  it's necessary to understand some fundamentals about Positional Number Systems. 
+To define the _Procedure_  it's necessary to understand some fundamentals about [Positional notation](https://en.wikipedia.org/wiki/Positional_notation) and [Numeral Systems](https://en.wikipedia.org/wiki/Numeral_system). 
 
 The definition is taken from [Quora](https://www.quora.com) question ["What is a positional number system?"](https://www.quora.com/What-is-a-positional-number-system)
 
