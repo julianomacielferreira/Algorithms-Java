@@ -49,7 +49,7 @@ To define the _Procedure_  it's necessary to understand some fundamentals about 
 
 The definition is taken from [Quora](https://www.quora.com) question ["What is a positional number system?"](https://www.quora.com/What-is-a-positional-number-system)
 
-    - A positional (numeral) system is a system for representation of numbers by an ordered set of numerals symbols (called digits) in which the value of a numeral symbol depends on its position
+> A positional (numeral) system is a system for representation of numbers by an ordered set of numerals symbols (called digits) in which the value of a numeral symbol depends on its position
 
 Exemplifying:
 
