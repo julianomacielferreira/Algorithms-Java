@@ -69,7 +69,7 @@ So the base two, starting from 0 until (2 - 1) has only the symbols {0, 1}.
 
 From right to left, the representation of the binary number 1010<sub>2</sub> in base ten is:
 
-> 1010 = (0 * 2 <sup>0</sup>) + (1 * 2<sup>1</sup>) + (0 * 2<sup>2</sup>) + (1 ^ 2<sup>3</sup>) = (0 * 1) + (1 * 2) + (0 * 4) + (1 * 8) = 0 + 2 + 0 + 8 = 10
+> 1010 = (0 * 2<sup>0</sup>) + (1 * 2<sup>1</sup>) + (0 * 2<sup>2</sup>) + (1 ^ 2<sup>3</sup>) = (0 * 1) + (1 * 2) + (0 * 4) + (1 * 8) = 0 + 2 + 0 + 8 = 10
 
 With all said, the problem is asking us to implement the algorithm to make the inverse path, i.e, given a number in base ten (in the example above, 36), convert it to binary.
 
