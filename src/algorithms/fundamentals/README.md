@@ -42,8 +42,8 @@ In summary, the approach is:
 **_Solution:_** 
     
     1 - Decomposing the problem is very easy, it's giving us the input and output:
-        - _Input:_ an integer (int type) variable N.
-        - _Output:_ a String s representing the binary form of the decimal number.
+        - __Inputs:__ an integer (int type) variable N.
+        - __Output:__ a String s representing the binary form of the decimal number.
         
 To define the _Procedure_  it's necessary to understand some fundamental about Positional Number Systems.
 
