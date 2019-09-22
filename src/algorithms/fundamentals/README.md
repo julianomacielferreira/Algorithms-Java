@@ -71,10 +71,15 @@ From right to left, the representation of the binary number 1010<sub>2</sub> in 
 
 > 1010 = (0 x 2<sup>0</sup>) + (1 x 2<sup>1</sup>) + (0 x 2<sup>2</sup>) + (1 x 2<sup>3</sup>) = (0 x 1) + (1 x 2) + (0 x 4) + (1 x 8) = 0 + 2 + 0 + 8 = 10
 
-With all said, the problem is asking us to implement the algorithm to make the inverse path, i.e, given a number in base ten (in the example above, 36), convert it to binary.
+With all said, the problem is asking us to implement the algorithm to make the inverse path, i.e, given a number in base decimal, convert it to binary: 10 = 1010<sub>2</sub>.
 
+Now it's necessary to understand a little about [Number theory](https://en.wikipedia.org/wiki/Number_theory) basics: **Euclid's Division Algorithm**
 
-    2 - Procedure
+It's about multiples and divisors of integer numbers.
+
+> Suppose "n" is a natural number (i.e, 1, 2, 3, ..., etc.) not null (n > 0).  If "m" \in N (m is 1, 2, 3, ..., etc.), so "m" is a multiple of "n" OR it's between two consecutives multiples of "m".
+> In algebraic notation it's: m x (q) \le n < m x (q + 1) 
+
 
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
 Include row and column numbers.**
@@ -99,3 +104,4 @@ the integer i appeared in the argument array. If the values in a[] are all betwe
 - ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)
 - [The Java Tutorials](https://docs.oracle.com/javase/tutorial/tutorialLearningPaths.html)
 - [Mathematics Fundamentals I (Brazilian Portuguese)](http://mtm.grad.ufsc.br/files/2014/04/Fundamentos-de-Matem%C3%A1tica-I.pdf)
+- [Fundamentals of Arithmetic (Brazilian Portuguese)](https://livraria.ufsc.br/produto/818/fundamentos-de-aritmetica)

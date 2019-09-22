@@ -30,7 +30,7 @@ for commercial purposes.**
 
 ## Technologies
 
-I opted to use [Java&trade; Platform, Standard Edition 8 API Specification](https://docs.oracle.com/javase/8/docs/api/) and [Netbeans IDE 8.2](https://netbeans.org/)
+I opted to use [Java&trade; Platform, Standard Edition 8 API Specification](https://docs.oracle.com/javase/8/docs/api/) and [Netbeans IDE 8.2](https://netbeans.org/).
 
 ## Data Sets
 
