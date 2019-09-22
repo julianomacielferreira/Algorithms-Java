@@ -30,7 +30,7 @@ I choose some problems that, in my opinion, are not hard to solve but would be n
 
 In summary, the approach is:
 
-    1 - Decompose the problem in its related inputs and outputs.
+    1 - Decompose the problem and check if all parts were understood (the explicit and implicit, ones), define inputs and outputs.
     2 - Determine (if it's not already in the statement) the procedure.
     3 - Gather some references if the problem involves related knowledge of other areas.  
     4 - Implement the solution in Java with comments to explain each part. 
@@ -40,14 +40,12 @@ In summary, the approach is:
 **1.1.9: Write a code fragment that puts the binary representation of a positive _integer N_ into a _String s_.**
 
 **_Solution:_** 
-First, decompose the problem and see if all parts were understood (the explicit and implicit, ones).
-
-_Note about Positional Number Systems_: @TODO - Define
-
-It's necessary to create a method with the input and output:
-- _Input:_ a variable N with type int (integer);
-- _Output:_ a String representing the binary form of the decimal number;
-- _Procedure:_ 
+    
+    1 - Decomposing the problem is very easy, it's giving us the input and output:
+        - _Input:_ an integer (int type) variable N.
+        - _Output:_ a String s representing the binary form of the decimal number.
+        
+To define the _Procedure_  it's necessary to understand some fundamental about Positional Number Systems.
 
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
 Include row and column numbers.**
