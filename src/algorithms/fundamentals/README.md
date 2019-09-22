@@ -14,7 +14,7 @@ The basic knowledge necessary is:
 
 It's really complete with detailed (and others summarized) information about the Java programming fundamentals that is familiar in a whole bunch of other languages.
 
-Read carefully:
+**Required knowledge:**
 
 - [1. Fundamentals](https://algs4.cs.princeton.edu/10fundamentals/)
     - [1.1 Programming Model](https://algs4.cs.princeton.edu/11model/)
