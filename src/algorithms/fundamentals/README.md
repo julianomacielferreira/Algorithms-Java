@@ -32,9 +32,9 @@ I choose some problems that, in my opinion, are not hard to solve but would be n
 
 In summary, the approach is:
 
-1 - Decompose the problem in its related inputs and outputs.
-2 - Determine (if it's not already in the statement) the procedure.
-3 - Gather some references if the problem involves related knowledge of other areas.  
+    1 - Decompose the problem in its related inputs and outputs.
+    2 - Determine (if it's not already in the statement) the procedure.
+    3 - Gather some references if the problem involves related knowledge of other areas.  
 
 
 **1.1.9: Write a code fragment that puts the binary representation of a positive <u>integer N</u> into a <u>String s</u>.**
