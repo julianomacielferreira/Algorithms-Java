@@ -26,7 +26,7 @@ It's really complete with detailed (and others summarized) information about the
         - [Expressions, Statements, and Blocks](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/expressions.html)
         - [Control Flow Statements](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html)
 
-> I choose some problems that, in my opinion, they are not hard, but should be nice to explain the process followed to solve. 
+**I choose problems that, in my opinion, they are not hard. But should be nice to explain the process followed to solve.**
 
 In summary, the approach is:
 
