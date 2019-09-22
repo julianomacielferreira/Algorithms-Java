@@ -73,13 +73,13 @@ From right to left, the representation of the binary number 1010<sub>2</sub> in 
 
 With all said, the problem is asking us to implement the algorithm to make the inverse path, i.e, given a number in base decimal, convert it to binary: 10 = 1010<sub>2</sub>.
 
-Now it's necessary to understand a little about [Number theory](https://en.wikipedia.org/wiki/Number_theory) basics: **Euclid's Division Algorithm**
+Now, it's necessary to understand very little about [Number theory](https://en.wikipedia.org/wiki/Number_theory) basics: **Euclid's Division Algorithm**
 
 It's about multiples and divisors of integer numbers.
 
-> Suppose "n" is a natural number (i.e, 1, 2, 3, ..., etc.) not null (n > 0).<br> 
-> If "m" is a natural number (i.e, 1, 2, 3, ..., etc.), so "m" is a multiple of "n" OR it's between two consecutives multiples of "m".<br> 
-> In algebraic notation: m * q <= n < m * (q + 1) 
+> Suppose _n_ is a natural number (i.e, 1, 2, 3, ..., etc.) not null (n > 0).<br> 
+> If _m_ is a natural number (i.e, 1, 2, 3, ..., etc.), so _m_ is a multiple of _n_ OR it's between two consecutives multiples of _m_.<br> 
+> In algebraic notation: _m_ * q <= _n_ < _m_ * (q + 1) 
 
 
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
