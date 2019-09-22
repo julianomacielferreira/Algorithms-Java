@@ -35,6 +35,7 @@ In summary, the approach is:
     1 - Decompose the problem in its related inputs and outputs.
     2 - Determine (if it's not already in the statement) the procedure.
     3 - Gather some references if the problem involves related knowledge of other areas.  
+    4 - Implement the solution in Java with comments to explain each part. 
 
 
 **1.1.9: Write a code fragment that puts the binary representation of a positive _integer N_ into a _String s_.**
