@@ -1,7 +1,5 @@
 # Fundamentals Problem Set
 
-@TODO - Define content, link to booksite that has the material, select the problems and solutions.
-
 The [book site](https://algs4.cs.princeton.edu/home/) has the pre-requirements (I'm not going to copy here) to going deep and 
 solve the problems of the first chapter _1.1 Basic Programming Fundamentals_.
 
@@ -37,25 +35,33 @@ The problems are:
 
 **1.1.9:** Write a code fragment that puts the binary representation of a positive integer N into a **String s**.
 
-**My solution:** @TODO - Solve it
+**_Solution:_** 
+First, decompose the problem and see if all parts were understood (the explicit and implicit, ones).
+
+__Note about Positional Number Systems_: @TODO - Define
+
+It's necessary to create a method with the input and output:
+- _Input:_ a variable N with type int (integer);
+- _Output:_ a String representing the binary form of the decimal number;
+- _Procedure:_ 
 
 **1.1.11** Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
 Include row and column numbers.
 
-**My solution:** @TODO - Solve it
+**Solution:** @TODO - Solve it
 
 **1.1.13** Write a code fragment to print the tranposition (rows and columns changed) of a two-dimensional array with M rows and N columns.
 
-**My solution:** @TODO - Solve it
+**Solution:** @TODO - Solve it
 
 **1.1.14** Write a static method **lg()** that takes an **int** value as argument and returns the largest int not larger than the base-2 logarithm of N. Do not use **Math**.
 
-**My solution:** @TODO - Solve it
+**Solution:** @TODO - Solve it
 
 **1.1.15** Write a static method **histogram()** that takes an array a[] of **int** values and an integer M as argument and returns an array of length M whose ith entry is the number of times
 the integer i appeared in the argument array. If the values in a[] are all between 0 and M-1, the sum of the values int the returned array should be equal to a.length.
 
-**My solution:** @TODO - Solve it
+**Solution:** @TODO - Solve it
 
 # References
 
