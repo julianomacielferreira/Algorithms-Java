@@ -59,7 +59,7 @@ From right to left direction increases the power of the base (starting from 0):
  
 > 36 = (6 * 10 ^ 0) + (3 * 10 ^ 1) = (6 * 1) + (3 * 10) = 6 + 30 = 36
 
-The quantity of numerals (symbols) is the same as the base. The base 10 has 10 digits ({0, 1, 2, 3, 4, 5, 6, 7, 8, 9}).
+The quantity of numerals (symbols) is the same as the base. The base 10 has 10 digits => {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}.
 The rule is, start from 0 until _base - 1_ for the numerals.
  
 So the base two have 2 symbols, starting from 0 until 1 (2 - 1) => {0, 1}.
