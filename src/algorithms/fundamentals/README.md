@@ -63,7 +63,7 @@ The quantity of numerals (symbols) is the same as the base. The base 10 has 10 d
 
 The rule for the symbols is: start from 0 until _base - 1_.
  
-So the base two, starting from 0 until 1 (2 - 1) has only the symbols {0, 1}.
+So the base two, starting from 0 until (2 - 1) has only the symbols {0, 1}.
 
 From right to left, the representation of the binary number 1010 in decimal is:
 
