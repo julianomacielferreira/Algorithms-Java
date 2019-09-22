@@ -77,9 +77,9 @@ Now it's necessary to understand a little about [Number theory](https://en.wikip
 
 It's about multiples and divisors of integer numbers.
 
-> Suppose "n" is a natural number (i.e, 1, 2, 3, ..., etc.) not null (n > 0).\  
-> If "m" is a natural number (i.e, 1, 2, 3, ..., etc.),\ 
-> So "m" is a multiple of "n" OR it's between two consecutives multiples of "m".\
+> Suppose "n" is a natural number (i.e, 1, 2, 3, ..., etc.) not null (n > 0).<br> 
+> If "m" is a natural number (i.e, 1, 2, 3, ..., etc.),<br>  
+> So "m" is a multiple of "n" OR it's between two consecutives multiples of "m".<br> 
 > In algebraic notation it's: m * q <= n < m * (q + 1) 
 
 
