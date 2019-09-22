@@ -26,8 +26,6 @@ It's really complete with detailed (and others summarized) information about the
         - [Expressions, Statements, and Blocks](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/expressions.html)
         - [Control Flow Statements](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html)
 
-## Problems
-
 I choose some problems that, in my opinion, are not hard to solve but would be nice to explain the solution and the process followed. 
 
 In summary, the approach is:
@@ -37,6 +35,7 @@ In summary, the approach is:
     3 - Gather some references if the problem involves related knowledge of other areas.  
     4 - Implement the solution in Java with comments to explain each part. 
 
+## Problems
 
 **1.1.9: Write a code fragment that puts the binary representation of a positive _integer N_ into a _String s_.**
 
