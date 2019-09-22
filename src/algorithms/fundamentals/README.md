@@ -79,10 +79,19 @@ It's about multiples and divisors of integer numbers.
 
 > Suppose _n_ is a natural number (i.e, 1, 2, 3, ..., etc.) not null (n > 0).<br> 
 > If _m_ is a natural number (i.e, 1, 2, 3, ..., etc.), so _m_ is a multiple of _n_ OR it's between two consecutives multiples of _m_.<br> 
-> In algebraic notation: (_m_ * q) <= _n_ < _m_ * (q + 1)<br>
-> If (_m_ * q) <= _n_ (a multiple of _m_ is less than _n_), implies that there's a natural number r (remainder) such that _n_ = (_m_ * q) + r (with r always less then _m_).<br>
-> If r is 0, so _n_ = (_m_ * q), i.e, _m_ is multiple of _n_.
+> In algebraic notation: ( _m_ * q ) <= _n_ < _m_ * (q + 1)<br>
+> If (_m_ * q) <= _n_ (a multiple of _m_ is less than _n_), implies that there's a natural number r (remainder) such that _n_ = ( _m_ * q ) + r (with r always less than _m_).<br>
+> If r is 0, so _n_ = ( _m_ * q ), i.e, _m_ is multiple of _n_.
 
+So, summarizing the above there's a theorem specifying that:
+
+> For any natural numbers _n_ and _m_, with _m_ != 0 (not null), there exists only one pair of numbers _q_ and _r_ such that _n_ = ( _m_ * q ) + r.
+
+Let's plug numbers to see that:
+
+When _n_ = 73 and _m_ = 5:<br> 
+( _m_ * q ) <= _n_ < _m_ * (q + 1) => (5 * q) <= 73 < 5 * (q + 1)
+ 
 
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
 Include row and column numbers.**
