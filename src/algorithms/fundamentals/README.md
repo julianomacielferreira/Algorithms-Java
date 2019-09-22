@@ -53,7 +53,7 @@ The definition is taken from [Quora](https://www.quora.com) question ["What is a
 
 Exemplifying:
 
-In a straightforward manner it's saying that a decimal number, for example 36, is representing the sum of two numbers (digits) multiplied by powers of 10. 
+In a straightforward manner it's saying that a decimal number, for example 36, is equal to the sum of two numbers (digits) multiplied by powers of 10. 
 
 From right to left direction increases the power of the base (starting from 10 raised to 0):
  
