@@ -79,7 +79,8 @@ It's about multiples and divisors of integer numbers.
 
 > Suppose _n_ is a natural number (i.e, 1, 2, 3, ..., etc.) not null (n > 0).<br> 
 > If _m_ is a natural number (i.e, 1, 2, 3, ..., etc.), so _m_ is a multiple of _n_ OR it's between two consecutives multiples of _m_.<br> 
-> In algebraic notation: _m_ * q <= _n_ < _m_ * (q + 1) 
+> In algebraic notation: _m_ * q <= _n_ < _m_ * (q + 1)<br>
+> From _m_ * q <= _n_ implies that there's a natural number r (remainder) such that _n_ = (_m_ * q) + r  
 
 
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
