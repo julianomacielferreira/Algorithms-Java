@@ -43,7 +43,7 @@ In summary, the approach is:
 **_Solution:_** 
 First, decompose the problem and see if all parts were understood (the explicit and implicit, ones).
 
-__Note about Positional Number Systems_: @TODO - Define
+_Note about Positional Number Systems_: @TODO - Define
 
 It's necessary to create a method with the input and output:
 - _Input:_ a variable N with type int (integer);
