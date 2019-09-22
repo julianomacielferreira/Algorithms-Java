@@ -30,10 +30,11 @@ I choose some problems that, in my opinion, are not hard to solve but would be n
 
 In summary, the approach is:
 
-    1 - Decompose the problem and check if all parts were understood (the explicit and implicit, ones), define inputs and outputs.
-    2 - Determine (if it's not already in the statement) the procedure.
-    3 - Gather some references if the problem involves related knowledge of other areas.  
-    4 - Implement the solution in Java with comments to explain each part. 
+    1 - Decompose the problem and check if all parts were understood (the explicit and implicit).
+    2 - Define inputs and outputs.
+    3 - Determine (if it's not already in the statement) the procedure.
+    4 - Gather some references if the problem involves related knowledge of other areas.  
+    5 - Implement the solution in Java with comments to explain each part. 
 
 ## Problems
 
