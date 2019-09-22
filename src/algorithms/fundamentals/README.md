@@ -81,3 +81,4 @@ the integer i appeared in the argument array. If the values in a[] are all betwe
 
 - ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)
 - [The Java Tutorials](https://docs.oracle.com/javase/tutorial/tutorialLearningPaths.html)
+- [Mathematics Fundamentals I (Brazilian Portuguese)](http://mtm.grad.ufsc.br/files/2014/04/Fundamentos-de-Matem%C3%A1tica-I.pdf)
