@@ -53,6 +53,11 @@ The definition is taken from [Quora](https://www.quora.com) question ["What is a
 
 Exemplifying:
 
+In a straightforward manner it's saying that a decimal number, for example 36, is representing the sum of two numbers (digits) multiplied by powers of 10.
+
+From left to right:
+ 
+> 36 = (6 * 10 ^ 0) + (3 * 10 ^ 1) = (6 * 1) + (3 * 10) = 6 + 30 = 36
 
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
 Include row and column numbers.**
