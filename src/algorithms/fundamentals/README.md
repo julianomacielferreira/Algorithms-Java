@@ -71,8 +71,7 @@ From right to left, the representation of the binary number 1010 in base ten is:
 
 > 1010 = (0 * 2 ^ 0) + (1 * 2 ^ 1) + (0 * 2 ^ 2) + (1 ^ 2 ^ 3) = (0 * 1) + (1 * 2) + (0 * 4) + (1 * 8) = 0 + 2 + 0 + 8 = 10
 
-With all said, the problem is asking us to implement the algorithm to make the inverse path.
-Given a number in base ten (in the example above, 36), convert it to binary.
+With all said, the problem is asking us to implement the algorithm to make the inverse path, i.e, given a number in base ten (in the example above, 36), convert it to binary.
 
 
     2 - Procedure
