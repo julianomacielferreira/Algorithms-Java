@@ -59,15 +59,21 @@ From right to left direction increases the power of the base (starting from 10 r
  
 > 36 = (6 * 10 ^ 0) + (3 * 10 ^ 1) = (6 * 1) + (3 * 10) = 6 + 30 = 36
 
-The quantity of numerals (symbols) is the same as the base. The base 10 has 10 digits => {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}.
+The quantity of numerals (symbols) is the same as the base. The base ten has 10 digits => {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}.
 
 The rule for the symbols is: start from 0 until _base - 1_.
  
 So the base two, starting from 0 until (2 - 1) has only the symbols {0, 1}.
 
-From right to left, the representation of the binary number 1010 in decimal is:
+From right to left, the representation of the binary number 1010 in base ten is:
 
 > 1010 = (0 * 2 ^ 0) + (1 * 2 ^ 1) + (0 * 2 ^ 2) + (1 ^ 2 ^ 3) = (0 * 1) + (1 * 2) + (0 * 4) + (1 * 8) = 0 + 2 + 0 + 8 = 10
+
+With all said, the problem is asking us to implement the algorithm to make the inverse path.
+Given a base 10 number (in the example above, 10), convert it to binary.
+
+
+    2 - Procedure
 
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
 Include row and column numbers.**
