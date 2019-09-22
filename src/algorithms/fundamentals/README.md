@@ -104,9 +104,13 @@ or
 
 > __n__ = ( __b__ * q ) + m<sub>0</sub>
 
-where using the distributive property:
+using the distributive property:
 
 > ( __b__ * q ) = m<sub>1</sub> * __b__<sup>1</sup> + m<sub>2</sub> * __b__<sup>2</sup> + ... + m<sub>i</sub> * __b__<sup>i</sup> = __b__ * (m<sub>1</sub> + m<sub>2</sub> * __b__<sup>1</sup> + m<sub>3</sub> * __b__<sup>2</sup> + ... + m<sub>i</sub> * __b__<sup>i - 1</sup>)
+
+and then:
+
+> __n__ = __b__ * (m<sub>1</sub> + m<sub>2</sub> * __b__<sup>1</sup> + m<sub>3</sub> * __b__<sup>2</sup> + ... + m<sub>i</sub> * __b__<sup>i - 1</sup>) + m<sub>0</sub>
 
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
 Include row and column numbers.**
