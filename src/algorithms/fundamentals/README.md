@@ -135,19 +135,19 @@ Start dividing by the base:
 
 > 36 / 2 = 18 (remainder=0, that's the m<sub>0</sub> digit)
 
-The quotient is 18 not {0, 1}, continuing dividing by the base:
+The quotient is 18 not {0, 1}, keep dividing by the base:
 
 > 18 / 2 = 9 (remainder=0, that's the m<sub>1</sub> digit)
 
-The quotient is 9 not {0, 1}, continuing dividing by the base:
+The quotient is 9 not {0, 1}, keep dividing by the base:
 
 > 9 / 2 = 4 (remainder=1, that's the m<sub>2</sub> digit)
 
-The quotient is 4 not {0, 1}, continuing dividing by the base:
+The quotient is 4 not {0, 1}, keep dividing by the base:
 
 > 4 / 2 = 2 (remainder=0, that's the m<sub>3</sub> digit)
 
-The quotient is 2 not {0, 1}, continuing dividing by the base:
+The quotient is 2 not {0, 1}, keep dividing by the base:
 
 > 2 / 2 = 1 (remainder=0, that's the m<sub>4</sub> digit)
 
