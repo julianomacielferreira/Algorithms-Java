@@ -151,7 +151,9 @@ The quotient is 2 not {0, 1}, continuing dividing by the base:
 
 > 2 / 2 = 1 (remainder=0, that's the m<sub>4</sub> digit)
 
-Finally, the quotient is {0, 1} (the m<sub>5</sub> digit). Now, it's just a matter of concatenating (from right to left) all remainders with the last quotient:
+Finally, the quotient is 1 (the m<sub>5</sub> digit). 
+
+Now, it's just a matter of concatenating (from right to left) all remainders with the last quotient:
 
 > 36 = 2 * (m<sub>1</sub> + m<sub>2</sub> * 2<sup>1</sup> + m<sub>3</sub> * 2<sup>2</sup> + m<sub>4</sub> * 2<sup>3</sup> + m<sub>5</sub> * 2<sup>4</sup>) + m<sub>0</sub> = 2 * (0 + 1 * 2<sup>1</sup> + 0 * 2<sup>2</sup> + 0 * 2<sup>3</sup> + 1 * 2<sup>4</sup>) + 0
 > = 2 * (0 + 2 + 0 + 0 + 16) + 0 = 2 * (18) + 0 = 36
