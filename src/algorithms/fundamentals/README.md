@@ -111,7 +111,7 @@ and then:
 
 > __n__ = __b__ * (m<sub>1</sub> + m<sub>2</sub> * __b__<sup>1</sup> + m<sub>3</sub> * __b__<sup>2</sup> + ... + m<sub>i</sub> * __b__<sup>i - 1</sup>) + m<sub>0</sub>
 
-With all __m<sub>i</sub>__'s in {0, 1,..., (b - 1)}.
+With all __m<sub>i</sub>__'s = {0, 1,..., (b - 1)}.
 
 Plugging the example numbers:
 
