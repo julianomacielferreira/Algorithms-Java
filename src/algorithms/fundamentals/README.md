@@ -168,6 +168,8 @@ The quotient is 2 not {0, 1}, keep dividing by the base:
 
 Finally, the quotient is 1 (the m<sub>5</sub> digit). 
 
+All the __m<sub>i</sub>__'s are {m<sub>0</sub>=0, m<sub>1</sub>=0,  m<sub>2</sub>=1, m<sub>3</sub>=0, m<sub>4</sub>=0, m<sub>5</sub>=1}.
+
 > 36 = 2 * (m<sub>1</sub> + m<sub>2</sub> * 2<sup>1</sup> + m<sub>3</sub> * 2<sup>2</sup> + m<sub>4</sub> * 2<sup>3</sup> + m<sub>5</sub> * 2<sup>4</sup>) + m<sub>0</sub><br>
 > 36 = 2 * (0 + 1 * 2<sup>1</sup> + 0 * 2<sup>2</sup> + 0 * 2<sup>3</sup> + 1 * 2<sup>4</sup>) + 0<br>
 > 36 = 2 * (0 + 2 + 0 + 0 + 16) + 0<br> 
