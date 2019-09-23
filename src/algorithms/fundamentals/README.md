@@ -116,7 +116,7 @@ Let's use numbers to see that:
 > With _n_ = 73 and _m_ = 5<br> 
 > We have (5 * q) <= 73 < 5 * (q + 1)<br>
 > Then, q = 14 and (5 * 14) <= 73 < 5 * (14 + 1)<br>
-> Is equal to 70 <= 73 < 75<br>   
+> Is equal to 70 <= 73 < 75<br>
 > The only natural numbers to represent the inequality are q = 14 and r = 73 - (5 * 14) = 3 (remember, r = _n_ - ( _m_ * q )).<br> 
 > So 73 = (5 * 14) + 3.
 
