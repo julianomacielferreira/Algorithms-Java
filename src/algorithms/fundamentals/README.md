@@ -51,7 +51,7 @@ for (int n = N; n > 0; n /= 2) {
 }
 ```
 
-comparing to the [implemented](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/DecimalTo.java), and there's one in the Java API, too.
+comparing to the [implemented](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/DecimalTo.java), and there's one in the [Java API](https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#toBinaryString-int-), too.
 
 But, to understand deeply why it works, it's important to try to create/recreate your own implementation.
 
