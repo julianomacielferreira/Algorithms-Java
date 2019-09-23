@@ -79,7 +79,9 @@ Reading the number from right to left (units, dozens, etc.) increases the power 
 > 36 = 6 + 30<br>
 > 36 = 36
 
-The quantity of numerals (symbols Indo-Arabic) is the same as the base. For example, base 10 has {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} digits.
+The quantity of numerals (symbols Indo-Arabic) is the same as the base. 
+
+For example, base 10 has {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} digits.
 
 The rule for the symbols is: start from 0 until _base - 1_.
  
