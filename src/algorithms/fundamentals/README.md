@@ -163,9 +163,11 @@ Representing as {0, 1} it's just a matter of concatenating (from right to left) 
 
 > 36 = m<sub>5</sub>m<sub>4</sub>m<sub>3</sub>m<sub>2</sub>m<sub>1</sub>m<sub>0</sub> = 100100<sub>2</sub>
 
-Implement this procedure as a method in Java:
+Implement this procedure as a static method in Java:
 
 ```java
+public class DecimalTo {
+
     public static String binary(int n) {
 
         // Assuming only positive integers (not dealing with sign)
@@ -188,6 +190,7 @@ Implement this procedure as a method in Java:
             // Use module operator to get the remainder            
             int remainder = n % 2;
 
+            // Append the remainder because it always go to the result            
             buffer.append(String.valueOf(remainder));
 
             // Divide by the base and keep the quotient            
@@ -199,9 +202,12 @@ Implement this procedure as a method in Java:
             }
         }
 
-        // Return s in reverse order (right from left)
+        // Return the result in reverse order (right from left)
         return buffer.reverse().toString();
     }
+
+}
+
 ```
 
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
