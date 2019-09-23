@@ -228,7 +228,7 @@ public class DecimalTo {
 
 ```
 
-__Obs.:__ The problem statement does not specify but this solution can be implemented with recurrence and a Stack, LIFO (last-in-first-out).
+__Obs.:__ The problem statement does not specify but this solution can be implemented with recursion and a Stack, LIFO (last-in-first-out).
 
 The [test case](https://github.com/julianomacielferreira/Algorithms/blob/master/test/algorithms/fundamentals/DecimalToTest.java) is very simple:
 
