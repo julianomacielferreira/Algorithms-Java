@@ -106,7 +106,7 @@ It's about multiples and divisors of integer numbers and states the follow:
 > If (_m_ * q) <= _n_ (a multiple of _m_ is less than _n_), implies that there's a natural number r (remainder) such that _n_ = ( _m_ * q ) + r (r < _m_).<br>
 > If r = 0, so _n_ = ( _m_ * q ), i.e, _m_ is multiple of _n_.
 
-So, summarizing the above there's a theorem specifying that:
+So, summarizing the above is the theorem:
 
 > For any natural numbers _n_ and _m_, with _m_ != 0 (not null), there exists only one pair of numbers _q_ and _r_ such that _n_ = ( _m_ * q ) + r.
 
