@@ -98,7 +98,7 @@ With all said, the problem is asking us to implement the algorithm to make the i
 
 Now, it's necessary to understand very little about [Number theory](https://en.wikipedia.org/wiki/Number_theory) basics: **Euclid's Division Algorithm**
 
-It's about multiples and divisors of integer numbers.
+It's about multiples and divisors of integer numbers and states the follow:
 
 > Suppose _n_ is a natural number (i.e, 1, 2, 3, ..., etc.) not null (n > 0).<br> 
 > If _m_ is a natural number (i.e, 1, 2, 3, ..., etc.), so _m_ is a multiple of _n_ OR it's between two consecutives multiples of _m_.<br> 
