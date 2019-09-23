@@ -196,6 +196,7 @@ public class DecimalTo {
             // Divide by the base and keep the quotient            
             n /= 2;
 
+            // Check if it's in the base case
             if (n < 2) {
                 buffer.append(String.valueOf(n));
                 quotientNotZeroOrOne = false;
