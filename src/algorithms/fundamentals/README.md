@@ -163,7 +163,7 @@ Representing as {0, 1} it's just a matter of concatenating (from right to left) 
 
 > 36 = m<sub>5</sub>m<sub>4</sub>m<sub>3</sub>m<sub>2</sub>m<sub>1</sub>m<sub>0</sub> = 100100<sub>2</sub>
 
-Implement this procedure as a static method in Java:
+Implement this procedure as a [static method](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/DecimalTo.java) in Java:
 
 ```java
 public class DecimalTo {
