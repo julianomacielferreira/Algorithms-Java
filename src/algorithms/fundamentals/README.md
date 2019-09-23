@@ -104,7 +104,7 @@ It's about multiples and divisors of integer numbers and states the follow:
 > If _m_ is a natural number, so _m_ is a multiple of _n_ OR is between two consecutive multiples of _m_.<br> 
 > In algebraic notation: ( _m_ * q ) <= _n_ < _m_ * (q + 1)<br>
 > If (_m_ * q) <= _n_ (a multiple of _m_ is less than _n_), implies that there's a natural number r (remainder) such that _n_ = ( _m_ * q ) + r (r < _m_).<br>
-> If r is 0, so _n_ = ( _m_ * q ), i.e, _m_ is multiple of _n_.
+> If r = 0, so _n_ = ( _m_ * q ), i.e, _m_ is multiple of _n_.
 
 So, summarizing the above there's a theorem specifying that:
 
