@@ -51,6 +51,7 @@ public class DecimalTo {
             // Use module operator to get the remainder            
             int remainder = n % 2;
 
+            // Append the remainder because it always go to the result            
             buffer.append(String.valueOf(remainder));
 
             // Divide by the base and keep the quotient            
@@ -62,7 +63,7 @@ public class DecimalTo {
             }
         }
 
-        // Return s in reverse order (right from left)
+        // Return the result in reverse order (right from left)
         return buffer.reverse().toString();
     }
 
