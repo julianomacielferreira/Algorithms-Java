@@ -215,7 +215,25 @@ public class DecimalTo {
 
 ```
 
-The test 
+The [test case](https://github.com/julianomacielferreira/Algorithms/blob/master/test/algorithms/fundamentals/DecimalToTest.java) is very simple:
+
+```java
+public class DecimalToTest {
+
+    /**
+     * Test of binary method, of class DecimalTo.
+     */
+    @Test
+    public void testBinary() {
+        assertEquals("0", DecimalTo.binary(0));
+        assertEquals("1", DecimalTo.binary(1));
+        assertEquals("10", DecimalTo.binary(2));
+        assertEquals("1010", DecimalTo.binary(10));
+        assertEquals("100100", DecimalTo.binary(36));
+    }
+
+}
+```
 
 __Obs.:__ The problem statement does not specify but this solution can be improved using recurrence and a Stack, LIFO (last-in-first-out).
 
