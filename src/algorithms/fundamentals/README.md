@@ -111,7 +111,15 @@ and then:
 
 > __n__ = __b__ * (m<sub>1</sub> + m<sub>2</sub> * __b__<sup>1</sup> + m<sub>3</sub> * __b__<sup>2</sup> + ... + m<sub>i</sub> * __b__<sup>i - 1</sup>) + m<sub>0</sub>
 
-@TODO - Continue Here
+With all __m<sub>i</sub>__'s in {0, 1,..., (b - 1)}.
+
+Plugging the example numbers:
+
+> 36 = 10 * (3) + 6  {m<sub>0</sub>=6 and m<sub>1</sub>=3}
+
+> 365 = 10 * (6 + 3 * 10<sup>1</sup>) + 5 {m<sub>0</sub>=5, m<sub>1</sub>=6 and m<sub>2</sub>=3}
+
+> 1010<sub>2</sub> = 2 * (1 + 0 * 2<sup>1</sup> + 1 * 2<sup>2</sup>) + 0 {m<sub>0</sub>=0, m<sub>1</sub>=1, m<sub>2</sub>=0 and m<sub>3</sub>=1}
 
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
 Include row and column numbers.**
