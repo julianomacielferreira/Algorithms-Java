@@ -111,7 +111,7 @@ and then:
 
 > __n__ = __b__ * (m<sub>1</sub> + m<sub>2</sub> * __b__<sup>1</sup> + m<sub>3</sub> * __b__<sup>2</sup> + ... + m<sub>i</sub> * __b__<sup>i - 1</sup>) + m<sub>0</sub>
 
-With all __m<sub>i</sub>__'s = {0, 1,..., (b - 1)}.
+with all __m<sub>i</sub>__'s = {0, 1,..., (b - 1)}.
 
 Plugging the example numbers:
 
@@ -120,6 +120,42 @@ Plugging the example numbers:
 > 365 = 10 * (6 + 3 * 10<sup>1</sup>) + 5 {m<sub>0</sub>=5, m<sub>1</sub>=6 and m<sub>2</sub>=3}
 
 > 1010<sub>2</sub> = 2 * (1 + 0 * 2<sup>1</sup> + 1 * 2<sup>2</sup>) + 0 {m<sub>0</sub>=0, m<sub>1</sub>=1, m<sub>2</sub>=0 and m<sub>3</sub>=1}
+
+So to convert any number __n__ in base ten to binary, it's necessary that its representation be:
+
+ __n__ = 2 * (m<sub>1</sub> + m<sub>2</sub> * __b__<sup>1</sup> + m<sub>3</sub> * __b__<sup>2</sup> + ... + m<sub>i</sub> * __b__<sup>i - 1</sup>) + m<sub>0</sub>
+
+with all __m<sub>i</sub>__'s = {0, 1}.
+
+To do that it's just a matter of using successive divisions by the base we wish to convert __keeping each remainder and the last quotient until it's {0, 1}__:
+
+> 36 = ????<sub>2</sub>
+
+Start dividing by the base:
+
+> 36 / 2 = 18 (remainder=0, that's the m<sub>0</sub> digit)
+
+The quotient is 18 not {0, 1}, continuing dividing by the base:
+
+> 18 / 2 = 9 (remainder=0, that's the m<sub>1</sub> digit)
+
+The quotient is 9 not {0, 1}, continuing dividing by the base:
+
+> 9 / 2 = 4 (remainder=1, that's the m<sub>2</sub> digit)
+
+The quotient is 4 not {0, 1}, continuing dividing by the base:
+
+> 4 / 2 = 2 (remainder=0, that's the m<sub>3</sub> digit)
+
+The quotient is 2 not {0, 1}, continuing dividing by the base:
+
+> 2 / 2 = 1 (remainder=0, that's the m<sub>4</sub> digit)
+
+Finally, the quotient is {0, 1} (the m<sub>5</sub> digit). Now, it's just a matter of concatenating (from right to left) all remainders with the last quotient:
+
+> 36 = 2 * (m<sub>1</sub> + m<sub>2</sub> * 2<sup>1</sup> + m<sub>3</sub> * 2<sup>2</sup> + m<sub>4</sub> * 2<sup>3</sup> + m<sub>5</sub> * 2<sup>4</sup>) + m<sub>0</sub> = 2 * (0 + 1 * 2<sup>1</sup> + 0 * 2<sup>2</sup> + 0 * 2<sup>3</sup> + 1 * 2<sup>4</sup>) + 0
+> = 2 * (0 + 2 + 0 + 0 + 16) + 0 = 2 * (18) + 0 = 36
+
 
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
 Include row and column numbers.**
