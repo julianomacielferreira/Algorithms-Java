@@ -163,6 +163,47 @@ Representing as {0, 1} it's just a matter of concatenating (from right to left) 
 
 > 36 = m<sub>5</sub>m<sub>4</sub>m<sub>3</sub>m<sub>2</sub>m<sub>1</sub>m<sub>0</sub> = 100100<sub>2</sub>
 
+Implement this procedure as a method in Java:
+
+```java
+    public static String binary(int n) {
+
+        // Assuming only positive integers (not dealing with sign)
+        n = Math.abs(n);
+
+        // If n is {0,1} just return it
+        if (n < 2) {
+            return String.valueOf(n);
+        }
+
+        // Using StringBuilder to improve performance
+        StringBuilder buffer = new StringBuilder();
+
+        // Flag to stop the iteration        
+        boolean quotientNotZeroOrOne = true;
+
+        // Start the sucessive divisions keeping the remainder    
+        while (quotientNotZeroOrOne) {
+
+            // Use module operator to get the remainder            
+            int remainder = n % 2;
+
+            buffer.append(String.valueOf(remainder));
+
+            // Divide by the base and keep the quotient            
+            n /= 2;
+
+            if (n < 2) {
+                buffer.append(String.valueOf(n));
+                quotientNotZeroOrOne = false;
+            }
+        }
+
+        // Return s in reverse order (right from left)
+        return buffer.reverse().toString();
+    }
+```
+
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
 Include row and column numbers.**
 

@@ -21,28 +21,27 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package algorithms;
+package algorithms.fundamentals;
 
-import algorithms.fundamentals.DecimalTo;
-import edu.princeton.cs.algs4.StdOut;
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
 
 /**
- * Entry point class (contains the main() method). It could be called Main.java,
- * Bootstrap.java, etc.
  *
  * @author juliano
  */
-public class Algorithms {
+public class DecimalToTest {
 
     /**
-     * @param args the command line arguments
+     * Test of binary method, of class DecimalTo.
      */
-    public static void main(String[] args) {
-
-//        Drawing.points(100);
-//        Drawing.random(50);
-//        Drawing.random(50, true);
-        StdOut.println(DecimalTo.binary(365));
+    @Test
+    public void testBinary() {
+        assertEquals("0", DecimalTo.binary(0));
+        assertEquals("1", DecimalTo.binary(1));
+        assertEquals("10", DecimalTo.binary(2));
+        assertEquals("1010", DecimalTo.binary(10));
+        assertEquals("100100", DecimalTo.binary(36));
     }
 
 }

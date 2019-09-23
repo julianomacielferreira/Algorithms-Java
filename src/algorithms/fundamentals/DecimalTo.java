@@ -21,28 +21,49 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package algorithms;
-
-import algorithms.fundamentals.DecimalTo;
-import edu.princeton.cs.algs4.StdOut;
+package algorithms.fundamentals;
 
 /**
- * Entry point class (contains the main() method). It could be called Main.java,
- * Bootstrap.java, etc.
  *
  * @author juliano
  */
-public class Algorithms {
+public class DecimalTo {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+    public static String binary(int n) {
 
-//        Drawing.points(100);
-//        Drawing.random(50);
-//        Drawing.random(50, true);
-        StdOut.println(DecimalTo.binary(365));
+        // Assuming only positive integers (not dealing with sign)
+        n = Math.abs(n);
+
+        // If n is {0,1} just return it
+        if (n < 2) {
+            return String.valueOf(n);
+        }
+
+        // Using StringBuilder to improve performance
+        StringBuilder buffer = new StringBuilder();
+
+        // Flag to stop the iteration        
+        boolean quotientNotZeroOrOne = true;
+
+        // Start the sucessive divisions keeping the remainder    
+        while (quotientNotZeroOrOne) {
+
+            // Use module operator to get the remainder            
+            int remainder = n % 2;
+
+            buffer.append(String.valueOf(remainder));
+
+            // Divide by the base and keep the quotient            
+            n /= 2;
+
+            if (n < 2) {
+                buffer.append(String.valueOf(n));
+                quotientNotZeroOrOne = false;
+            }
+        }
+
+        // Return s in reverse order (right from left)
+        return buffer.reverse().toString();
     }
 
 }
