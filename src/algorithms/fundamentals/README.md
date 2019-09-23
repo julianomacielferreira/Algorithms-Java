@@ -156,6 +156,9 @@ Finally, the quotient is {0, 1} (the m<sub>5</sub> digit). Now, it's just a matt
 > 36 = 2 * (m<sub>1</sub> + m<sub>2</sub> * 2<sup>1</sup> + m<sub>3</sub> * 2<sup>2</sup> + m<sub>4</sub> * 2<sup>3</sup> + m<sub>5</sub> * 2<sup>4</sup>) + m<sub>0</sub> = 2 * (0 + 1 * 2<sup>1</sup> + 0 * 2<sup>2</sup> + 0 * 2<sup>3</sup> + 1 * 2<sup>4</sup>) + 0
 > = 2 * (0 + 2 + 0 + 0 + 16) + 0 = 2 * (18) + 0 = 36
 
+Or representing as {0, 1}:
+
+> 36 = m<sub>5</sub>m<sub>4</sub>m<sub>3</sub>m<sub>2</sub>m<sub>1</sub>m<sub>0</sub> = 100100<sub>2</sub>
 
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
 Include row and column numbers.**
