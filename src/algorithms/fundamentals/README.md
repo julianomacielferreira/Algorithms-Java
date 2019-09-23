@@ -176,7 +176,7 @@ All the __m<sub>i</sub>__'s are m<sub>0</sub>=0, m<sub>1</sub>=0,  m<sub>2</sub>
 > 36 = 2 * (18) + 0<br> 
 > 36 = 36
 
-Representing as {0, 1} it's just a matter of concatenating (from right to left) all remainders (__m<sub>i</sub>__'s) with the last quotient:
+Representing as {0, 1} it's just a matter of concatenating  all __m<sub>i</sub>__'s (from right to left):
 
 > 36 = m<sub>5</sub>m<sub>4</sub>m<sub>3</sub>m<sub>2</sub>m<sub>1</sub>m<sub>0</sub> = 100100<sub>2</sub>
 
