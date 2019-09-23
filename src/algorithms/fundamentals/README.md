@@ -40,6 +40,10 @@ In summary, the approach is:
 
 **1.1.9: Write a code fragment that puts the binary representation of a positive _integer N_ into a _String s_.**
 
+**_Observation:_** 
+The book already provides a much simpler solution comparing to the described below, and there's one in the Java API too.
+But, in my opinion, the point is to understand the concepts and try to create/recreate your own implementation.
+
 **_Solution:_** 
     
 Decomposing this problem is very easy, it's giving us the input and output:
@@ -210,6 +214,8 @@ public class DecimalTo {
 }
 
 ```
+
+The test 
 
 __Obs.:__ The problem statement does not specify but this solution can be improved using recurrence and a Stack, LIFO (last-in-first-out).
 
