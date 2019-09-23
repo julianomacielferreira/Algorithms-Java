@@ -45,4 +45,17 @@ public class DecimalToTest {
         assertEquals("111010110111100110100010101", DecimalTo.binary(123456789));
     }
 
+    /**
+     * Test of binary method, of class DecimalTo, compared to the Java API.
+     */
+    @Test
+    public void testBinaryWithJavaAPI() {
+        assertEquals(Integer.toBinaryString(0), DecimalTo.binary(0));
+        assertEquals(Integer.toBinaryString(1), DecimalTo.binary(1));
+        assertEquals(Integer.toBinaryString(2), DecimalTo.binary(2));
+        assertEquals(Integer.toBinaryString(10), DecimalTo.binary(10));
+        assertEquals(Integer.toBinaryString(36), DecimalTo.binary(36));
+        assertEquals(Integer.toBinaryString(123456789), DecimalTo.binary(123456789));
+    }
+
 }

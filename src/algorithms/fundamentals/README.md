@@ -51,9 +51,9 @@ for (int n = N; n > 0; n /= 2) {
 }
 ```
 
-comparing to the [implemented](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/DecimalTo.java), and there's one in the [Java API](https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#toBinaryString-int-), too.
+compared to the [implemented](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/DecimalTo.java) below, and there's one in the [Java API](https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#toBinaryString-int-), too.
 
-But, to understand deeply why it works, it's important to try to create/recreate your own implementation.
+But, to understand why this solutions works, it's important to try to create/recreate your own implementation.
 
 **_Solution:_** 
     
@@ -62,9 +62,9 @@ Decomposing this problem is very easy, it's giving us the input and output:
     - Inputs: an integer (int) variable N.
     - Output: a String s representing the binary form of the decimal number.
         
-To define the _Procedure_  it's necessary to understand some fundamentals about [Positional notation](https://en.wikipedia.org/wiki/Positional_notation) and [Numeral Systems](https://en.wikipedia.org/wiki/Numeral_system). 
+To define the _Procedure_,  it's necessary an overview of [Positional notation](https://en.wikipedia.org/wiki/Positional_notation) and [Numeral Systems](https://en.wikipedia.org/wiki/Numeral_system). 
 
-The definition is taken from [Quora](https://www.quora.com) question ["What is a positional number system?"](https://www.quora.com/What-is-a-positional-number-system)
+The definition is taken from a [Quora](https://www.quora.com) question ["What is a positional number system?"](https://www.quora.com/What-is-a-positional-number-system)
 
 > A positional (numeral) system is a system for representation of numbers by an ordered set of numerals symbols (called digits) in which the value of a numeral symbol depends on its position
 
@@ -72,19 +72,25 @@ Exemplifying:
 
 In a straightforward manner it's saying that a decimal number, for example 36, is equal to the sum of two numbers (digits) multiplied by powers of 10. 
 
-From right to left direction increases the power of the base (starting from 10 raised to 0):
+Reading the number from right to left (units, dozens, etc.) increases the power of the base (starting from 10 raised to 0):
  
-> 36 = (6 x 10<sup>0</sup>) + (3 x 10<sup>1</sup>) = (6 x 1) + (3 x 10) = 6 + 30 = 36
+> 36 = (6 x 10<sup>0</sup>) + (3 x 10<sup>1</sup>)<br>
+> 36 = (6 x 1) + (3 x 10)<br>
+> 36 = 6 + 30<br>
+> 36 = 26
 
-The quantity of numerals (symbols) is the same as the base. The base ten has 10 digits -> {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}.
+The quantity of numerals (symbols Indo-Arabic) is the same as the base. For example, base 10 has {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} digits.
 
 The rule for the symbols is: start from 0 until _base - 1_.
  
-So the base two, starting from 0 until (2 - 1) has only the symbols {0, 1}.
+So the base two, starting from 0 until (2 - 1) has {0, 1}.
 
 From right to left, the representation of the binary number 1010<sub>2</sub> in base ten is:
 
-> 1010 = (0 x 2<sup>0</sup>) + (1 x 2<sup>1</sup>) + (0 x 2<sup>2</sup>) + (1 x 2<sup>3</sup>) = (0 x 1) + (1 x 2) + (0 x 4) + (1 x 8) = 0 + 2 + 0 + 8 = 10
+> 1010<sub>2</sub> = (0 x 2<sup>0</sup>) + (1 x 2<sup>1</sup>) + (0 x 2<sup>2</sup>) + (1 x 2<sup>3</sup>)<br>
+> 1010<sub>2</sub> = (0 x 1) + (1 x 2) + (0 x 4) + (1 x 8)<br>
+> 1010<sub>2</sub> = 0 + 2 + 0 + 8<br>
+> 1010<sub>2</sub> = 10<br>
 
 With all said, the problem is asking us to implement the algorithm to make the inverse path, i.e, given a number in base decimal, convert it to binary: 10 = 1010<sub>2</sub>.
 
@@ -102,7 +108,7 @@ So, summarizing the above there's a theorem specifying that:
 
 > For any natural numbers _n_ and _m_, with _m_ != 0 (not null), there exists only one pair of numbers _q_ and _r_ such that _n_ = ( _m_ * q ) + r.
 
-Let's plug numbers to see that:
+Let's use numbers to see that:
 
 > When _n_ = 73 and _m_ = 5,<br> 
 > We have ( _m_ * q ) <= _n_ < _m_ * (q + 1) is (5 * q) <= 73 < 5 * (q + 1).<br> 
@@ -245,6 +251,20 @@ public class DecimalToTest {
         assertEquals("10", DecimalTo.binary(2));
         assertEquals("1010", DecimalTo.binary(10));
         assertEquals("100100", DecimalTo.binary(36));
+        assertEquals("111010110111100110100010101", DecimalTo.binary(123456789));
+    }
+
+    /**
+     * Test of binary method, of class DecimalTo, compared to the Java API.
+     */
+    @Test
+    public void testBinaryWithJavaAPI() {
+        assertEquals(Integer.toBinaryString(0), DecimalTo.binary(0));
+        assertEquals(Integer.toBinaryString(1), DecimalTo.binary(1));
+        assertEquals(Integer.toBinaryString(2), DecimalTo.binary(2));
+        assertEquals(Integer.toBinaryString(10), DecimalTo.binary(10));
+        assertEquals(Integer.toBinaryString(36), DecimalTo.binary(36));
+        assertEquals(Integer.toBinaryString(123456789), DecimalTo.binary(123456789));
     }
 
 }
