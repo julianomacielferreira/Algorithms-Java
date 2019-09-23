@@ -215,6 +215,8 @@ public class DecimalTo {
 
 ```
 
+__Obs.:__ The problem statement does not specify but this solution can be implemented with recurrence and a Stack, LIFO (last-in-first-out).
+
 The [test case](https://github.com/julianomacielferreira/Algorithms/blob/master/test/algorithms/fundamentals/DecimalToTest.java) is very simple:
 
 ```java
@@ -235,7 +237,7 @@ public class DecimalToTest {
 }
 ```
 
-__Obs.:__ The problem statement does not specify but this solution can be improved using recurrence and a Stack, LIFO (last-in-first-out).
+![](assets/screenshots/3.png)
 
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
 Include row and column numbers.**
