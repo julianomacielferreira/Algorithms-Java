@@ -94,7 +94,7 @@ From right to left, the representation of the binary number 1010<sub>2</sub> in 
 > 1010<sub>2</sub> = 0 + 2 + 0 + 8<br>
 > 1010<sub>2</sub> = 10<br>
 
-With all said, the problem is asking us to implement the algorithm to make the inverse path, i.e, given a number in base decimal, convert it to binary: 10 = 1010<sub>2</sub>.
+With all said, the problem is asking us to implement the algorithm to make the inverse of the example above, i.e, given a number in base decimal convert it to binary: 10 = 1010<sub>2</sub>.
 
 Now, it's necessary to understand very little about [Number theory](https://en.wikipedia.org/wiki/Number_theory) basics: **Euclid's Division Algorithm**
 
