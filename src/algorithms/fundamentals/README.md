@@ -112,14 +112,14 @@ So, summarizing the above is the theorem:
 
 Let's use numbers to see that:
 
-> Let ( _m_ * q ) <= _n_ < _m_ * (q + 1)<br>
-> With _n_ = 73 and _m_ = 5<br> 
-> We have (5 * q) <= 73 < 5 * (q + 1)<br>
-> Then, q = 14 and (5 * 14) <= 73 < 5 * (14 + 1)<br>
-> Is equal to 70 <= 73 < 75<br>
+> Let: ( _m_ * q ) <= _n_ < _m_ * (q + 1)<br>
+> With: _n_ = 73 and _m_ = 5<br> 
+> We have: (5 * q) <= 73 < 5 * (q + 1)<br>
+> Then: q = 14 and (5 * 14) <= 73 < 5 * (14 + 1)<br>
+> Is equal to: 70 <= 73 < 75<br>
 > The only natural numbers to represent the inequality are:<br>
 > q = 14, r = 73 - (5 * 14) = 3 (remember, r = _n_ - ( _m_ * q )).<br>
-> So 73 = (5 * 14) + 3.
+> So: 73 = (5 * 14) + 3.
 
 The concepts shows that any number __n__ (n > 1) in a base __b__, with __m__ being the numerals {0, 1, 2, ..., (b - 1)}, can be represented uniquely as: 
 
