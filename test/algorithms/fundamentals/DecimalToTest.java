@@ -42,6 +42,7 @@ public class DecimalToTest {
         assertEquals("10", DecimalTo.binary(2));
         assertEquals("1010", DecimalTo.binary(10));
         assertEquals("100100", DecimalTo.binary(36));
+        assertEquals("111010110111100110100010101", DecimalTo.binary(123456789));
     }
 
 }
