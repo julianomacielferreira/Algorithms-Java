@@ -54,10 +54,10 @@ public class DecimalTo {
             // Append the remainder because it always go to the result            
             buffer.append(String.valueOf(remainder));
 
-            // Divide by the base and keep the quotient            
+            // Divide by the base      
             n /= 2;
 
-            // Check if it's in the base case to stop the iteration      
+            // Check if the quotient is {0, 1} to stop the iteration      
             if (n < 2) {
                 buffer.append(String.valueOf(n));
                 quotientNotZeroOrOne = false;
