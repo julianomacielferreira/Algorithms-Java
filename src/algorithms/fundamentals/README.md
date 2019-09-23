@@ -41,7 +41,7 @@ In summary, the approach is:
 **1.1.9: Write a code fragment that puts the binary representation of a positive _integer N_ into a _String s_.**
 
 **_Observation:_** 
-The book already provides a much simpler solution comparing to the described below, and there's one in the Java API too.
+The book already provides a much simpler solution comparing to the [implemented](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/DecimalTo.java), and there's one in the Java API too.
 But, in my opinion, the point is to understand the concepts and try to create/recreate your own implementation.
 
 **_Solution:_** 
