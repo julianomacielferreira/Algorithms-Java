@@ -61,6 +61,8 @@ public class DecimalTo {
             if (n < 2) {
                 // The last quotient is the highest order term
                 buffer.append(String.valueOf(n));
+                
+                // Set the flag to false to stop the iteration
                 quotientNotZeroOrOne = false;
             }
         }
