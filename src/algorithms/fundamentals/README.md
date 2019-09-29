@@ -344,6 +344,8 @@ public class MatrixTest {
 }
 ```
 
+![](../../../assets/screenshots/4.png)
+
 __Obs.:__ I don't implement the print method logic because the test case is already testing if it works.
 
 
