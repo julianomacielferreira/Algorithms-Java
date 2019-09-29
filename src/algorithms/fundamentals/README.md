@@ -303,7 +303,7 @@ public class Matrix {
      * array, NOT ragged, with M rows and N columns.
      *
      * @param a two-dimensional array NOT ragged.
-     * @return
+     * @return the transpose of the array
      */
     public static int[][] transpositionOf(int a[][]) {
 
