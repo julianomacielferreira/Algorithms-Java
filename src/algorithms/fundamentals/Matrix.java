@@ -38,14 +38,18 @@ public class Matrix {
      */
     public static int[][] transposition(int a[][]) {
 
+        // The columns of b is the number of rows of a (a.length)
         int columns = a.length;
-        int rows = a[0].length; // The two-dimensional array is not ragged
+        
+        // Because a is not ragged, all rows have the same number os columns 
+        // and it's enough get the length of one column.
+        int rows = a[0].length;  
 
         int b[][] = new int[rows][columns];
 
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[i].length; j++) {
-                b[j][i] = a[i][j];
+                b[j][i] = a[i][j]; // Here is where the swap happens
             }
         }
 
