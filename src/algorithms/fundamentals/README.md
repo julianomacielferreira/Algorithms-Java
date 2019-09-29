@@ -303,22 +303,22 @@ public class Matrix {
      * array, NOT ragged, with M rows and N columns.
      *
      * @param a two-dimensional array NOT ragged.
-     * @return the transpose of the array
+     * @return the transpose of the array.
      */
     public static int[][] transpositionOf(int a[][]) {
 
-        // The columns of b is the number of rows of a (a.length)
+        // The columns of b is the number of rows of a (a.length).
         int columns = a.length;
-        
+
         // Because a is not ragged, all rows have the same number os columns 
         // and it's enough get the length of one column.
-        int rows = a[0].length;  
+        int rows = a[0].length;
 
         int b[][] = new int[rows][columns];
 
-        for (int i = 0; i < a.length; i++) {
-            for (int j = 0; j < a[i].length; j++) {
-                b[j][i] = a[i][j]; // Here is where the swap happens
+        for (int i = 0; i < a.length; i++) { // Iterate over the rows of a.  
+            for (int j = 0; j < a[i].length; j++) { // Iterate over the columns of each i-row.        
+                b[j][i] = a[i][j]; // Here is where the swap happens.
             }
         }
 
