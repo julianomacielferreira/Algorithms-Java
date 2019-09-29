@@ -40,10 +40,10 @@ public class Matrix {
 
         // The columns of b is the number of rows of a (a.length)
         int columns = a.length;
-        
+
         // Because a is not ragged, all rows have the same number os columns 
         // and it's enough get the length of one column.
-        int rows = a[0].length;  
+        int rows = a[0].length;
 
         int b[][] = new int[rows][columns];
 

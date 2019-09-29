@@ -36,7 +36,7 @@ public class MatrixTest {
      * Test of transposition method, of class Matrix.
      */
     @Test
-    public void testTransposition() {
+    public void testTranspositionOf() {
 
         int[][] a = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         int[][] b = {{1, 4, 7}, {2, 5, 8}, {3, 6, 9}};
