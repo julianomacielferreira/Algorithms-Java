@@ -293,7 +293,7 @@ Include row and column numbers.**
 
 **_Solution:_** 
 
-Assuming that the two-dimensional array of integers is not ragged, the solution is very straightforward:
+Assuming that the two-dimensional array of integers is not ragged, the [solution](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/Matrix.java) is very straightforward:
 
 ```java
 public class Matrix {
@@ -305,7 +305,7 @@ public class Matrix {
      * @param a two-dimensional array NOT ragged.
      * @return
      */
-    public static int[][] transposition(int a[][]) {
+    public static int[][] transpositionOf(int a[][]) {
 
         // The columns of b is the number of rows of a (a.length)
         int columns = a.length;
@@ -327,7 +327,7 @@ public class Matrix {
 }
 ```
 
-The test case is very simple:
+The [test case](https://github.com/julianomacielferreira/Algorithms/blob/master/test/algorithms/fundamentals/MatrixTest.java) is very simple:
 
 ```java
 public class MatrixTest {

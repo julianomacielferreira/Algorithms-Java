@@ -41,8 +41,8 @@ public class MatrixTest {
         int[][] a = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         int[][] b = {{1, 4, 7}, {2, 5, 8}, {3, 6, 9}};
 
-        assertArrayEquals(b, Matrix.transposition(a));
-        assertArrayEquals(a, Matrix.transposition(b));
+        assertArrayEquals(b, Matrix.transpositionOf(a));
+        assertArrayEquals(a, Matrix.transpositionOf(b));
     }
 
 }

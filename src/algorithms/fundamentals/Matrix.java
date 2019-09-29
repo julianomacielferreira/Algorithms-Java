@@ -36,7 +36,7 @@ public class Matrix {
      * @param a two-dimensional array NOT ragged.
      * @return
      */
-    public static int[][] transposition(int a[][]) {
+    public static int[][] transpositionOf(int a[][]) {
 
         // The columns of b is the number of rows of a (a.length)
         int columns = a.length;
