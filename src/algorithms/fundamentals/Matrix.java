@@ -39,9 +39,9 @@ public class Matrix {
     public static int[][] transposition(int a[][]) {
 
         int columns = a.length;
-        int rowls = a[0].length; // The two-dimensional array is not ragged
+        int rows = a[0].length; // The two-dimensional array is not ragged
 
-        int b[][] = new int[rowls][columns];
+        int b[][] = new int[rows][columns];
 
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[i].length; j++) {
