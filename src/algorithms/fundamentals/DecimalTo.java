@@ -29,6 +29,12 @@ package algorithms.fundamentals;
  */
 public class DecimalTo {
 
+    /**
+     * Converts an integer from decimal to binary and returns it as string.
+     *
+     * @param n
+     * @return the binary string representing the number n
+     */
     public static String binary(int n) {
 
         // Assuming only positive integers (not dealing with sign)
@@ -61,7 +67,7 @@ public class DecimalTo {
             if (n < 2) {
                 // The last quotient is the highest order term
                 buffer.append(String.valueOf(n));
-                
+
                 // Set the flag to false to stop the iteration
                 quotientNotZeroOrOne = false;
             }

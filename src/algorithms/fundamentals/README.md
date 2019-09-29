@@ -291,7 +291,61 @@ Include row and column numbers.**
 
 **1.1.13: Write a code fragment to print the transposition (rows and columns changed) of a two-dimensional array with M rows and N columns.**
 
-**Solution:** @TODO - Solve it
+**_Solution:_** 
+
+Assuming that two-dimensional array is not ragged, the solution is very straightforward:
+
+```java
+public class Matrix {
+
+    /**
+     * Make the transposition (rows and columns changed) of a two-dimensional
+     * array, NOT ragged, with M rows and N columns.
+     *
+     * @param a two-dimensional array NOT ragged.
+     * @return
+     */
+    public static int[][] transposition(int a[][]) {
+
+        int columns = a.length;
+        int rowls = a[0].length; // The two-dimensional array is not ragged
+
+        int b[][] = new int[rowls][columns];
+
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                b[j][i] = a[i][j];
+            }
+        }
+
+        return b;
+    }
+}
+```
+
+The test case is very simple:
+
+```java
+public class MatrixTest {
+
+    /**
+     * Test of transposition method, of class Matrix.
+     */
+    @Test
+    public void testTransposition() {
+
+        int[][] a = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int[][] b = {{1, 4, 7}, {2, 5, 8}, {3, 6, 9}};
+
+        assertArrayEquals(b, Matrix.transposition(a));
+        assertArrayEquals(a, Matrix.transposition(b));
+    }
+
+}
+```
+
+__Obs.:__ I don't implement the print method logic because the test case is already testing if it works.
+
 
 **1.1.14: Write a static method **lg()** that takes an **int** value as argument and returns the largest int not larger than the base-2 logarithm of N. Do not use _Math_.**
 
