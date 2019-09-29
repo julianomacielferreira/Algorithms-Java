@@ -293,7 +293,7 @@ Include row and column numbers.**
 
 **_Solution:_** 
 
-Assuming that two-dimensional array is not ragged, the solution is very straightforward:
+Assuming that the two-dimensional array of integers is not ragged, the solution is very straightforward:
 
 ```java
 public class Matrix {
