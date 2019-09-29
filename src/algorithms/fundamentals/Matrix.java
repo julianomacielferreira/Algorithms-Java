@@ -26,17 +26,19 @@ package algorithms.fundamentals;
 /**
  *
  * @author juliano
+ * @param <T> type of the matrix elements
  */
-public class Matrix {
+public class Matrix<T> {
 
     /**
      * Make the transposition (rows and columns changed) of a two-dimensional
      * array, NOT ragged, with M rows and N columns.
      *
+     * @param <T> type of the array elements
      * @param a two-dimensional array NOT ragged.
      * @return the transpose of the array.
      */
-    public static int[][] transpositionOf(int a[][]) {
+    public static <T> T[][] transpositionOf(T a[][]) {
 
         // The columns of b is the number of rows of a (a.length).
         int columns = a.length;
@@ -45,7 +47,7 @@ public class Matrix {
         // and it's enough get the length of one column.
         int rows = a[0].length;
 
-        int b[][] = new int[rows][columns];
+        T[][] b = (T[][]) new Object[rows][columns];
 
         for (int i = 0; i < a.length; i++) { // Iterate over the rows of a.  
             for (int j = 0; j < a[i].length; j++) { // Iterate over the columns of each i-row.        

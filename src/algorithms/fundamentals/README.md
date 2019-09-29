@@ -293,19 +293,20 @@ Include row and column numbers.**
 
 **_Solution:_** 
 
-Assuming that the two-dimensional array of integers is not ragged, the [solution](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/Matrix.java) is very straightforward:
+Assuming that the two-dimensional array is not ragged, the [solution](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/Matrix.java) is very straightforward:
 
 ```java
-public class Matrix {
+public class Matrix<T> {
 
     /**
      * Make the transposition (rows and columns changed) of a two-dimensional
      * array, NOT ragged, with M rows and N columns.
      *
+     * @param <T> type of the array elements
      * @param a two-dimensional array NOT ragged.
      * @return the transpose of the array.
      */
-    public static int[][] transpositionOf(int a[][]) {
+    public static <T> T[][] transpositionOf(T a[][]) {
 
         // The columns of b is the number of rows of a (a.length).
         int columns = a.length;
@@ -314,7 +315,7 @@ public class Matrix {
         // and it's enough get the length of one column.
         int rows = a[0].length;
 
-        int b[][] = new int[rows][columns];
+        T[][] b = (T[][]) new Object[rows][columns];
 
         for (int i = 0; i < a.length; i++) { // Iterate over the rows of a.  
             for (int j = 0; j < a[i].length; j++) { // Iterate over the columns of each i-row.        
@@ -338,14 +339,21 @@ public class MatrixTest {
     @Test
     public void testTranspositionOf() {
 
-        int[][] a = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        int[][] b = {{1, 4, 7}, {2, 5, 8}, {3, 6, 9}};
+        Integer[][] a = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        Integer[][] b = {{1, 4, 7}, {2, 5, 8}, {3, 6, 9}};
 
         assertArrayEquals(b, Matrix.transpositionOf(a));
         assertArrayEquals(a, Matrix.transpositionOf(b));
+
+        Double[][] c = {{1.9, 2.8, 3.7}, {4.6, 5.5, 6.4}, {7.3, 8.2, 9.1}};
+        Double[][] d = {{1.9, 4.6, 7.3}, {2.8, 5.5, 8.2}, {3.7, 6.4, 9.1}};
+
+        assertArrayEquals(d, Matrix.transpositionOf(c));
+        assertArrayEquals(c, Matrix.transpositionOf(d));
     }
 
 }
+
 ```
 
 ![](../../../assets/screenshots/4.png)
