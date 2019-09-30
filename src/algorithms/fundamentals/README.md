@@ -302,6 +302,10 @@ _Example:_
 
 Suppose _a_ is 3x3 matrix:
 
+```java
+Integer[][] a = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+```
+
 | 1 | 2 | 3 |
 |---|---|---|
 | 4 | 5 | 6 |
@@ -309,6 +313,10 @@ Suppose _a_ is 3x3 matrix:
 
 
 the transposed is:
+
+```java
+Integer[][] b = {{1, 4, 7}, {2, 5, 8}, {3, 6, 9}};
+```
 
 | 1 | 4 | 7 |
 |---|---|---|
