@@ -345,6 +345,7 @@ public class Matrix<T> {
         // and it's enough get the length of one column.
         int rows = a[0].length;
 
+        // Instantiate an array of base type Object, and cast it to T type.        
         T[][] transposed = (T[][]) new Object[rows][columns];
 
         for (int i = 0; i < a.length; i++) { // Iterate over the rows of a.  
