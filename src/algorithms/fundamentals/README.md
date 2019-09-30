@@ -298,11 +298,12 @@ Decomposing this problem is very easy, it's giving us the input and output:
     - Inputs: a two-dimensional array.
     - Output: a transposed two-dimensional array.
   
-_Example.:_
+_Example:_
 
 Suppose _a_ is 3x3 matrix:
 
 | 1 | 2 | 3 |
+|---|---|---|
 | 4 | 5 | 6 |
 | 7 | 8 | 9 |
 
@@ -310,6 +311,7 @@ Suppose _a_ is 3x3 matrix:
 the transposed is:
 
 | 1 | 4 | 7 |
+|---|---|---|
 | 2 | 5 | 8 |
 | 3 | 6 | 9 |
 
