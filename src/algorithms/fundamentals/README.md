@@ -302,11 +302,18 @@ _Example.:_
 
 Suppose _a_ is 3x3 matrix:
 
---   --                   --   --
-|1 2 3|                   |1 4 7|
-|4 5 6| the transposed is |2 5 8|.
-|7 8 9|                   |3 6 9|  
---   --                   --   --
+| 1 | 2 | 3 |
+|---|---|---|
+| 4 | 5 | 6 |
+| 7 | 8 | 9 |
+
+
+the transposed is:
+
+| 1 | 4 | 7 |
+|---|---|---|
+| 2 | 5 | 8 |
+| 3 | 6 | 9 |
 
 Assuming that the two-dimensional array is not ragged, the [solution](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/Matrix.java) is very straightforward:
 
