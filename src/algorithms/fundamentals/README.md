@@ -293,6 +293,21 @@ Include row and column numbers.**
 
 **_Solution:_** 
 
+Decomposing this problem is very easy, it's giving us the input and output:
+
+    - Inputs: a two-dimensional array.
+    - Output: a transposed two-dimensional array.
+  
+_Example.:_
+
+Suppose _a_ is 3x3 matrix:
+
+--   --                   --   --
+|1 2 3|                   |1 4 7|
+|4 5 6| the transposed is |2 5 8|.
+|7 8 9|                   |3 6 9|  
+--   --                   --   --
+
 Assuming that the two-dimensional array is not ragged, the [solution](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/Matrix.java) is very straightforward:
 
 ```java
@@ -308,22 +323,22 @@ public class Matrix<T> {
      */
     public static <T> T[][] transpositionOf(T a[][]) {
 
-        // The columns of b is the number of rows of a (a.length).
+        // The columns of transposed is the number of rows of a (a.length).
         int columns = a.length;
 
         // Because a is not ragged, all rows have the same number os columns 
         // and it's enough get the length of one column.
         int rows = a[0].length;
 
-        T[][] b = (T[][]) new Object[rows][columns];
+        T[][] transposed = (T[][]) new Object[rows][columns];
 
         for (int i = 0; i < a.length; i++) { // Iterate over the rows of a.  
             for (int j = 0; j < a[i].length; j++) { // Iterate over the columns of each i-row.        
-                b[j][i] = a[i][j]; // Here is where the swap happens.
+                transposed[j][i] = a[i][j]; // Here is where the swap happens.
             }
         }
 
-        return b;
+        return transposed;
     }
 }
 ```

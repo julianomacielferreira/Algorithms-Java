@@ -40,21 +40,21 @@ public class Matrix<T> {
      */
     public static <T> T[][] transpositionOf(T a[][]) {
 
-        // The columns of b is the number of rows of a (a.length).
+        // The columns of transposed is the number of rows of a (a.length).
         int columns = a.length;
 
         // Because a is not ragged, all rows have the same number os columns 
         // and it's enough get the length of one column.
         int rows = a[0].length;
 
-        T[][] b = (T[][]) new Object[rows][columns];
+        T[][] transposed = (T[][]) new Object[rows][columns];
 
         for (int i = 0; i < a.length; i++) { // Iterate over the rows of a.  
             for (int j = 0; j < a[i].length; j++) { // Iterate over the columns of each i-row.        
-                b[j][i] = a[i][j]; // Here is where the swap happens.
+                transposed[j][i] = a[i][j]; // Here is where the swap happens.
             }
         }
 
-        return b;
+        return transposed;
     }
 }
