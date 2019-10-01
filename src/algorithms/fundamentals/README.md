@@ -389,7 +389,7 @@ public class MatrixTest {
 
 ![](../../../assets/screenshots/4.png)
 
-__Obs.:__ I don't implement the print method logic because the test case is already testing if it works.
+__Obs.:__ I did not implemented the print method logic because the test case is already checking it.
 
 
 **1.1.14: Write a static method **lg()** that takes an **int** value as argument and returns the largest int not larger than the base-2 logarithm of N. Do not use _Math_.**
