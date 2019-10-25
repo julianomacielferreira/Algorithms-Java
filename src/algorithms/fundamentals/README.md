@@ -305,6 +305,122 @@ boolean[][] booleanArray = {{false, true}, {true, false}};
 | 1 |   | * |
 | 2 | * |   |
 
+Assuming that the two-dimensional array is not ragged, the [solution](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/BooleanArray.java):
+
+```java
+public class BooleanArray {
+
+    /**
+     * This method prints the contents of a two-dimensional boolean
+     * booleanArray, using '*' to represent true and a 'space' to represent
+     * false (includes row and column numbers).
+     *
+     * @param booleanArray boolean booleanArray
+     */
+    public static String format(boolean[][] booleanArray) {
+
+        try {
+
+            // Using StringBuilder to improve performance
+            StringBuilder output = new StringBuilder();
+
+            // Get the length of first column to format the header (column numbers)
+            int columns = booleanArray[0].length;
+
+            // Add four spaces to start exactly above the first column
+            addSpaceToOutput(4, output);
+
+            // Add the column header to output            
+            for (int j = 1; j <= columns; j++) {
+                output.append(j);
+                addSpaceToOutput(1, output);
+            }
+
+            // Append new line before start the rows and columns
+            output.append("\n");
+
+            // Iterate over the rows
+            for (int i = 0; i < booleanArray.length; i++) {
+
+                // Add the row number to output 
+                output.append(i + 1);
+
+                addSpaceToOutput(1, output);
+
+                // Add the first separator of each row
+                output.append("|");
+
+                addSpaceToOutput(1, output);
+
+                // Iterate over each column of the i'th row
+                for (int j = 0; j < booleanArray[i].length; j++) {
+
+                    // If it's true add '*'
+                    if (booleanArray[i][j]) {
+
+                        output.append("*");
+                        addSpaceToOutput(1, output);
+
+                    } else {
+                        // False add two ' ' (spaces)
+                        addSpaceToOutput(2, output);
+                    }
+                }
+
+                // Append the separator and add new line
+                output.append("|\n");
+
+            }
+
+            return output.toString();
+
+        } catch (Exception e) {
+            return "Array is empty!";
+        }
+
+    }
+
+    /**
+     * Append an empty space to string builder.
+     *
+     * @param quantity
+     * @param output
+     */
+    private static void addSpaceToOutput(int quantity, StringBuilder output) {
+
+        final String space = " ";
+
+        for (int i = 0; i < quantity; i++) {
+            output.append(space);
+        }
+    }
+}
+```
+The [test case](https://github.com/julianomacielferreira/Algorithms/blob/master/test/algorithms/fundamentals/BooleanArrayTest.java) is very simple:
+
+```java
+public class BooleanArrayTest {
+
+    /**
+     * Test of format method, of class BooleanArray.
+     */
+    @Test
+    public void testFormat() {
+
+        boolean[][] booleanArray1 = {{false, true}, {true, false}, {true, true}};
+        String result1 = BooleanArray.format(booleanArray1);
+
+        String expResult = "    1 2 \n1 |   * |\n2 | *   |\n3 | * * |\n";
+        assertEquals(expResult, result1);
+
+        boolean[][] booleanArray2 = {{true, true}, {true, true}, {true, true}};
+        String result2 = BooleanArray.format(booleanArray2);
+        assertNotEquals(expResult, result2);
+    }
+
+}
+```
+
 **1.1.13: Write a code fragment to print the transposition (rows and columns changed) of a two-dimensional array with M rows and N columns.**
 
 **_Solution:_** 

@@ -30,28 +30,87 @@ package algorithms.fundamentals;
 public class BooleanArray {
 
     /**
-     * This method prints the contents of a two-dimensional boolean array, using
-     * '*' to represent true and a 'space' to represent false (includes row
-     * and column numbers).
+     * This method prints the contents of a two-dimensional boolean
+     * booleanArray, using '*' to represent true and a 'space' to represent
+     * false (includes row and column numbers).
      *
-     * @param array boolean array
+     * @param booleanArray boolean booleanArray
      */
-    public static void print(boolean[][] array) {
+    public static String format(boolean[][] booleanArray) {
 
-        // Using StringBuilder to improve performance
-        StringBuilder buffer = new StringBuilder();
+        try {
 
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                if (array[i][j]) {
-                    buffer.append("");
-                } else {
-                    buffer.append("");
+            // Using StringBuilder to improve performance
+            StringBuilder output = new StringBuilder();
+
+            // Get the length of first column to format the header (column numbers)
+            int columns = booleanArray[0].length;
+
+            // Add four spaces to start exactly above the first column
+            addSpaceToOutput(4, output);
+
+            // Add the column header to output            
+            for (int j = 1; j <= columns; j++) {
+                output.append(j);
+                addSpaceToOutput(1, output);
+            }
+
+            // Append new line before start the rows and columns
+            output.append("\n");
+
+            // Iterate over the rows
+            for (int i = 0; i < booleanArray.length; i++) {
+
+                // Add the row number to output 
+                output.append(i + 1);
+
+                addSpaceToOutput(1, output);
+
+                // Add the first separator of each row
+                output.append("|");
+
+                addSpaceToOutput(1, output);
+
+                // Iterate over each column of the i'th row
+                for (int j = 0; j < booleanArray[i].length; j++) {
+
+                    // If it's true add '*'
+                    if (booleanArray[i][j]) {
+
+                        output.append("*");
+                        addSpaceToOutput(1, output);
+
+                    } else {
+                        // False add two ' ' (spaces)
+                        addSpaceToOutput(2, output);
+                    }
                 }
 
+                // Append the separator and add new line
+                output.append("|\n");
+
             }
+
+            return output.toString();
+
+        } catch (Exception e) {
+            return "Array is empty!";
         }
 
-        System.out.println(buffer.toString());
+    }
+
+    /**
+     * Append an empty space to string builder.
+     *
+     * @param quantity
+     * @param output
+     */
+    private static void addSpaceToOutput(int quantity, StringBuilder output) {
+
+        final String space = " ";
+
+        for (int i = 0; i < quantity; i++) {
+            output.append(space);
+        }
     }
 }

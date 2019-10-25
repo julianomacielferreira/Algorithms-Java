@@ -21,34 +21,33 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package algorithms;
+package algorithms.fundamentals;
 
-import algorithms.fundamentals.BooleanArray;
-import algorithms.fundamentals.DecimalTo;
-import edu.princeton.cs.algs4.StdOut;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import org.junit.Test;
 
 /**
- * Entry point class (contains the main() method). It could be called Main.java,
- * Bootstrap.java, etc.
  *
  * @author juliano
  */
-public class Algorithms {
+public class BooleanArrayTest {
 
     /**
-     * @param args the command line arguments
+     * Test of format method, of class BooleanArray.
      */
-    public static void main(String[] args) {
+    @Test
+    public void testFormat() {
 
-//        Drawing.points(100);
-//        Drawing.random(50);
-//        Drawing.random(50, true);
-        StdOut.println(DecimalTo.binary(365));
+        boolean[][] booleanArray1 = {{false, true}, {true, false}, {true, true}};
+        String result1 = BooleanArray.format(booleanArray1);
 
-        boolean[][] arr = {{false, true}, {true, false}, {true, true}};
+        String expResult = "    1 2 \n1 |   * |\n2 | *   |\n3 | * * |\n";
+        assertEquals(expResult, result1);
 
-        StdOut.println(BooleanArray.format(arr));
-
+        boolean[][] booleanArray2 = {{true, true}, {true, true}, {true, true}};
+        String result2 = BooleanArray.format(booleanArray2);
+        assertNotEquals(expResult, result2);
     }
 
 }
