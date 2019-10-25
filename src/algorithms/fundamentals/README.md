@@ -287,7 +287,23 @@ public class DecimalToTest {
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
 Include row and column numbers.**
 
-**Solution:** @TODO - Solve it
+**Solution:** 
+
+The input and output to this problem are:
+    
+    - Input: a two-dimensiona boolean array like boolean[][] booleanArray = {{false, true}, {true, false}}
+    - Output: a representation of the array using '*' for true and ' ' (space) for false
+
+_Example:_
+
+```java
+boolean[][] booleanArray = {{false, true}, {true, false}};
+```
+
+|   | * |
+|---|---|
+| * |   |
+
 
 **1.1.13: Write a code fragment to print the transposition (rows and columns changed) of a two-dimensional array with M rows and N columns.**
 
