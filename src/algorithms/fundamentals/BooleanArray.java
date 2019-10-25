@@ -21,34 +21,37 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package algorithms;
-
-import algorithms.fundamentals.BooleanArray;
-import algorithms.fundamentals.DecimalTo;
-import edu.princeton.cs.algs4.StdOut;
+package algorithms.fundamentals;
 
 /**
- * Entry point class (contains the main() method). It could be called Main.java,
- * Bootstrap.java, etc.
  *
  * @author juliano
  */
-public class Algorithms {
+public class BooleanArray {
 
     /**
-     * @param args the command line arguments
+     * This method prints the contents of a two-dimensional boolean array, using
+     * '*' to represent true and a 'space' to represent false (includes row
+     * and column numbers).
+     *
+     * @param array boolean array
      */
-    public static void main(String[] args) {
+    public static void print(boolean[][] array) {
 
-//        Drawing.points(100);
-//        Drawing.random(50);
-//        Drawing.random(50, true);
-        StdOut.println(DecimalTo.binary(365));
-        
-        boolean[][] arr = {{false, true}, {true, false}};
-        
-        BooleanArray.print(arr);
-        
+        // Using StringBuilder to improve performance
+        StringBuilder buffer = new StringBuilder();
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (array[i][j]) {
+                    buffer.append("");
+                } else {
+                    buffer.append("");
+                }
+
+            }
+        }
+
+        System.out.println(buffer.toString());
     }
-
 }
