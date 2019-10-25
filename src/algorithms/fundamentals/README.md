@@ -421,6 +421,8 @@ public class BooleanArrayTest {
 }
 ```
 
+![](../../../assets/screenshots/5.png)
+
 **1.1.13: Write a code fragment to print the transposition (rows and columns changed) of a two-dimensional array with M rows and N columns.**
 
 **_Solution:_** 
