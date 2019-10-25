@@ -300,10 +300,10 @@ _Example:_
 boolean[][] booleanArray = {{false, true}, {true, false}};
 ```
 
-|   | * |
-|---|---|
-| * |   |
-
+|   | 1 | 2 |
+|---|---|---|
+| 1 |   | * |
+| 2 | * |   |
 
 **1.1.13: Write a code fragment to print the transposition (rows and columns changed) of a two-dimensional array with M rows and N columns.**
 
