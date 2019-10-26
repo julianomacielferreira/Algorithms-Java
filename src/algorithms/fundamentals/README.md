@@ -407,14 +407,16 @@ public class BooleanArrayTest {
     @Test
     public void testFormat() {
 
+        String expResult = "    1 2 \n1 |   * |\n2 | *   |\n3 | * * |\n";
+
         boolean[][] booleanArray1 = {{false, true}, {true, false}, {true, true}};
         String result1 = BooleanArray.format(booleanArray1);
 
-        String expResult = "    1 2 \n1 |   * |\n2 | *   |\n3 | * * |\n";
         assertEquals(expResult, result1);
 
         boolean[][] booleanArray2 = {{true, true}, {true, true}, {true, true}};
         String result2 = BooleanArray.format(booleanArray2);
+
         assertNotEquals(expResult, result2);
     }
 
