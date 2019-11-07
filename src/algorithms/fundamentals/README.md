@@ -530,7 +530,61 @@ __Obs.:__ I did not implemented the print method logic because the test case is 
 
 **1.1.14: Write a static method **lg()** that takes an **int** value as argument and returns the largest int not larger than the base-2 logarithm of N. Do not use _Math_.**
 
-**Solution:** @TODO - Solve it
+**Solution:** 
+
+Decomposing this problem is very easy, it's giving us the input and output:
+
+    - Inputs: an integer N.
+    - Output: the largest integer not greater than base-2 log of n.
+
+So, just divide the integer N by 2 and keep tracking of how many times the remainder continues above 1, incrementing a variable that is going to be the 2 exponent.
+
+```java
+public class LargestInteger {
+
+    /**
+     * This method takes an integer value as argument and returns the largest
+     * integer not larger than the base-2 logarithm of N (not using Math).
+     *
+     * @param n an arbitrary integer
+     * @return the largest integer not greater than base-2 log of n
+     */
+    public static int lg(int n) {
+
+        int largestIntegerNotGreater = 0;
+
+        for (int i = n; i > 1; i = i / 2) {
+            largestIntegerNotGreater++;
+        }
+
+        return largestIntegerNotGreater;
+    }
+}
+```
+
+The [test case](https://github.com/julianomacielferreira/Algorithms/blob/master/test/algorithms/fundamentals/LargestIntegerTest.java) is very simple:
+
+```java
+public class LargestIntegerTest {
+
+    /**
+     * Test of lg method, of class LargestInteger.
+     */
+    @Test
+    public void testLg() {
+
+        assertEquals(1, LargestInteger.lg(3));
+        assertEquals(2, LargestInteger.lg(4));
+        assertEquals(2, LargestInteger.lg(6));
+        assertEquals(2, LargestInteger.lg(7));
+        assertEquals(3, LargestInteger.lg(8));
+    }
+
+}
+```
+
+![](../../../assets/screenshots/6.png)
+
 
 **1.1.15: Write a static method _histogram()_ that takes an array a[] of _int_ values and an integer M as argument and returns an array of length M whose ith entry is the number of times
 the integer i appeared in the argument array. If the values in a[] are all between 0 and M-1, the sum of the values int the returned array should be equal to a.length.** 
