@@ -587,9 +587,77 @@ public class LargestIntegerTest {
 
 
 **1.1.15: Write a static method _histogram()_ that takes an array a[] of _int_ values and an integer M as argument and returns an array of length M whose ith entry is the number of times
-the integer i appeared in the argument array. If the values in a[] are all between 0 and M-1, the sum of the values int the returned array should be equal to a.length.** 
+the integer i appeared in the argument array. If the values in a[] are all between 0 and M-1, the sum of the values in the returned array should be equal to a.length.** 
 
-**Solution:** @TODO - Solve it
+**Solution:** 
+
+The input and output:
+
+    - Inputs: an array a[] of int values and an integer M.
+    - Output: an array of length M whose ith entry is the number of times the integer i appeared in the argument array.
+
+The solution is straightforward, just iterating the returned array and using a temporary variable to keep counting how many
+times the 'ith' integer appears as value of the argument array.
+
+```java
+public class Histogram {
+
+    /**
+     * Takes an array a[] of int values and an integer M as argument and returns
+     * an array of length M whose ith entry is the number of times the integer i
+     * appeared in the argument array.
+     *
+     * @param argArray argument array
+     * @param M length M of the returned array
+     * @return
+     */
+    public static int[] numberOfTimesIAppearedIn(int argArray[], int M) {
+
+        int returnedArray[] = new int[M];
+
+        // If the values in a[] are all between 0 and M - 1 the sum of the 
+        // values in the returned array should be equal to a.length.
+        for (int i = 0; i < returnedArray.length; i++) {
+            int totalIth = 0;
+
+            for (int j = 0; j < argArray.length; j++) {
+                if (argArray[j] == i) {
+                    totalIth++;
+                }
+            }
+
+            returnedArray[i] = totalIth;
+        }
+
+        return returnedArray;
+    }
+}
+```
+
+The [test case](https://github.com/julianomacielferreira/Algorithms/blob/master/test/algorithms/fundamentals/HistogramTest.java) is very simple:
+
+```java
+public class HistogramTest {
+
+    /**
+     * Test of numberOfTimesIAppearedIn method, of class Histogram.
+     */
+    @Test
+    public void testNumberOfTimesIAppearedIn() {
+
+        int[] a = {1, 1, 2, 2, 3, 4, 5, 6};
+
+        int M = 7;
+
+        int[] expResult = {0, 2, 2, 1, 1, 1, 1};
+
+        int[] result = Histogram.numberOfTimesIAppearedIn(a, M);
+
+        assertArrayEquals(expResult, result);
+    }
+
+}
+```
 
 # References
 
