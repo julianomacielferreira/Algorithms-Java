@@ -26,7 +26,7 @@ It's really complete with detailed (and others summarized) information about the
         - [Expressions, Statements, and Blocks](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/expressions.html)
         - [Control Flow Statements](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html)
 
-**I choose problems that, in my opinion, they are not hard. But should be nice to explain the process followed to solve.**
+**I choose problems that, in my opinion, are not hard to solve, but it should be nice to explain the process I followed to solve them.**
 
 In summary, the approach is:
 
@@ -70,22 +70,22 @@ The definition is taken from a [Quora](https://www.quora.com) question ["What is
 
 Exemplifying:
 
-In a straightforward manner it's saying that a decimal number, for example 36, is equal to the sum of two numbers (digits) multiplied by powers of 10. 
+In a straightforward manner, it's saying that a decimal number, for example 36, is equal to the sum of two numbers (digits) multiplied by powers of 10. 
 
-Reading the number from right to left (units, dozens, etc.) increases the power of the base (starting from 10 raised to 0):
+Reading the number 36, from right to left (units, dozens, etc.), increases the power of the base starting from 10 raised to 0 (i.e, 10<sup>0</sup>):
  
 > 36 = (6 x 10<sup>0</sup>) + (3 x 10<sup>1</sup>)<br>
 > 36 = (6 x 1) + (3 x 10)<br>
 > 36 = 6 + 30<br>
 > 36 = 36
 
-The quantity of numerals (symbols Indo-Arabic) is the same as the base. 
+The quantity of numerals (or symbols Indo-Arabic) are the same as the base. 
 
-For example, base 10 has {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} digits.
+For example, base 10 has { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 } digits.
 
 The rule for the symbols is: start from 0 until _base - 1_.
  
-So the base two, starting from 0 until (2 - 1) has {0, 1}.
+So the base two, starting from 0 until (2 - 1) has { 0, 1 }.
 
 From right to left, the representation of the binary number 1010<sub>2</sub> in base ten is:
 
@@ -94,7 +94,9 @@ From right to left, the representation of the binary number 1010<sub>2</sub> in 
 > 1010<sub>2</sub> = 0 + 2 + 0 + 8<br>
 > 1010<sub>2</sub> = 10<br>
 
-With all said, the problem is asking us to implement the algorithm to make the inverse of the example above, i.e, given a number in base decimal convert it to binary: 10 = 1010<sub>2</sub>.
+With all said, the problem is asking us to implement an algorithm to make the inverse of the example above, i.e, given a number in base decimal convert it to binary: 
+
+> 10 = 1010<sub>2</sub>.
 
 Now, it's necessary to understand very little about [Number theory](https://en.wikipedia.org/wiki/Number_theory) basics: **Euclid's Division Algorithm**
 
