@@ -153,7 +153,7 @@ Plugging the example numbers:
 
 > 1010<sub>2</sub> = 2 * (1 + 0 * 2<sup>1</sup> + 1 * 2<sup>2</sup>) + 0 {m<sub>0</sub>=0, m<sub>1</sub>=1, m<sub>2</sub>=0 and m<sub>3</sub>=1}
 
-So to convert any number __n__ in base ten to binary, it's necessary that its representation be:
+So, to convert any number __n__ (written in base ten) to binary, it's necessary that its representation be:
 
  __n__ = 2 * (m<sub>1</sub> + m<sub>2</sub> * __b__<sup>1</sup> + m<sub>3</sub> * __b__<sup>2</sup> + ... + m<sub>i</sub> * __b__<sup>i - 1</sup>) + m<sub>0</sub>
 
