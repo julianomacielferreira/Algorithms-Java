@@ -159,7 +159,7 @@ So, to convert any number __n__ (written in base ten) to binary, it's necessary 
 
 with all __m<sub>i</sub>__'s = {0, 1}.
 
-To do that it's just a matter of using successive divisions by the base we wish to convert __keeping each remainder and the last quotient until it's {0, 1}__:
+Doing that is just a matter of using successive divisions by the base we wish to convert __keeping each remainder and the last quotient until it's {0, 1}__:
 
 > 36 = ????<sub>2</sub>
 
