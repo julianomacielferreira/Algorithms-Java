@@ -123,7 +123,7 @@ Let's use numbers to see that:
 > q = 14, r = 73 - (5 * 14) = 3 (remember, r = _n_ - ( _m_ * q )).<br>
 > So: 73 = (5 * 14) + 3.
 
-The concepts shows that any number __n__ (n > 1) in a base __b__, with __m__ being the numerals {0, 1, 2, ..., (b - 1)}, can be represented uniquely as: 
+These concepts shows that any number __n__ (n > 1) in a base __b__, with __m__ being the numerals {0, 1, 2, ..., (b - 1)}, can be represented uniquely as: 
 
 > __n__ = m<sub>0</sub> + m<sub>1</sub> * __b__<sup>1</sup> + m<sub>2</sub> * __b__<sup>2</sup> + ... + m<sub>i</sub> * __b__<sup>i</sup> ( i >= 0 and m<sub>i</sub> != 0)
 
