@@ -13,6 +13,7 @@ and its book site is full of resources for learning and practicing.
 - [Book Standard Library](#book-standard-library)
 - [Algorithms](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms#README)
     - [Fundamentals Problem Set](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/#README)
+    - [Data Abstraction Problem Set](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/data.abstraction/#README)
 - [License](#license)
 - [References](#references)
 
