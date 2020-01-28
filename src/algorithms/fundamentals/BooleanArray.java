@@ -31,10 +31,11 @@ public class BooleanArray {
 
     /**
      * This method prints the contents of a two-dimensional boolean
-     * booleanArray, using '*' to represent true and a 'space' to represent
+     * array, using '*' to represent true and a 'space' to represent
      * false (includes row and column numbers).
      *
-     * @param booleanArray boolean booleanArray
+     * @param booleanArray boolean array
+     * @return two-dimensional boolean array string representation
      */
     public static String format(boolean[][] booleanArray) {
 
