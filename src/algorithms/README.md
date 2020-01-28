@@ -1,6 +1,6 @@
 # Algorithms Package
 
-@TODO - Define more what is inside.
+This package contains the classes and their respective static methods representing my solutions to the proposed exercises.
 
 # Table of contents
 
