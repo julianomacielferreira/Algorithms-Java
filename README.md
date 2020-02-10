@@ -1,4 +1,4 @@
-# Algorithms (SIDE PROJECT)
+# Algorithms in Java (SIDE PROJECT)
 
 The intention of this repository is to having fun and improve my skills on Algorithm Analysis and Design, 
 by implementing algorithms and solving proposed problems from the books.
