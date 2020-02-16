@@ -679,6 +679,13 @@ public class Fibonacci {
 
 **Develop a better implementation of F(N) that saves computed values in an array.**
 
+**Solution:** 
+
+The input and output:
+
+    - Inputs:
+    - Output:
+
 # References
 
 - ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)
