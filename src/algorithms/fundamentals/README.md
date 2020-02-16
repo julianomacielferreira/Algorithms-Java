@@ -284,8 +284,6 @@ public class DecimalToTest {
 }
 ```
 
-![](../../../assets/screenshots/3.png)
-
 **1.1.11: Write a code fragment that prints the contents of a two-dimensional boolean array, using * to represent true and a space to represent false.
 Include row and column numbers.**
 
@@ -426,8 +424,6 @@ public class BooleanArrayTest {
 }
 ```
 
-![](../../../assets/screenshots/5.png)
-
 **1.1.13: Write a code fragment to print the transposition (rows and columns changed) of a two-dimensional array with M rows and N columns.**
 
 **_Solution:_** 
@@ -526,8 +522,6 @@ public class MatrixTest {
 
 ```
 
-![](../../../assets/screenshots/4.png)
-
 __Obs.:__ I did not implemented the print method logic because the test case is already checking it.
 
 
@@ -585,9 +579,6 @@ public class LargestIntegerTest {
 
 }
 ```
-
-![](../../../assets/screenshots/6.png)
-
 
 **1.1.15: Write a static method _histogram()_ that takes an array a[] of _int_ values and an integer M as argument and returns an array of length M whose ith entry is the number of times
 the integer i appeared in the argument array. If the values in a[] are all between 0 and M-1, the sum of the values in the returned array should be equal to a.length.** 
@@ -661,6 +652,32 @@ public class HistogramTest {
 
 }
 ```
+
+**1.1.19: Run the following program on your computer:**
+
+```java
+public class Fibonacci {
+    
+    public static long F(int N) {
+        
+        if(N == 0) return 0;
+        if(N == 1) return 1;
+        
+        return F(N-1) + F(N - 2);
+    } 
+
+    public static void main(String[] args) {
+        
+        for(int N = 0; N < 100; N++) {
+            StdOut.println(N + " " + F(N));
+        }
+    }
+}
+```
+
+**What is the largest value of N for which this program takes less than 1 hour to compute the value of F(N)?**
+
+**Develop a better implementation of F(N) that saves computed values in an array.**
 
 # References
 
