@@ -694,3 +694,8 @@ To optimize the solution we have to use [Memoization](https://en.wikipedia.org/w
 - [The Java Tutorials](https://docs.oracle.com/javase/tutorial/tutorialLearningPaths.html)
 - [Mathematics Fundamentals I (Brazilian Portuguese)](http://mtm.grad.ufsc.br/files/2014/04/Fundamentos-de-Matem%C3%A1tica-I.pdf)
 - [Fundamentals of Arithmetic (Brazilian Portuguese)](https://livraria.ufsc.br/produto/818/fundamentos-de-aritmetica)
+- [Wikipedia Memoization definition](https://en.wikipedia.org/wiki/Memoization)
+
+# License
+
+Please see the [license agreement](https://github.com/julianomacielferreira/Algorithms/blob/master/LICENSE).

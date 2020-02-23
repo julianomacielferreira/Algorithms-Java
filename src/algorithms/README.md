@@ -6,3 +6,7 @@ This package contains the classes and their respective static methods representi
 
 - [Fundamentals Problem Set](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/#README)
 - [Data Abstraction Problem Set](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/data/abstraction/#README)
+
+# License
+
+Please see the [license agreement](https://github.com/julianomacielferreira/Algorithms/blob/master/LICENSE).
