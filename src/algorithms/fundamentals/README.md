@@ -686,8 +686,11 @@ The input and output:
     - Inputs: an integer N
     - Output: the Fibonacci of N.
 
-First, the definition of [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number) by Wikipedia is: In mathematics, the Fibonacci numbers, commonly denoted Fn, 
+First, the definition of [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number) by Wikipedia is: 
+
+> In mathematics, the Fibonacci numbers, commonly denoted Fn, 
 form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1.
+
 To optimize the solution we have to use [Memoization](https://en.wikipedia.org/wiki/Memoization) as an optimization technique.
 
 # References
