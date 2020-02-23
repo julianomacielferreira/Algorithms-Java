@@ -679,7 +679,7 @@ public class Fibonacci {
 
     - When reach 34 it completely slows down.
 
-**Develop a better implementation of F(N) that saves computed values in an ~~array~~ HashMap.**
+**Develop a better implementation of F(N) that saves computed values in ~~an array~~ HashMap.**
 
 **Solution:** 
 
