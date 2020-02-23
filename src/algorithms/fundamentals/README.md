@@ -683,8 +683,10 @@ public class Fibonacci {
 
 The input and output:
 
-    - Inputs:
-    - Output:
+    - Inputs: an integer N
+    - Output: the factorial of N. Ex.: N = 4 will return (4 + 3 + 2 + 1 + 0)
+
+To optimize the solution we have to use [Memoization](https://en.wikipedia.org/wiki/Memoization) an optimization technique.
 
 # References
 
