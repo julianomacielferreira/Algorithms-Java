@@ -677,9 +677,9 @@ public class Fibonacci {
 
 **What is the largest value of N for which this program takes less than 1 hour to compute the value of F(N)?**
 
-**Develop a better implementation of F(N) that saves computed values in an array.**
-
     - When reach 34 it completely slows down.
+
+**Develop a better implementation of F(N) that saves computed values in an array.**
 
 **Solution:** 
 
