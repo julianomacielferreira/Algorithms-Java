@@ -737,6 +737,27 @@ public class Fibonacci {
 }
 ```
 
+The [test case](https://github.com/julianomacielferreira/Algorithms/blob/master/test/algorithms/fundamentals/FibonacciTest.java) is very trivial:
+
+```java
+public class FibonacciTest {
+
+    /**
+     * Test of F method, of class Fibonacci.
+     */
+    @Test
+    public void testF() {
+
+        int N = 6;
+        long expResult = 8L;
+        long result = Fibonacci.F(N);
+
+        assertEquals(expResult, result);
+    }
+
+}
+```
+
 # References
 
 - ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)
