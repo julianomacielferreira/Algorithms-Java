@@ -693,6 +693,48 @@ form a sequence, called the Fibonacci sequence, such that each number is the sum
 
 To optimize the solution we have to use [Memoization](https://en.wikipedia.org/wiki/Memoization) as an optimization technique.
 
+```java
+public class Fibonacci {
+
+    // Use a Map to dynamically add and retrieve by key the values already computed    
+    private static final Map<Integer, Long> RESULT_CACHE = new HashMap<>();
+
+    /**
+     * Computes the Fibonacci number of N
+     *
+     * @param N
+     * @return
+     */
+    public static long F(int N) {
+
+        // If we cached the value, then return it
+        if (RESULT_CACHE.containsKey(N)) {
+            return RESULT_CACHE.get(N);
+        }
+
+        // Compute the Nth term 
+        long fibonnaci_value;
+
+        switch (N) {
+            case 0:
+                fibonnaci_value = 0;
+                break;
+            case 1:
+                fibonnaci_value = 1;
+                break;
+            default:
+                fibonnaci_value = F(N - 1) + F(N - 2);
+                break;
+        }
+
+        // Cache the value and return it        
+        RESULT_CACHE.put(N, fibonnaci_value);
+
+        return fibonnaci_value;
+    }
+}
+```
+
 # References
 
 - ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)

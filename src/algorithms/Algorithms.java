@@ -48,7 +48,7 @@ public class Algorithms {
 //
 //        StdOut.println(BooleanArray.format(arr));
         
-        for (int N = 0; N < 10; N++) {
+        for (int N = 0; N < 100; N++) {
             StdOut.println(N + " " + Fibonacci.F(N));
         }
 
