@@ -684,9 +684,11 @@ public class Fibonacci {
 The input and output:
 
     - Inputs: an integer N
-    - Output: the factorial of N. Ex.: N = 4 will return (4 + 3 + 2 + 1 + 0)
+    - Output: the Fibonacci of N.
 
-To optimize the solution we have to use [Memoization](https://en.wikipedia.org/wiki/Memoization) an optimization technique.
+First, the definition of [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number) by Wikipedia is: In mathematics, the Fibonacci numbers, commonly denoted Fn, 
+form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1.
+To optimize the solution we have to use [Memoization](https://en.wikipedia.org/wiki/Memoization) as an optimization technique.
 
 # References
 
@@ -695,6 +697,7 @@ To optimize the solution we have to use [Memoization](https://en.wikipedia.org/w
 - [Mathematics Fundamentals I (Brazilian Portuguese)](http://mtm.grad.ufsc.br/files/2014/04/Fundamentos-de-Matem%C3%A1tica-I.pdf)
 - [Fundamentals of Arithmetic (Brazilian Portuguese)](https://livraria.ufsc.br/produto/818/fundamentos-de-aritmetica)
 - [Wikipedia Memoization definition](https://en.wikipedia.org/wiki/Memoization)
+- [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number)
 
 # License
 

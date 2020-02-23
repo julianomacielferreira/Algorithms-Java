@@ -23,8 +23,7 @@
  */
 package algorithms;
 
-import algorithms.fundamentals.BooleanArray;
-import algorithms.fundamentals.DecimalTo;
+import algorithms.fundamentals.Fibonacci;
 import edu.princeton.cs.algs4.StdOut;
 
 /**
@@ -43,11 +42,15 @@ public class Algorithms {
 //        Drawing.points(100);
 //        Drawing.random(50);
 //        Drawing.random(50, true);
-        StdOut.println(DecimalTo.binary(365));
-
-        boolean[][] arr = {{false, true}, {true, false}, {true, true}};
-
-        StdOut.println(BooleanArray.format(arr));
+//        StdOut.println(DecimalTo.binary(365));
+//
+//        boolean[][] arr = {{false, true}, {true, false}, {true, true}};
+//
+//        StdOut.println(BooleanArray.format(arr));
+        
+        for (int N = 0; N < 10; N++) {
+            StdOut.println(N + " " + Fibonacci.F(N));
+        }
 
     }
 

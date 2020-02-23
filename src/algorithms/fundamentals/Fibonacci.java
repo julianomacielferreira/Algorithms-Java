@@ -23,8 +23,6 @@
  */
 package algorithms.fundamentals;
 
-import edu.princeton.cs.algs4.StdOut;
-
 /**
  *
  * @author juliano
@@ -41,12 +39,5 @@ public class Fibonacci {
         }
 
         return F(N - 1) + F(N - 2);
-    }
-
-    public static void main(String[] args) {
-
-        for (int N = 0; N < 100; N++) {
-            StdOut.println(N + " " + F(N));
-        }
     }
 }
