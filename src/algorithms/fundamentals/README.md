@@ -430,7 +430,7 @@ public class BooleanArrayTest {
 
 Decomposing this problem is very easy, it's giving us the input and output:
 
-    - Inputs: a two-dimensional array.
+    - Input: a two-dimensional array.
     - Output: a transposed two-dimensional array.
   
 _Example:_
@@ -531,7 +531,7 @@ __Obs.:__ I did not implemented the print method logic because the test case is 
 
 Decomposing this problem is very easy, it's giving us the input and output:
 
-    - Inputs: an integer N.
+    - Input: an integer N.
     - Output: the largest integer not greater than base-2 log of n.
 
 So, just divide the integer N by 2 and keep tracking of how many times the remainder continues above 1, incrementing a variable that is going to be the 2 exponent.
@@ -587,7 +587,7 @@ the integer i appeared in the argument array. If the values in a[] are all betwe
 
 Decomposing the input and output:
 
-    - Inputs: an array a[] of int values and an integer M.
+    - Input: an array a[] of int values and an integer M.
     - Output: an array of length M whose ith entry is the number of times the integer i appeared in the argument array.
 
 The solution is straightforward, just iterating the returned array and using a temporary variable to keep counting how many
@@ -685,7 +685,7 @@ public class Fibonacci {
 
 Decomposing the input and output:
 
-    - Inputs: an integer N
+    - Input: an integer N
     - Output: the Fibonacci of N.
 
 First, the definition of [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number) by Wikipedia is: 
@@ -766,7 +766,7 @@ public class FibonacciTest {
 
 Decomposing the input and output:
 
-    - Inputs: 
+    - Input: 
     - Output: 
 
 # References
