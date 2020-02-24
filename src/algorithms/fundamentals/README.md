@@ -585,7 +585,7 @@ the integer i appeared in the argument array. If the values in a[] are all betwe
 
 **Solution:** 
 
-The input and output:
+Decomposing the input and output:
 
     - Inputs: an array a[] of int values and an integer M.
     - Output: an array of length M whose ith entry is the number of times the integer i appeared in the argument array.
@@ -683,7 +683,7 @@ public class Fibonacci {
 
 **Solution:** 
 
-The input and output:
+Decomposing the input and output:
 
     - Inputs: an integer N
     - Output: the Fibonacci of N.
@@ -759,6 +759,15 @@ public class FibonacciTest {
 
 }
 ```
+
+**1.1.20: Write a recursive static method that computes the value of ln(N!)**
+
+**Solution:** 
+
+Decomposing the input and output:
+
+    - Inputs: 
+    - Output: 
 
 # References
 
