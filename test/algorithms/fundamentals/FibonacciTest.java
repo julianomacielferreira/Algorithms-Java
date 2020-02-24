@@ -38,11 +38,14 @@ public class FibonacciTest {
     @Test
     public void testF() {
 
-        int N = 6;
-        long expResult = 8L;
-        long result = Fibonacci.F(N);
+        int N = 6; // F(6) = [0 + 1 = 1], [1 + 2 = 3], [3 + 5 = 8]
 
-        assertEquals(expResult, result);
+        assertEquals(8L, Fibonacci.F(N));
+
+        N = 80; // F(80) = 3 x 5 x 7 x 11 x 41 x 47 x 1601 x 2161 x 3041
+
+        assertEquals(23416728348467685L, Fibonacci.F(N));
+
     }
 
 }
