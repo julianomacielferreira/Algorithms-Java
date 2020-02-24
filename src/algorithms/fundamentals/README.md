@@ -685,7 +685,7 @@ public class Fibonacci {
 
 Decomposing the input and output:
 
-    - Input: an integer N
+    - Input: an integer N.
     - Output: the Fibonacci of N.
 
 First, the definition of [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number) by Wikipedia is: 
@@ -766,8 +766,8 @@ public class FibonacciTest {
 
 Decomposing the input and output:
 
-    - Input: 
-    - Output: 
+    - Input: an integer N.
+    - Output: the value of the natural logarithm (ln) of N factorial (N!).
 
 # References
 
