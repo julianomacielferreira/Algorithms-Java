@@ -772,7 +772,7 @@ Decomposing the input and output:
 First, the definition of [Factorial](https://en.wikipedia.org/wiki/Factorial) by Wikipedia is: 
 
 > In mathematics, the factorial of a positive integer n, denoted by n!, is the product of all positive integers less than or equal to n:
-
+>
 > n! = n * (n - 1) * (n - 2) * ... * 2 * 1
 
 
