@@ -784,6 +784,7 @@ First, the definition of [Factorial](https://en.wikipedia.org/wiki/Factorial) by
 - [Fundamentals of Arithmetic (Brazilian Portuguese)](https://livraria.ufsc.br/produto/818/fundamentos-de-aritmetica)
 - [Wikipedia Memoization definition](https://en.wikipedia.org/wiki/Memoization)
 - [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number)
+- [Factorial](https://en.wikipedia.org/wiki/Factorial)
 
 # License
 
