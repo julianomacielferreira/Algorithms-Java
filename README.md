@@ -1,7 +1,7 @@
 # Algorithms in Java (SIDE PROJECT)
 
 The intention of this repository is to having fun and improve my skills on Algorithm Analysis and Design, 
-by implementing algorithms and solving proposed problems from the books.
+by implementing algorithms and solving proposed problems from the [books](https://github.com/julianomacielferreira/Algorithms-Java#references).
 
 I choose Java&trade; as the implementation language because I purchase a copy of the book ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)
 and its [book site](https://algs4.cs.princeton.edu/home/) is full of resources for learning and practicing.
