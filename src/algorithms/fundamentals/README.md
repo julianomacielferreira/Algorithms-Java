@@ -769,6 +769,12 @@ Decomposing the input and output:
     - Input: an integer N.
     - Output: the value of the natural logarithm (ln) of N factorial (N!).
 
+First, the definition of [Factorial](https://en.wikipedia.org/wiki/Factorial) by Wikipedia is: 
+
+> In mathematics, the factorial of a positive integer n, denoted by n!, is the product of all positive integers less than or equal to n:
+> n! = n * (n - 1) * (n - 2) * ... * 2 * 1
+
+
 # References
 
 - ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)
