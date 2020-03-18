@@ -775,7 +775,7 @@ First, the definition of [Factorial](https://en.wikipedia.org/wiki/Factorial) by
 >
 > n! = n * (n - 1) * (n - 2) * ... * 2 * 1
 
-Again, to optimize the solution we have to use [Memoization](https://en.wikipedia.org/wiki/Memoization) technique alongside with recursion.
+Again, to optimize the solution we have to use [Memoization](https://en.wikipedia.org/wiki/Memoization) technique alongside with recursion (as in 1.1.19 exercise).
 
 
 ```java
