@@ -23,6 +23,7 @@
  */
 package algorithms;
 
+import algorithms.fundamentals.Factorial;
 import algorithms.fundamentals.Fibonacci;
 import edu.princeton.cs.algs4.StdOut;
 
@@ -47,11 +48,13 @@ public class Algorithms {
 //        boolean[][] arr = {{false, true}, {true, false}, {true, true}};
 //
 //        StdOut.println(BooleanArray.format(arr));
-        
-        for (int N = 0; N < 100; N++) {
+        for (int N = 0; N <= 100; N++) {
             StdOut.println(N + " " + Fibonacci.F(N));
         }
 
+        for (int N = 0; N <= 65; N++) {
+            StdOut.println(N + " " + Factorial.compute(N));
+        }
     }
 
 }

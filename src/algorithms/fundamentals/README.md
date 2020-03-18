@@ -693,7 +693,7 @@ First, the definition of [Fibonacci number](https://en.wikipedia.org/wiki/Fibona
 > In mathematics, the Fibonacci numbers, commonly denoted Fn, 
 form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1.
 
-To optimize the solution we have to use [Memoization](https://en.wikipedia.org/wiki/Memoization) as an optimization technique.
+To optimize the solution we have to use [Memoization](https://en.wikipedia.org/wiki/Memoization) technique alongside with recursion.
 
 ```java
 public class Fibonacci {
@@ -775,6 +775,47 @@ First, the definition of [Factorial](https://en.wikipedia.org/wiki/Factorial) by
 >
 > n! = n * (n - 1) * (n - 2) * ... * 2 * 1
 
+Again, to optimize the solution we have to use [Memoization](https://en.wikipedia.org/wiki/Memoization) technique alongside with recursion.
+
+
+```java
+public class Factorial {
+
+    // Use a Map to dynamically add and retrieve by key the values already computed    
+    private static final Map<Integer, Long> RESULT_CACHE = new HashMap<>();
+
+    /**
+     * Computes the Factorial number of N
+     *
+     * @param N
+     * @return
+     */
+    public static long compute(int N) {
+
+        // If we cached the value, then return it
+        if (RESULT_CACHE.containsKey(N)) {
+            return RESULT_CACHE.get(N);
+        }
+
+        // Compute the Nth term 
+        long factorial_value;
+
+        if (N == 0) {
+
+            factorial_value = 1;
+
+        } else {
+
+            factorial_value = N * compute(N - 1);
+        }
+
+        // Cache the value and return it        
+        RESULT_CACHE.put(N, factorial_value);
+
+        return factorial_value;
+    }
+}
+```
 
 # References
 

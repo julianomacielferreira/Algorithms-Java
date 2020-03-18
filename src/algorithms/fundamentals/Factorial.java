@@ -23,11 +23,17 @@
  */
 package algorithms.fundamentals;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * @author juliano
  */
 public class Factorial {
+
+    // Use a Map to dynamically add and retrieve by key the values already computed    
+    private static final Map<Integer, Long> RESULT_CACHE = new HashMap<>();
 
     /**
      * Computes the Factorial number of N
@@ -37,6 +43,26 @@ public class Factorial {
      */
     public static long compute(int N) {
 
-        return 0L;
+        // If we cached the value, then return it
+        if (RESULT_CACHE.containsKey(N)) {
+            return RESULT_CACHE.get(N);
+        }
+
+        // Compute the Nth term 
+        long factorial_value;
+
+        if (N == 0) {
+
+            factorial_value = 1;
+
+        } else {
+
+            factorial_value = N * compute(N - 1);
+        }
+
+        // Cache the value and return it        
+        RESULT_CACHE.put(N, factorial_value);
+
+        return factorial_value;
     }
 }
