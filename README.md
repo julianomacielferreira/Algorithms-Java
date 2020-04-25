@@ -68,18 +68,6 @@ A great portion of the code uses the books standard library [algs4.jar](https://
 
 To get more details about it, access the section [Code](https://algs4.cs.princeton.edu/code/) of the booksite or the complete [javadoc](https://algs4.cs.princeton.edu/code/javadoc/) documentation.
 
-**Obs.:** When using another IDE than Netbeans, see the instructions of the IDE choosen on how to add the library to the classpath.
-
-With [Netbeans IDE 8.2](https://netbeans.org/) the process is very simple:
-
-1. In the tab **Projects**, click in the project folder with the mouse right button at _Properties_:
-
-![](assets/screenshots/1.png)
-
-2. After, just include the jar file in the **Libraries** section clicking on **Add/JAR/Folder** button:
- 
-![](assets/screenshots/2.png)
-
 # Disclaimer
 
 **This repository DOES NOT CONTAIN any copy / reproduction of the content available in the books ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/), 
