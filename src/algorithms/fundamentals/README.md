@@ -53,16 +53,16 @@ for (int n = N; n > 0; n /= 2) {
 
 compared to the [implemented](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/DecimalTo.java) below, and there's one in the [Java API](https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#toBinaryString-int-), too.
 
-But, to understand why this solutions works, it's important to try to create/recreate your own implementation.
+But, to understand why this solutions works, it's important to try to create / recreate your own implementation.
 
 **_Solution:_** 
     
 Decomposing this problem is very easy, it's giving us the input and output:
 
-    - Inputs: an integer (int) variable N.
-    - Output: a String s representing the binary form of the decimal number.
+    - Inputs: an integer (int) variable 'N'.
+    - Output: a String 's' representing the binary form of the decimal number.
         
-To define the _Procedure_,  it's necessary an overview of [Positional notation](https://en.wikipedia.org/wiki/Positional_notation) and [Numeral Systems](https://en.wikipedia.org/wiki/Numeral_system). 
+To define a **_Procedure_** to solve it's necessary an overview of [Positional notation](https://en.wikipedia.org/wiki/Positional_notation) and [Numeral Systems](https://en.wikipedia.org/wiki/Numeral_system). 
 
 The definition is taken from a [Quora](https://www.quora.com) question ["What is a positional number system?"](https://www.quora.com/What-is-a-positional-number-system)
 
