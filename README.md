@@ -10,6 +10,7 @@ and its [book site](https://algs4.cs.princeton.edu/home/) is full of resources f
 
 - [Technologies](#technologies)
 - [Data Sets](#data-sets)
+- [Compile and Test](#compile-and-test)
 - [Book Standard Library](#book-standard-library)
 - [Algorithms](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms#README)
     - [Fundamentals Problem Set](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/#README)
@@ -61,6 +62,20 @@ $ git add .gitattributes
 Finally, commit and push to GitHub as you normally would.
 
 **Obs.:** See [Git Large File Storage (LFS)](https://git-lfs.github.com/) to know more.
+
+## Compile and Test
+
+To compile and run the algorithms, just run in console:
+
+```bash
+$ ./compile.sh
+```
+
+To compile the tests, just run in console:
+
+```bash
+$ ./run-tests.sh
+```
 
 ## Book Standard Library
 
