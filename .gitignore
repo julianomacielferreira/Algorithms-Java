@@ -35,5 +35,8 @@ dist/
 nbdist/
 .nb-gradle/
 
+# vscode
+.vscode/
+
 # Data files
 data/*
