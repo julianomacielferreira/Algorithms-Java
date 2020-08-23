@@ -4,6 +4,7 @@ The [book site](https://algs4.cs.princeton.edu/home/) has the pre-requirements (
 solve the problems of the first chapter _1.1 Basic Programming Fundamentals_.
 
 The basic knowledge necessary is:
+
 - Primitive data types and expressions
 - Statements
 - Arrays
@@ -17,10 +18,10 @@ It's really complete with detailed (and others summarized) information about the
 **Required knowledge:**
 
 - [1. Fundamentals](https://algs4.cs.princeton.edu/10fundamentals/)
-    - [1.1 Programming Model](https://algs4.cs.princeton.edu/11model/)
+  - [1.1 Programming Model](https://algs4.cs.princeton.edu/11model/)
 
 - [The Java Tutorials: _Learning the Java Language_](https://docs.oracle.com/javase/tutorial/java/index.html)
-    - [Language Basics](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html)
+  - [Language Basics](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html)
         - [Variables](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html)
         - [Operators](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html)
         - [Expressions, Statements, and Blocks](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/expressions.html)
@@ -40,7 +41,7 @@ In summary, the approach is:
 
 **1.1.9: Write a code fragment that puts the binary representation of a positive _integer N_ into a _String s_.**
 
-**_Observation:_** 
+**_Observation:_**
 The book already provides a much simpler solution:
 
 ```java
@@ -55,14 +56,14 @@ compared to the [implemented](https://github.com/julianomacielferreira/Algorithm
 
 But, to understand why this solutions works, it's important to try to create / recreate your own implementation.
 
-**_Solution:_** 
-    
+**_Solution:_**
+
 Decomposing this problem is very easy, it's giving us the input and output:
 
     - Inputs: an integer (int) variable 'N'.
     - Output: a String 's' representing the binary form of the decimal number.
-        
-To define a **_Procedure_** to solve it's necessary an overview of [Positional notation](https://en.wikipedia.org/wiki/Positional_notation) and [Numeral Systems](https://en.wikipedia.org/wiki/Numeral_system). 
+
+To define a **_Procedure_** to solve it's necessary an overview of [Positional notation](https://en.wikipedia.org/wiki/Positional_notation) and [Numeral Systems](https://en.wikipedia.org/wiki/Numeral_system).
 
 The definition is taken from a [Quora](https://www.quora.com) question ["What is a positional number system?"](https://www.quora.com/What-is-a-positional-number-system)
 
@@ -70,7 +71,7 @@ The definition is taken from a [Quora](https://www.quora.com) question ["What is
 
 Exemplifying:
 
-In a straightforward manner, it's saying that a decimal number, for example 36, is equal to the sum of two numbers (digits) multiplied by powers of 10. 
+In a straightforward manner, it's saying that a decimal number, for example 36, is equal to the sum of two numbers (digits) multiplied by powers of 10.
 
 Reading the number 36, from right to left (units, dozens, etc.), increases the power of the base starting from 10 raised to 0 (i.e, 10<sup>0</sup>):
  
@@ -79,12 +80,12 @@ Reading the number 36, from right to left (units, dozens, etc.), increases the p
 > 36 = 6 + 30<br>
 > 36 = 36
 
-The quantity of numerals (or symbols Indo-Arabic) are the same as the base. 
+The quantity of numerals (or symbols Indo-Arabic) are the same as the base.
 
 For example, base 10 has { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 } digits.
 
 The rule for the symbols is: start from 0 until _base - 1_.
- 
+
 So the base two, starting from 0 until (2 - 1) has { 0, 1 }.
 
 From right to left, the representation of the binary number 1010<sub>2</sub> in base ten is:
@@ -94,7 +95,7 @@ From right to left, the representation of the binary number 1010<sub>2</sub> in 
 > 1010<sub>2</sub> = 0 + 2 + 0 + 8<br>
 > 1010<sub>2</sub> = 10<br>
 
-With all said, the problem is asking us to implement an algorithm to make the inverse of the example above, i.e, given a number in base decimal convert it to binary: 
+With all said, the problem is asking us to implement an algorithm to make the inverse of the example above, i.e, given a number in base decimal convert it to binary:
 
 > 10 = 1010<sub>2</sub>.
 
@@ -123,7 +124,7 @@ Let's use numbers to see that:
 > q = 14, r = 73 - (5 * 14) = 3 (remember, r = _n_ - ( _m_ * q )).<br>
 > So: 73 = (5 * 14) + 3.
 
-These concepts shows that any number __n__ (n > 1) in a base __b__, with __m__ being the numerals {0, 1, 2, ..., (b - 1)}, can be represented uniquely as: 
+These concepts shows that any number __n__ (n > 1) in a base __b__, with __m__ being the numerals {0, 1, 2, ..., (b - 1)}, can be represented uniquely as:
 
 > __n__ = m<sub>0</sub> + m<sub>1</sub> * __b__<sup>1</sup> + m<sub>2</sub> * __b__<sup>2</sup> + ... + m<sub>i</sub> * __b__<sup>i</sup> ( i >= 0 and m<sub>i</sub> != 0)
 
@@ -370,7 +371,6 @@ public class BooleanArray {
 
                 // Append the separator and add new line
                 output.append("|\n");
-
             }
 
             return output.toString();
@@ -816,6 +816,40 @@ public class Factorial {
     }
 }
 ```
+
+**1.1.21: Write a program that reads in lines from standard input with each line containing a name and two integers and then uses printf() to print a table with a column of names, the integers, and the result of dividing the first by the second, accurate to three decimal places. You could use a program like this to tabulate batting averages for baseball players or grades for students.**
+
+**Solution:** 
+
+Decomposing the input and output:
+
+    - Input: .
+    - Output: .
+
+**1.1.22: Write a version of BinarySearch that uses the recursive rank() given on page 25 and _traces_ the method calls. Each time the recursive method is called , print the argument values lo and hi, indented by depth of the recursion. _Hint_: Add an argument to the recursive method thats keeps track of the depth.**
+
+**Solution:** 
+
+Decomposing the input and output:
+
+    - Input: .
+    - Output: .
+
+**1.1.23: Add to the BinarySearch test client the ability to respond to a second argument: + to print numbers from standard input that _are not_ in the whitelist, - to print numbers that _are_ in the whitelist.**
+
+**Solution:** 
+
+Decomposing the input and output:
+
+    - Input: .
+    - Output: .
+
+**1.1.24: Give the sequence of values of _p_ and _q_ that are computed when Euclid's algorithm is used to compute the greatest common divisor of 105 and 24. Extend the code given on page 4 to develop a program Euclid that takes two integers from the command line and computes their greatest common divisor, printing out two arguments for each call on the recursive method. Use your program to compute the greatest common divisor of 1111111 and 1234567.**
+
+Decomposing the input and output:
+
+    - Input: .
+    - Output: .
 
 # References
 

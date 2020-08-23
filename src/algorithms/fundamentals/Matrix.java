@@ -38,6 +38,7 @@ public class Matrix<T> {
      * @param a two-dimensional array NOT ragged.
      * @return the transpose of the array.
      */
+    @SuppressWarnings("unchecked")
     public static <T> T[][] transpositionOf(T a[][]) {
 
         // The columns of transposed is the number of rows of a (a.length).
