@@ -40,14 +40,14 @@ public class Algorithms {
      */
     public static void main(String[] args) {
 
-//        Drawing.points(100);
-//        Drawing.random(50);
-//        Drawing.random(50, true);
-//        StdOut.println(DecimalTo.binary(365));
-//
-//        boolean[][] arr = {{false, true}, {true, false}, {true, true}};
-//
-//        StdOut.println(BooleanArray.format(arr));
+        // Drawing.points(100);
+        // Drawing.random(50);
+        // Drawing.random(50, true);
+        // StdOut.println(DecimalTo.binary(365));
+        //
+        // boolean[][] arr = {{false, true}, {true, false}, {true, true}};
+        //
+        // StdOut.println(BooleanArray.format(arr));
         for (int N = 0; N <= 100; N++) {
             StdOut.println(N + " " + Fibonacci.F(N));
         }
