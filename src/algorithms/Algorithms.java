@@ -23,6 +23,7 @@
  */
 package algorithms;
 
+import algorithms.fundamentals.Drawing;
 import algorithms.fundamentals.Factorial;
 import algorithms.fundamentals.Fibonacci;
 import edu.princeton.cs.algs4.StdOut;
@@ -38,9 +39,9 @@ public class Algorithms {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
-        // Drawing.points(100);
+        Drawing.points(100);
         // Drawing.random(50);
         // Drawing.random(50, true);
         // StdOut.println(DecimalTo.binary(365));
