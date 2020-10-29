@@ -292,7 +292,7 @@ Include row and column numbers.**
 
 The input and output to this problem are:
     
-    - Input: a two-dimensiona boolean array like boolean[][] booleanArray = {{false, true}, {true, false}}
+    - Input: a two-dimensional boolean array like boolean[][] booleanArray = {{false, true}, {true, false}}
     - Output: a representation of the array using '*' for true and ' ' (space) for false
 
 _Example:_
