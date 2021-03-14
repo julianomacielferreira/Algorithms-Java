@@ -1,6 +1,6 @@
 # Algorithms in Java (SIDE PROJECT)
 
-The intention of this repository is to having fun and improve my skills on Algorithm Analysis and Design, 
+The intention of this repository is to have fun and improve my skills on Algorithm Analysis and Design, 
 by implementing algorithms and solving proposed problems from the [books](https://github.com/julianomacielferreira/Algorithms-Java#references).
 
 I choose Java&trade; as the implementation language because I purchase a copy of the book ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)
@@ -29,7 +29,7 @@ Data files used to test the algorithms have not been versioned in this repositor
 
 Click on the section [Data](https://introcs.cs.princeton.edu/java/data/) in the booksite to get one by one or download them all as one zipped big file (1GB approx.): [introcs-data.zip](https://introcs.cs.princeton.edu/java/code/introcs-data.zip).
 
-After download the file, unzip it in a folder called **data** in the project root folder:
+After downloading the file, unzip it in a folder called **data** in the project root folder:
 
 ```bash
 $ unzip introcs-data.zip -d project-root-folder/data

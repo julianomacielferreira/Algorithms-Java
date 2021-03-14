@@ -34,3 +34,6 @@ nbdist/
 
 # Data files
 data/*
+
+# Output files
+out/*
