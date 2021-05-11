@@ -23,9 +23,11 @@
  */
 package algorithms;
 
+import algorithms.fundamentals.CompareThreeNumbers;
 import algorithms.fundamentals.Drawing;
 import algorithms.fundamentals.Factorial;
 import algorithms.fundamentals.Fibonacci;
+import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
 /**
@@ -41,7 +43,7 @@ public class Algorithms {
      */
     public static void main(final String[] args) {
 
-        Drawing.points(100);
+        // Drawing.points(100);
         // Drawing.random(50);
         // Drawing.random(50, true);
         // StdOut.println(DecimalTo.binary(365));
@@ -49,13 +51,24 @@ public class Algorithms {
         // boolean[][] arr = {{false, true}, {true, false}, {true, true}};
         //
         // StdOut.println(BooleanArray.format(arr));
-        for (int N = 0; N <= 100; N++) {
+        /*for (int N = 0; N <= 100; N++) {
             StdOut.println(N + " " + Fibonacci.F(N));
         }
 
         for (int N = 0; N <= 65; N++) {
             StdOut.println(N + " " + Factorial.compute(N));
-        }
-    }
+        }*/
 
+        StdOut.print("Type n1: ");
+        int n1 = StdIn.readInt();
+        StdOut.print("Type n2: ");
+        int n2 = StdIn.readInt();
+        StdOut.print("Type n3: ");
+        int n3 = StdIn.readInt();
+
+        boolean isEqual = CompareThreeNumbers.printIfEqual(n1, n2, n3);
+
+        StdOut.print("The numbers are equal? ");
+        StdOut.println(isEqual);
+    }
 }
