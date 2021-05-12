@@ -23,10 +23,14 @@
  */
 package algorithms.fundamentals;
 
-public class CompareThreeNumbers {
+public class CompareNumbers {
 
-    public static boolean printIfEqual(int n1, int n2, int n3) {
+    public static boolean printIfThreeNumbersAreEqual(int n1, int n2, int n3) {
 
         return (n1 == n2 && n2 == n3);
+    }
+
+    public static boolean checkIfTheNumbersAreBetweenZeroAndOne(double x, double y) {
+        return (x > 0.0 && x < 1.0 && y > 0.0 && y < 1.0);
     }
 }

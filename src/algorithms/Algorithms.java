@@ -23,7 +23,7 @@
  */
 package algorithms;
 
-import algorithms.fundamentals.CompareThreeNumbers;
+import algorithms.fundamentals.CompareNumbers;
 import algorithms.fundamentals.Drawing;
 import algorithms.fundamentals.Factorial;
 import algorithms.fundamentals.Fibonacci;
@@ -66,9 +66,19 @@ public class Algorithms {
         StdOut.print("Type n3: ");
         int n3 = StdIn.readInt();
 
-        boolean isEqual = CompareThreeNumbers.printIfEqual(n1, n2, n3);
+        boolean isEqual = CompareNumbers.printIfThreeNumbersAreEqual(n1, n2, n3);
 
         StdOut.print("The numbers are equal? ");
         StdOut.println(isEqual);
+
+        StdOut.print("Type x: ");
+        double x = StdIn.readDouble();
+        StdOut.print("Type y: ");
+        double y = StdIn.readDouble();
+
+        boolean isBetween = CompareNumbers.checkIfTheNumbersAreBetweenZeroAndOne(x,y);
+
+        StdOut.print("The numbers are between 0 and 1? ");
+        StdOut.println(isBetween);
     }
 }
