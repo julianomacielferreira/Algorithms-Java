@@ -27,7 +27,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
  * @author juliano
  */
 public class Factorial {

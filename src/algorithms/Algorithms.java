@@ -23,10 +23,7 @@
  */
 package algorithms;
 
-import algorithms.fundamentals.CompareNumbers;
-import algorithms.fundamentals.Drawing;
-import algorithms.fundamentals.Factorial;
-import algorithms.fundamentals.Fibonacci;
+import algorithms.fundamentals.*;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
@@ -43,21 +40,22 @@ public class Algorithms {
      */
     public static void main(final String[] args) {
 
-        // Drawing.points(100);
-        // Drawing.random(50);
-        // Drawing.random(50, true);
-        // StdOut.println(DecimalTo.binary(365));
-        //
-        // boolean[][] arr = {{false, true}, {true, false}, {true, true}};
-        //
-        // StdOut.println(BooleanArray.format(arr));
-        /*for (int N = 0; N <= 100; N++) {
+         Drawing.points(100);
+         Drawing.random(50);
+         Drawing.random(50, true);
+         StdOut.println(DecimalTo.binary(365));
+
+         boolean[][] arr = {{false, true}, {true, false}, {true, true}};
+
+         StdOut.println(BooleanArray.format(arr));
+
+        for (int N = 0; N <= 100; N++) {
             StdOut.println(N + " " + Fibonacci.F(N));
         }
 
         for (int N = 0; N <= 65; N++) {
             StdOut.println(N + " " + Factorial.compute(N));
-        }*/
+        }
 
         StdOut.print("Type n1: ");
         int n1 = StdIn.readInt();
