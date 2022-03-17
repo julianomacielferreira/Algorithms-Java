@@ -40,22 +40,44 @@ public class Algorithms {
      */
     public static void main(final String[] args) {
 
-         Drawing.points(100);
-         Drawing.random(50);
-         Drawing.random(50, true);
-         StdOut.println(DecimalTo.binary(365));
+        Table.print();
 
-         boolean[][] arr = {{false, true}, {true, false}, {true, true}};
+//        drawing();
+//        decimalToBinary();
+//        booleanArray();
+//        fibonacci();
+//        factorial();
+//        compareNumbers();
+    }
 
-         StdOut.println(BooleanArray.format(arr));
+    private static void drawing() {
+        Drawing.points(100);
+        Drawing.random(50);
+        Drawing.random(50, true);
+    }
 
+    private static void decimalToBinary() {
+        StdOut.println(DecimalTo.binary(365));
+    }
+
+    private static void booleanArray() {
+        boolean[][] arr = {{false, true}, {true, false}, {true, true}};
+        StdOut.println(BooleanArray.format(arr));
+    }
+
+    private static void fibonacci() {
         for (int N = 0; N <= 100; N++) {
             StdOut.println(N + " " + Fibonacci.F(N));
         }
+    }
 
+    private static void factorial() {
         for (int N = 0; N <= 65; N++) {
             StdOut.println(N + " " + Factorial.compute(N));
         }
+    }
+
+    private static void compareNumbers() {
 
         StdOut.print("Type n1: ");
         int n1 = StdIn.readInt();
@@ -74,7 +96,7 @@ public class Algorithms {
         StdOut.print("Type y: ");
         double y = StdIn.readDouble();
 
-        boolean isBetween = CompareNumbers.checkIfTheNumbersAreBetweenZeroAndOne(x,y);
+        boolean isBetween = CompareNumbers.checkIfTheNumbersAreBetweenZeroAndOne(x, y);
 
         StdOut.print("The numbers are between 0 and 1? ");
         StdOut.println(isBetween);

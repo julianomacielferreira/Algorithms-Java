@@ -24,9 +24,8 @@
 package algorithms.fundamentals;
 
 /**
- *
- * @author juliano
  * @param <T> type of the matrix elements
+ * @author juliano
  */
 public class Matrix<T> {
 
@@ -35,25 +34,25 @@ public class Matrix<T> {
      * array, NOT ragged, with M rows and N columns.
      *
      * @param <T> type of the array elements
-     * @param a two-dimensional array NOT ragged.
+     * @param a   two-dimensional array NOT ragged.
      * @return the transpose of the array.
      */
     @SuppressWarnings("unchecked")
-    public static <T> T[][] transpositionOf(T a[][]) {
+    public static <T> T[][] transpositionOf(T matrix[][]) {
 
         // The columns of transposed is the number of rows of a (a.length).
-        int columns = a.length;
+        int columns = matrix.length;
 
-        // Because a is not ragged, all rows have the same number os columns 
+        // Because 'matrix' is not ragged, all rows have the same number of columns
         // and it's enough get the length of one column.
-        int rows = a[0].length;
+        int rows = matrix[0].length;
 
         // Instantiate an array of base type Object, and cast it to T type.        
         T[][] transposed = (T[][]) new Object[rows][columns];
 
-        for (int i = 0; i < a.length; i++) { // Iterate over the rows of a.  
-            for (int j = 0; j < a[i].length; j++) { // Iterate over the columns of each i-row.        
-                transposed[j][i] = a[i][j]; // Here is where the swap happens.
+        for (int i = 0; i < matrix.length; i++) { // Iterate over the rows of a.
+            for (int j = 0; j < matrix[i].length; j++) { // Iterate over the columns of each i-row.
+                transposed[j][i] = matrix[i][j]; // Here is where the swap happens.
             }
         }
 

@@ -823,8 +823,8 @@ public class Factorial {
 
 Decomposing the input and output:
 
-    - Input: .
-    - Output: .
+    - Input: Read lines from console using (StdIn)
+    - Output: Output in the console a table with a column of names, more two columns for the integers and the last column with the result of dividing the first by the second with three decimal places.
 
 **1.1.22: Write a version of BinarySearch that uses the recursive rank() given on page 25 and _traces_ the method calls. Each time the recursive method is called , print the argument values lo and hi, indented by depth of the recursion. _Hint_: Add an argument to the recursive method thats keeps track of the depth.**
 
