@@ -29,17 +29,39 @@ import edu.princeton.cs.algs4.StdOut;
 /**
  * @author juliano
  */
-public class Table {
+public class PrintDivide {
 
-
+    /**
+     * Reads in lines from standard input with each line containing a name and two integers and then uses printf()
+     * to print a table with a column of names, the integers, and the result of dividing the first by the second,
+     * accurate to three decimal places
+     */
     public static void print() {
 
-        StdOut.println("Digite o nome e dois números:");
+        // Ask the user to type in console
+        StdOut.println("Type a name and two integers in each line:");
+
+        // While user does not type ctrl D, its tries to read a line
         while (!StdIn.isEmpty()) {
-            StdOut.println(StdIn.readString());
+            // Remove spaces from beginning and end of the string
+            String line = StdIn.readLine().trim();
+
+            // Split or separate the string in 3 parts using blank space as divider
+            String parts[] = line.split(" ");
+
+            try {
+                String name = parts[0];
+                Integer firstInt = Integer.parseInt(parts[1]);
+                Integer secondNumber = Integer.parseInt(parts[2]);
+                Float result = (float) firstInt / secondNumber;
+                StdOut.printf("%s\t%d\t%d\t%.3f", name, firstInt, secondNumber, result);
+                StdOut.println();
+            } catch (IndexOutOfBoundsException ex) {
+                StdOut.print(ex.getMessage());
+            }
+
         }
 
-        StdOut.printf("%.3f", 3.4);
 
     }
 

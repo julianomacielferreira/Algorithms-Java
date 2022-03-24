@@ -40,7 +40,7 @@ public class Algorithms {
      */
     public static void main(final String[] args) {
 
-        Table.print();
+        PrintDivide.print();
 
 //        drawing();
 //        decimalToBinary();
