@@ -826,6 +826,54 @@ Decomposing the input and output:
     - Input: Read lines from console using (StdIn)
     - Output: Output in the console a table with a column of names, more two columns for the integers and the last column with the result of dividing the first by the second with three decimal places.
 
+The solution implementation is very simple:
+
+```java
+public class PrintDivision {
+
+    /**
+     * Reads in lines from standard input with each line containing a name and two integers and then uses printf()
+     * to print a table with a column of names, the integers, and the result of dividing the first by the second,
+     * accurate to three decimal places
+     */
+    public static void print() {
+
+        // Ask the user to type in console
+        StdOut.println("Type a name and two integers in each line:");
+
+        // While user does not type ctrl D, its tries to read a line
+        while (!StdIn.isEmpty()) {
+            // Remove spaces from beginning and end of the string
+            String line = StdIn.readLine().trim();
+
+            // Split or separate the string in 3 parts using blank space as divider
+            String parts[] = line.split(" ");
+
+            try {
+                // Get the name in the first position of the array
+                String name = parts[0];
+
+                // Get the first number in the second position of the array
+                Integer firstNumber = Integer.parseInt(parts[1]);
+
+                // Get the second number in the third position of the array
+                Integer secondNumber = Integer.parseInt(parts[2]);
+
+                // Calculate the result dividing and casting to float
+                Float result = (float) firstNumber / secondNumber;
+
+                // Print the line with a tab space between each value
+                StdOut.printf("%s\t%d\t%d\t%.3f\n", name, firstNumber, secondNumber, result);
+
+            } catch (IndexOutOfBoundsException ex) {
+                StdOut.print(ex.getMessage());
+            }
+
+        }
+    }
+}
+```
+
 **1.1.22: Write a version of BinarySearch that uses the recursive rank() given on page 25 and _traces_ the method calls. Each time the recursive method is called , print the argument values lo and hi, indented by depth of the recursion. _Hint_: Add an argument to the recursive method thats keeps track of the depth.**
 
 **Solution:** 

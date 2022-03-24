@@ -29,7 +29,7 @@ import edu.princeton.cs.algs4.StdOut;
 /**
  * @author juliano
  */
-public class PrintDivide {
+public class PrintDivision {
 
     /**
      * Reads in lines from standard input with each line containing a name and two integers and then uses printf()
@@ -50,19 +50,25 @@ public class PrintDivide {
             String parts[] = line.split(" ");
 
             try {
+                // Get the name in the first position of the array
                 String name = parts[0];
-                Integer firstInt = Integer.parseInt(parts[1]);
+
+                // Get the first number in the second position of the array
+                Integer firstNumber = Integer.parseInt(parts[1]);
+
+                // Get the second number in the third position of the array
                 Integer secondNumber = Integer.parseInt(parts[2]);
-                Float result = (float) firstInt / secondNumber;
-                StdOut.printf("%s\t%d\t%d\t%.3f", name, firstInt, secondNumber, result);
-                StdOut.println();
+
+                // Calculate the result dividing and casting to float
+                Float result = (float) firstNumber / secondNumber;
+
+                // Print the line with a tab space between each value
+                StdOut.printf("%s\t%d\t%d\t%.3f\n", name, firstNumber, secondNumber, result);
+
             } catch (IndexOutOfBoundsException ex) {
                 StdOut.print(ex.getMessage());
             }
 
         }
-
-
     }
-
 }
