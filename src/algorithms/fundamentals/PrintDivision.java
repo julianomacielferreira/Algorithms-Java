@@ -47,17 +47,17 @@ public class PrintDivision {
             String line = StdIn.readLine().trim();
 
             // Split or separate the string in 3 parts using blank space as divider
-            String parts[] = line.split(" ");
+            String inputs[] = line.split(" ");
 
             try {
                 // Get the name in the first position of the array
-                String name = parts[0];
+                String name = inputs[0];
 
                 // Get the first number in the second position of the array
-                Integer firstNumber = Integer.parseInt(parts[1]);
+                Integer firstNumber = Integer.parseInt(inputs[1]);
 
                 // Get the second number in the third position of the array
-                Integer secondNumber = Integer.parseInt(parts[2]);
+                Integer secondNumber = Integer.parseInt(inputs[2]);
 
                 // Calculate the result dividing and casting to float
                 Float result = (float) firstNumber / secondNumber;
