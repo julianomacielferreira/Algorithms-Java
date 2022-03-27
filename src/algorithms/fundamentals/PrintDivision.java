@@ -60,7 +60,7 @@ public class PrintDivision {
                 int secondNumber = Integer.parseInt(inputs[2]);
 
                 // Calculate the result dividing and casting to float
-                Float result = (float) firstNumber / secondNumber;
+                float result = (float) firstNumber / secondNumber;
 
                 // Print the line with a tab space between each value
                 StdOut.printf("%s\t%d\t%d\t%.3f\n", name, firstNumber, secondNumber, result);
