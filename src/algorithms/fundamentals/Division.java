@@ -29,7 +29,7 @@ import edu.princeton.cs.algs4.StdOut;
 /**
  * @author juliano
  */
-public class PrintDivision {
+public class Division {
 
     /**
      * Reads in lines from standard input with each line containing a name and two integers and then uses printf()

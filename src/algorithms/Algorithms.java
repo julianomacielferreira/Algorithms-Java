@@ -40,14 +40,13 @@ public class Algorithms {
      */
     public static void main(final String[] args) {
 
-        PrintDivision.print();
-
 //        drawing();
 //        decimalToBinary();
 //        booleanArray();
 //        fibonacci();
 //        factorial();
 //        compareNumbers();
+        division();
     }
 
     private static void drawing() {
@@ -101,4 +100,9 @@ public class Algorithms {
         StdOut.print("The numbers are between 0 and 1? ");
         StdOut.println(isBetween);
     }
+
+    private static void division() {
+        Division.print();
+    }
+
 }

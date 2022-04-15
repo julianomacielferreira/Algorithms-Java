@@ -829,7 +829,7 @@ Decomposing the input and output:
 The solution implementation is very simple:
 
 ```java
-public class PrintDivision {
+public class Division {
 
     /**
      * Reads in lines from standard input with each line containing a name and two integers and then uses printf()
