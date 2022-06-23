@@ -40,13 +40,13 @@ public class Algorithms {
      */
     public static void main(final String[] args) {
 
-//        drawing();
+        drawing();
 //        decimalToBinary();
 //        booleanArray();
 //        fibonacci();
 //        factorial();
 //        compareNumbers();
-        division();
+//        division();
     }
 
     private static void drawing() {
