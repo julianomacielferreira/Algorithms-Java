@@ -46,9 +46,9 @@ public class BinarySearchRecursive {
 
     public static int rank(int key, int[] arr, int lo, int hi) {
 
-        traceRecursiveCalls(lo, hi);
-
         depth++;
+        
+        traceRecursiveCalls(lo, hi);
 
         // index of key in arr[], if present,
         // is not smaller than lo and not larger than hi

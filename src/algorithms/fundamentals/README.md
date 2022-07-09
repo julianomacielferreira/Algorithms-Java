@@ -930,7 +930,7 @@ public class Division {
 
 **1.1.22: Write a version of BinarySearch that uses the recursive rank() given on page 25 and _traces_ the method calls.
 Each time the recursive method is called , print the argument values lo and hi, indented by depth of the recursion. _
-Hint_: Add an argument to the recursive method thats keeps track of the depth.**
+Hint_: Add an argument to the recursive method that's keeps track of the depth.**
 
 **Solution:**
 
@@ -939,7 +939,7 @@ Decomposing the input and output:
     - Input: An integer value to be found and the array of values
     - Output: The value position in the array or negative minus 1 if its not present.
 
-The solution implementation is very simple:
+The solution implementation is very straightforward:
 
 ```java
 public class BinarySearchRecursive {
@@ -960,9 +960,9 @@ public class BinarySearchRecursive {
 
     public static int rank(int key, int[] arr, int lo, int hi) {
 
-        traceRecursiveCalls(lo, hi);
-
         depth++;
+
+        traceRecursiveCalls(lo, hi);
 
         // index of key in arr[], if present,
         // is not smaller than lo and not larger than hi
