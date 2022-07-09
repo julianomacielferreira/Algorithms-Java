@@ -23,13 +23,55 @@
  */
 package algorithms.fundamentals;
 
+import edu.princeton.cs.algs4.StdOut;
+
 /**
  * @author juliano
  */
 public class BinarySearchRecursive {
 
-    public static int rank(int lo, int hi) {
+    private static int depth;
 
-        return 0;
+    /**
+     * This method is an implementation of binary search algorithm
+     * to find integers in an ordered array
+     *
+     * @param key int
+     * @param arr int[]
+     * @return the key (arr index) if found, -1 otherwise
+     */
+    public static int rank(int key, int[] arr) {
+        return rank(key, arr, 0, arr.length - 1);
+    }
+
+    public static int rank(int key, int[] arr, int lo, int hi) {
+
+        traceRecursiveCalls(lo, hi);
+
+        depth++;
+
+        // index of key in arr[], if present,
+        // is not smaller than lo and not larger than hi
+        if (lo > hi)
+            return -1;
+
+        int middle = lo + (hi - lo) / 2;
+
+        if (key < arr[middle])
+            return rank(key, arr, lo, middle - 1);
+        else if (key > arr[middle])
+            return rank(key, arr, middle + 1, hi);
+        else
+            return middle;
+    }
+
+    private static void traceRecursiveCalls(int lo, int hi) {
+
+        StringBuilder tabs = new StringBuilder();
+
+        for (int i = 0; i < depth; i++)
+            tabs.append('\t');
+
+        StdOut.printf("%slo=%d, hi=%d\n", tabs, lo, hi, depth);
     }
 }
