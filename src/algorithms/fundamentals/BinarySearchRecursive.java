@@ -31,6 +31,7 @@ import edu.princeton.cs.algs4.StdOut;
 public class BinarySearchRecursive {
 
     private static int depth;
+    private static final StringBuilder tabs = new StringBuilder();
 
     /**
      * This method is an implementation of binary search algorithm
@@ -46,8 +47,6 @@ public class BinarySearchRecursive {
 
     public static int rank(int key, int[] arr, int lo, int hi) {
 
-        depth++;
-        
         traceRecursiveCalls(lo, hi);
 
         // index of key in arr[], if present,
@@ -67,11 +66,10 @@ public class BinarySearchRecursive {
 
     private static void traceRecursiveCalls(int lo, int hi) {
 
-        StringBuilder tabs = new StringBuilder();
+        depth++;
 
-        for (int i = 0; i < depth; i++)
-            tabs.append('\t');
+        tabs.append('\t');
 
-        StdOut.printf("%slo=%d, hi=%d\n", tabs, lo, hi, depth);
+        StdOut.printf("%slo=%d, hi=%d\n", tabs, lo, hi);
     }
 }
