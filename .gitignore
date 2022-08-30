@@ -33,7 +33,8 @@ nbdist/
 .nb-gradle/
 
 # Data files
-data/*
+algs4-data/*
+introcs-data/*
 
 # Output files
 out/*
