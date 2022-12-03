@@ -15,7 +15,7 @@ The basic knowledge necessary is:
 - Input and output
 
 It's really complete with detailed (and others summarized) information about the Java programming fundamentals that is
-familiar in a whole bunch of other languages.
+familiar in a lot of other languages.
 
 **Required knowledge:**
 
