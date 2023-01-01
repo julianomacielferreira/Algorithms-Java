@@ -35,6 +35,7 @@ nbdist/
 # Data files
 algs4-data/*
 introcs-data/*
+data/*
 
 # Output files
 out/*
