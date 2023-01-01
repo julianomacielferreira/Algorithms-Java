@@ -116,6 +116,7 @@ for commercial purposes.**
     - [Design and Analysis of Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/index.htm)
 - [Java&trade; Platform, Standard Edition 8 API Specification](https://docs.oracle.com/javase/8/docs/api/)
 - [Netbeans IDE 8.2](https://netbeans.org/)
+- [IntelliJ IDEA – the Leading Java and Kotlin IDE](https://www.jetbrains.com/idea/)
 
 # License
 
