@@ -341,7 +341,7 @@ boolean[][]booleanArray={{false,true},{true,false}};
 | 1 |   | * |
 | 2 | * |   |
 
-Assuming that the two-dimensional array is not ragged,
+Assuming that the two-dimensional array is not [ragged](https://en.wikipedia.org/wiki/Jagged_array),
 the [solution](https://github.com/julianomacielferreira/Algorithms/blob/master/src/algorithms/fundamentals/BooleanArray.java):
 
 ```java
