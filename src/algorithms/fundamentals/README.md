@@ -1,6 +1,6 @@
 # Fundamentals Problem Set
 
-The [book site](https://algs4.cs.princeton.edu/home/) has the pre-requirements (I'm not going to copy here) to going
+The [book site](https://algs4.cs.princeton.edu/home/) has the pre-requirements (**I'm not going to copy here**) to going
 deep and
 solve the problems of the first chapter _1.1 Basic Programming Fundamentals_.
 
