@@ -60,7 +60,7 @@ the [implemented](https://github.com/julianomacielferreira/Algorithms/blob/maste
 below, and there's one in
 the [Java API](https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#toBinaryString-int-), too.
 
-But, to understand why this solutions works, it's important to try to create / recreate your own implementation.
+But, to understand why these solutions works, it's important to try to create / recreate your own implementation.
 
 **_Solution:_**
 
@@ -987,7 +987,7 @@ public class BinarySearchRecursive {
         StdOut.printf("%slo=%d, hi=%d\n", tabs, lo, hi);
     }
 }
-```
+``` 
 
 **1.1.23: Add to the BinarySearch test client the ability to respond to a second argument: + to print numbers from
 standard input that _are not_ in the whitelist, - to print numbers that _are_ in the whitelist.**

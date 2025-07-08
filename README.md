@@ -21,7 +21,7 @@ and its [book site](https://algs4.cs.princeton.edu/home/) is full of resources f
 
 ## Technologies
 
-I opted to use [Java&trade; Platform, Standard Edition 8 API Specification](https://docs.oracle.com/javase/8/docs/api/) and [Netbeans IDE 8.2](https://netbeans.org/).
+I opted to use [Java&trade; Platform, Standard Edition 8 API Specification](https://docs.oracle.com/javase/8/docs/api/) and [IntelliJ IDEA Community](https://www.jetbrains.com/idea/download/?section=linux).
 
 ## Data Sets
 
@@ -115,7 +115,6 @@ for commercial purposes.**
     - [Introduction to Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm)
     - [Design and Analysis of Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/index.htm)
 - [Java&trade; Platform, Standard Edition 8 API Specification](https://docs.oracle.com/javase/8/docs/api/)
-- [Netbeans IDE 8.2](https://netbeans.org/)
 - [IntelliJ IDEA – the Leading Java and Kotlin IDE](https://www.jetbrains.com/idea/)
 
 # License
