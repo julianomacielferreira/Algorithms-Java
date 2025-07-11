@@ -27,35 +27,35 @@ import java.util.Arrays;
 
 public class StaticSetOfInts {
 
-    private final int[] values;
+    private final int[] numbers;
 
     public StaticSetOfInts(int[] keys) {
 
-        this.values = new int[keys.length];
+        this.numbers = new int[keys.length];
 
         for (int i = 0; i < keys.length; i++) {
-            this.values[i] = keys[i]; // defensive copy
+            this.numbers[i] = keys[i]; // defensive copy
         }
 
-        Arrays.sort(this.values);
+        Arrays.sort(this.numbers);
     }
 
     public boolean contains(int value) {
         return this.binarySearch(value) != 1;
     }
 
-    private int binarySearch(int value) {
+    private int binarySearch(int valueToFind) {
 
         int minimum_index = 0;
-        int highest_index = this.values.length - 1;
+        int highest_index = this.numbers.length - 1;
 
         while (minimum_index <= highest_index) {
-            // value is in values[minimum_index ... highest_index] or not present
+            // value is in numbers[minimum_index ... highest_index] or not present
             int middle_index = minimum_index + (highest_index - minimum_index) / 2;
 
-            if (value < this.values[middle_index]) {
+            if (valueToFind < this.numbers[middle_index]) {
                 highest_index = middle_index - 1;
-            } else if (value > this.values[middle_index]) {
+            } else if (valueToFind > this.numbers[middle_index]) {
                 minimum_index = middle_index + 1;
             } else {
                 return middle_index;
