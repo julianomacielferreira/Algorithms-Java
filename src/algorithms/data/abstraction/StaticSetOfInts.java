@@ -33,15 +33,14 @@ public class StaticSetOfInts {
 
         this.numbers = new int[keys.length];
 
-        for (int i = 0; i < keys.length; i++) {
-            this.numbers[i] = keys[i]; // defensive copy
-        }
+        // defensive copy
+        System.arraycopy(keys, 0, this.numbers, 0, keys.length);
 
         Arrays.sort(this.numbers);
     }
 
     public boolean contains(int value) {
-        return this.binarySearch(value) != 1;
+        return this.binarySearch(value) != -1;
     }
 
     private int binarySearch(int valueToFind) {
