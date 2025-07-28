@@ -21,31 +21,35 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package algorithms.data.abstraction;
+package algorithms.fundamentals;
 
-import algorithms.fundamentals.BinarySearch;
+public class BinarySearch {
 
-import java.util.Arrays;
+    private final int[] numbers;
 
-public class StaticSetOfInts {
-
-    private final BinarySearch binarySearch;
-
-    public StaticSetOfInts(int[] keys) {
-
-        int[] numbers = new int[keys.length];
-
-        // defensive copy
-        System.arraycopy(keys, 0, numbers, 0, keys.length);
-
-        Arrays.sort(numbers);
-
-        this.binarySearch = new BinarySearch(numbers);
+    public BinarySearch(int[] numbers) {
+        this.numbers = numbers;
     }
 
-    public boolean contains(int value) {
-        return this.binarySearch.findIndexOf(value) != -1;
+    public int findIndexOf(int value) {
+
+        int lo_index = 0;
+        int hi_index = this.numbers.length - 1;
+
+        while (lo_index <= hi_index) {
+
+            int mid_index = lo_index + (hi_index - lo_index) / 2;
+
+            if (value < this.numbers[mid_index]) {
+                hi_index = mid_index - 1;
+            } else if (value > this.numbers[mid_index]) {
+                lo_index = mid_index + 1;
+            } else {
+                return mid_index;
+            }
+        }
+
+        return -1;
     }
+
 }
-
-
