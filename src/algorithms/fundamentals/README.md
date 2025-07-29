@@ -1033,7 +1033,7 @@ public class BinarySearch {
 }
 ```
 
-And then implementing the BinarySearchTestClient class:
+And then implementing the BinarySearchTestClient class to read the command line parameter:
 
 ```java
 import java.util.Arrays;
@@ -1120,7 +1120,7 @@ public class EuclidsGCD {
 }
 ```
 
-Create the test client:
+Create the test client reading the two parameters from command line:
 
 ```java
 public class EuclidsGCDTestClient {
@@ -1137,6 +1137,23 @@ public class EuclidsGCDTestClient {
     }
 }
 ```
+
+**1.1.27 _Binomial Distribution_. Estimate the number of recursive calls that would be used by the code**
+
+```java
+public static double binomial(int N, int k, double p) {
+    
+    if((N == 0) && (k == 0)) 
+        return 1.0;
+    
+    if( (N < 0) || (k < 0))
+        return 0.0;
+    
+    return (1 -p) * binomial(N-1, k, p) + p * binomial(N-1, k-1, p);
+}
+```
+**to compute binomial(100, 50, 0.25). Develop a better implementation that is based on saving
+computed values after the sort.**
 
 
 # References
