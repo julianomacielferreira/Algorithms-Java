@@ -996,7 +996,7 @@ standard input that _are not_ in the whitelist, - to print numbers that _are_ in
 
 Decomposing the input and output:
 
-    - Input: String parameter + or - from command line.
+    - Input: String parameter '+' or '-' from command line.
     - Output: The numbers from "4Kints.txt" that are in the whitelist ("1Kints.txt") and the numbers that are not in the list
 
 First implementing the BinarySearch class:
