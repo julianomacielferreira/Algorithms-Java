@@ -880,7 +880,7 @@ Decomposing the input and output:
     - Input: Read lines from console using (StdIn)
     - Output: Output in the console a table with a column of names, more two columns for the integers and the last column with the result of dividing the first by the second with three decimal places.
 
-The solution implementation is very simple:
+The solution implementation:
 
 ```java
 public class Division {
@@ -939,7 +939,7 @@ Decomposing the input and output:
     - Input: An integer value to be found and the array of values
     - Output: The value position in the array or negative minus 1 if its not present.
 
-The solution implementation is very straightforward:
+One implementation of solution is very straightforward:
 
 ```java
 public class BinarySearchRecursive {
@@ -996,8 +996,99 @@ standard input that _are not_ in the whitelist, - to print numbers that _are_ in
 
 Decomposing the input and output:
 
-    - Input: .
-    - Output: .
+    - Input: String parameter + or - from command line.
+    - Output: The numbers from "4Kints.txt" that are in the whitelist ("1Kints.txt") and the numbers that are not in the list
+
+First implementing the BinarySearch class:
+
+```java
+public class BinarySearch {
+
+    private final int[] numbers;
+
+    public BinarySearch(int[] numbers) {
+        this.numbers = numbers;
+    }
+
+    public int findIndexOf(int value) {
+
+        int lo_index = 0;
+        int hi_index = this.numbers.length - 1;
+
+        while (lo_index <= hi_index) {
+
+            int mid_index = lo_index + (hi_index - lo_index) / 2;
+
+            if (value < this.numbers[mid_index]) {
+                hi_index = mid_index - 1;
+            } else if (value > this.numbers[mid_index]) {
+                lo_index = mid_index + 1;
+            } else {
+                return mid_index;
+            }
+        }
+
+        return -1;
+    }
+}
+```
+
+And then implementing the BinarySearchTestClient class:
+
+```java
+import java.util.Arrays;
+
+public class BinarySearchTestClient {
+
+    public static void main(final String[] args) {
+
+        String param = args[0];
+        
+        if(param == null) throw new RuntimeException("No parameter found");
+        
+        int[] numbers = In.readInts("./data/4Kints.txt");
+        int[] numbersToFind = In.readInts("./data/1Kints.txt");
+
+        Arrays.sort(numbers);
+        Arrays.sort(numbersToFind);
+        
+        if(param.equals("+")) {
+            printNumbersThatAreNotInWhiteList(numbers, numbersToFind);
+        } else if(param.equals("-")) {
+            printNumbersThatAreInWhitelist(numbers, numbersToFind);
+        }
+    }
+    
+    private static void printNumbersThatAreInWhitelist(final int[] numbers, int[] numbersToFind) {
+
+        BinarySearch binarySearch = new BinarySearch(numbers);
+
+        for (Integer number : numbersToFind) {
+
+            int index = binarySearch.findIndexOf(number);
+
+            if (index > -1) {
+                StdOut.println(String.format("The number %s is at the list", number));
+            }
+        }
+
+    }
+
+    private static void printNumbersThatAreNotInWhiteList(final int[] numbers, int[] numbersToFind) {
+
+        BinarySearch binarySearch = new BinarySearch(numbers);
+
+        for (Integer number : numbersToFind) {
+
+            int index = binarySearch.findIndexOf(number);
+
+            if (index == -1) {
+                StdOut.println(String.format("The number %s is not in the list", number));
+            }
+        }
+    }
+}
+```
 
 **1.1.24: Give the sequence of values of _p_ and _q_ that are computed when Euclid's algorithm is used to compute the
 greatest common divisor of 105 and 24. Extend the code given on page 4 to develop a program Euclid that takes two
