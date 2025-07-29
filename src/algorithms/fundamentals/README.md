@@ -1100,6 +1100,45 @@ Decomposing the input and output:
     - Input: .
     - Output: .
 
+In the code solution, first implement a class with the gcd algorithm:
+
+```java
+import edu.princeton.cs.algs4.StdOut;
+
+public class EuclidsGCD {
+
+    public static int compute(int p, int q) {
+
+        StdOut.println(String.format("gcd(p: %s, q: %s)", p, q));
+
+        if (q == 0) return p;
+
+        int remainder = p % q;
+
+        return compute(q, remainder);
+    }
+}
+```
+
+Create the test client:
+
+```java
+public class EuclidsGCDTestClient {
+
+    public static void main(final String[] args) {
+
+        String p = args[0];
+        String q = args[1];
+
+        if (p == null || q == null) throw new RuntimeException("No parameters found");
+
+        int gcd = EuclidsGCD.compute(Integer.valueOf(p), Integer.valueOf(q));
+        StdOut.println(String.format("greatest common divisor of %s and %s is %s", p, q, gcd));
+    }
+}
+```
+
+
 # References
 
 - ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)
