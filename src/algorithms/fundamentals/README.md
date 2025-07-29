@@ -1097,8 +1097,8 @@ the recursive method. Use your program to compute the greatest common divisor of
 
 Decomposing the input and output:
 
-    - Input: .
-    - Output: .
+    - Input: two integers from the command line.
+    - Output: greatest common divisor, printing out two arguments for each call on the recursive method.
 
 In the code solution, first implement a class with the gcd algorithm:
 
