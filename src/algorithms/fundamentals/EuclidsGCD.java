@@ -25,9 +25,9 @@ package algorithms.fundamentals;
 
 import edu.princeton.cs.algs4.StdOut;
 
-public class GCDEuclids {
+public class EuclidsGCD {
 
-    public static int gcd(int p, int q) {
+    public static int compute(int p, int q) {
 
         StdOut.println(String.format("gcd(p: %s, q: %s)", p, q));
 
@@ -35,6 +35,6 @@ public class GCDEuclids {
 
         int remainder = p % q;
 
-        return gcd(q, remainder);
+        return compute(q, remainder);
     }
 }
