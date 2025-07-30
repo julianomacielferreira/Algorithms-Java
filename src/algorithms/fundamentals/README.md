@@ -1172,7 +1172,10 @@ The solution is just textual with mathematics symbology and logic:
 >
 > By the division algorithm, **_p_** = **_a_** * **_q_** + **_r_** for some integer **_a_** and **_r_** where 0 &le; **_r_** < **_q_**.
 > Any common divisor of **_p_** and **_q_** must also divide **_r_** (since **_r_** = **_p_** - **_a_** * **_q_**, remember from algebra!),
-> and any common divisor of **_q_** and **_r_** must also divide **_p_**.
+> and any common divisor of **_q_** and **_r_** must also divide **_p_**. 
+> 
+> Therefore, the set of common divisors of **_p_** and **_q_** is the same as the set 
+> of common divisors of **_q_** and **_r_**, which implies that GCD(**_p_**, **_q_**) = GCD(**_q_**, **_r_**). 
 
 **1.1.27 _Binomial Distribution_. Estimate the number of recursive calls that would be used by the code**
 
