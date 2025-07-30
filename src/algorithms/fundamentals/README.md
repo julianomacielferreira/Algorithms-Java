@@ -1148,7 +1148,7 @@ First, we need to know what **_mathematical induction_** is:
 > It's a method used to prove that a mathematical statement is true for all positive integers (or sometimes for all 
 > integers greater than a certain number). It involves two main steps:
 > 1. **_Base Case_**: Prove that the statement is true for the smallest possible value (usually 1 or 0).
-> 2. **_Inductive Step_**: Assume that the statement is true for some arbitrary value (k), and then prove that is true for the next value (k + 1). 
+> 2. **_Inductive Step_**: Assume that the statement is true for some arbitrary value (k), and then prove that is true for the next value (k+1). 
 >
 > If both steps are successfully proven, then the statement is true for all positive integers (or all integers greater than the base case). 
 
