@@ -1157,13 +1157,18 @@ The solution is just textual with mathematics symbology and logic:
 > To prove that Euclid's algorithm computes the greatest common divisor (GCD) of any pair of non-negative integers **_p_** and **_q_**,
 > we start with the base case, i.e, when **_q = 0_**.
 >
-> When **_q = 0_**, the algorithm returns **_p_**, which is indeed the GCD of **_p_** and **_0_** since the GCD of any number and **_0_** is the number itself.
+> When **_q = 0_**, the algorithm returns **_p_**, which is indeed the GCD of **_p_** and **_0_** since the GCD of **_any number_** and **_0_** is the number itself.
 >
 > **Step 2**: <ins>**Inductive Hypothesis**</ins>
 > 
 > Assume that Euclid's algorithm correctly computes the GCD for all pairs (**_p_**, **_q_**) where **_q_** < **_k_**, for some positive integer **_k_**.
 > Specifically, we assume that GCD(**_p_**, **_q_**) = GCD(**_q_**, **_r_**), where **_r_** is the remainder of **_p_** 
 > divided by **_q_** (i.e, **_p_** = **_a_** * **_q_** + **_r_** for some integer **_a_**).
+>
+> **Step 3**: <ins>**Inductive Step**</ins> 
+> 
+> Now, consider the case when **_q_** = **_k_**. According to Euclid's algorithm, we compute the remainder **_r_** of **_p_** divided by **_q_** and 
+> then find GCD(**_q_**, **_r_**).
 
 **1.1.27 _Binomial Distribution_. Estimate the number of recursive calls that would be used by the code**
 
