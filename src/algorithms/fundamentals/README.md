@@ -1162,16 +1162,17 @@ The solution is just textual with mathematics symbology and logic:
 > **Step 2**: <ins>**Inductive Hypothesis**</ins>
 > 
 > Assume that Euclid's algorithm correctly computes the GCD for all pairs (**_p_**, **_q_**) where **_q_** < **_k_**, for some positive integer **_k_**.
-> Specifically, we assume that GCD(**_p_**, **_q_**) = GCD(**_q_**, **_r_**), where **_r_** is the remainder of **_p_** 
-> divided by **_q_** (i.e, **_p_** = **_a_** * **_q_** + **_r_** for some integer **_a_**).
+> Specifically, we assume that GCD(**_p_**, **_q_**) = GCD(**_q_**, **_r_**), where **_r_** is the remainder of "**_p_** 
+> divided by **_q_**" (i.e, **_p_** = **_a_** * **_q_** + **_r_** for some integer **_a_**).
 >
 > **Step 3**: <ins>**Inductive Step**</ins> 
 > 
-> Now, consider the case when **_q_** = **_k_**. According to Euclid's algorithm, we compute the remainder **_r_** of **_p_** divided by **_q_** and 
+> Now, consider the case when **_q_** = **_k_**. According to Euclid's algorithm, we compute the remainder **_r_** of "**_p_** divided by **_q_**" and 
 > then find GCD(**_q_**, **_r_**). 
 >
 > By the division algorithm, **_p_** = **_a_** * **_q_** + **_r_** for some integer **_a_** and **_r_** where 0 &le; **_r_** < **_q_**.
-> Any common divisor of **_p_** and **_q_** must also divide **_r_** (since **_r = **_p_** - **_a_** * **_q_**, remember from algebra!)
+> Any common divisor of **_p_** and **_q_** must also divide **_r_** (since **_r_** = **_p_** - **_a_** * **_q_**, remember from algebra!),
+> and any common divisor of **_q_** and **_r_** must also divide **_p_**.
 
 **1.1.27 _Binomial Distribution_. Estimate the number of recursive calls that would be used by the code**
 
