@@ -1183,6 +1183,22 @@ The solution is just textual with mathematics symbology and logic:
 > Euclid's algorithm correctly computes GCD(**_q_**, **_r_**), and thus it correctly computes GCD(**_p_**, **_q_**) for **_q_** = **_k_**.
 > 
 > This concludes the inductive step.
+>
+> <ins>**Conslusion**</ins>
+> 
+> By mathematical induction, Euclid's algorithm computes the greatest common divisor of any pair of non-negative integers **_p_** and **_q_**.
+> 
+> Example:
+> 
+> Compute the GCD of 542 and 234: 
+> 
+> - 542 = 2 * 234 + 74 (**_p_** = 542, **_q_** = 234, **_a_** = 2 and **_r_** = 74)
+> - 234 = 3 * 74 + 12 (**_p_** = 234, **_q_** = 74, **_a_** = 3 and **_r_** = 12)
+> - 74 = 6 * 12 + 2 (**_p_** = 74, **_q_** = 12, **_a_** = 6 and **_r_** = 2)
+> - 12 = 1 * 6 + 0 (**_p_** = 12, **_q_** = 2, **_a_** = 1 and **_r_** = 0)
+> 
+> So, the GCD(2, 0) = 2, what implies that the GCD(542, 234) = 2.
+
 
 **1.1.27 _Binomial Distribution_. Estimate the number of recursive calls that would be used by the code**
 
