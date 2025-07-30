@@ -1139,20 +1139,30 @@ public class EuclidsGCDTestClient {
 ```
 
 **1.1.25 Use mathematical induction to prove that Euclid's algorithm computes the greatest common divisor of any pair 
-of non negative integers p and q.**
+of non-negative integers p and q.**
 
-The solution is just textual with mathematics symbology and logic:
-
-First, we need to know what **_mathematical induction_** is:
+First, we need to know what **<u>mathematical induction</u>** is.
 
 > It's a method used to prove that a mathematical statement is true for all positive integers (or sometimes for all 
 > integers greater than a certain number). It involves two main steps:
-> 1. **_Base Case_**: Prove that the statement is true for the smallest possible value (usually 1 or 0).
-> 2. **_Inductive Step_**: Assume that the statement is true for some arbitrary value (k), and then prove that is true for the next value (k+1). 
+> 1. **<u>Base Case</u>**: Prove that the statement is true for the smallest possible value (usually 1 or 0).
+> 2. **<u>Inductive Step</u>**: Assume that the statement is true for some arbitrary value (k), and then prove that is true for the next value (k+1). 
 >
 > If both steps are successfully proven, then the statement is true for all positive integers (or all integers greater than the base case). 
 
+The solution is just textual with mathematics symbology and logic:
+
 **1.1.27 _Binomial Distribution_. Estimate the number of recursive calls that would be used by the code**
+
+> **Step 1**: **Base Case**
+> 
+> To prove that Euclid's algorithm computes the greatest common divisor (GCD) of any pair of non negative integers **_p_** and **_q_**,
+> we start with the base case, i.e, when **_q = 0_**.
+> 
+> When **_q = 0_**, the algorithm returns **_p_**, which is indeed the GCD of **_p_** and **_0_** since the GCD of any number and **_0_** is the number itself.
+>
+> **Step 2**: **Inductive Hypothesis**
+
 
 ```java
 public static double binomial(int N, int k, double p) {
