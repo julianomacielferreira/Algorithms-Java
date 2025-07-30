@@ -1211,12 +1211,47 @@ public static double binomial(int N, int k, double p) {
     if( (N < 0) || (k < 0))
         return 0.0;
     
-    return (1 -p) * binomial(N-1, k, p) + p * binomial(N-1, k-1, p);
+    return (1 - p) * binomial(N - 1, k, p) + p * binomial(N - 1, k - 1, p);
 }
 ```
 **to compute binomial(100, 50, 0.25). Develop a better implementation that is based on saving
 computed values after the sort.**
 
+Again, like in exercise 1.1.25, we need some background about what is a Binomial Distribution to understand the code solution:
+
+> The binomial distribution is a discrete probability distribution that models the number of successes
+> in a fixed number of independent trials, where each trial has a constant probability of success.
+> 
+> It's commonly used to analyse and predict the outcomes of experiments or events that have two possible outcomes, such as:
+> 
+> - Success or failure
+> - Yes or no
+> - Heads or tails
+> 
+> The binomial distribution is characterized by three parameters:
+> 
+> - 1. **n**: The number os trials
+> - 2. **p**: The probability of success in each trial
+> - 3. **x**: The number of successes
+> 
+> The probability of getting exactly x successes in n trials is given by binomial probability formula:
+> 
+> P(X = x) = (n choose x) * p<sup>x</sup> * (1-p)<sup>(n-x)</sup>
+> 
+> The binomial distribution has many real-world applications, such as:
+> 
+> - Predicting the number of defective products in a batch
+> - Analyzing the results of medical trials
+> - Modeling the behavior of stock prices
+> 
+> Some key properties of the binomial distribution include:
+> 
+> - Mean (or expected value): np
+> - Variance (a measure of how spread out the possible outcomes are around the expected value): np(1-p)
+> - Standard deviation (measure the spread or variability of the distribution): $\sqrt{(np(1-p))}$
+> 
+> The binomial distribution is a fundamental concept in statistics and probability theory, and it's
+> widely used in many fields, including business, medicine, social sciences, and engineering.
 
 # References
 
