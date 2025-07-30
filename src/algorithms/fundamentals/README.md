@@ -1176,6 +1176,13 @@ The solution is just textual with mathematics symbology and logic:
 > 
 > Therefore, the set of common divisors of **_p_** and **_q_** is the same as the set 
 > of common divisors of **_q_** and **_r_**, which implies that GCD(**_p_**, **_q_**) = GCD(**_q_**, **_r_**). 
+>
+> **Step 4**: <ins>**Conclusion of induction**</ins> 
+> 
+> Given that GCD(**_p_**, **_q_**) = GCD(**_q_**, **_r_**) and **_r_** < **_q_** (**_q_** = **_k_**), by the inductive hypotheses (Step 3),
+> Euclid's algorithm correctly computes GCD(**_q_**, **_r_**), and thus it correctly computes GCD(**_p_**, **_q_**) for **_q_** = **_k_**.
+> 
+> This concludes the inductive step.
 
 **1.1.27 _Binomial Distribution_. Estimate the number of recursive calls that would be used by the code**
 
