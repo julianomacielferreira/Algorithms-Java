@@ -1208,7 +1208,7 @@ public static double binomial(int N, int k, double p) {
     if((N == 0) && (k == 0)) 
         return 1.0;
     
-    if( (N < 0) || (k < 0))
+    if((N < 0) || (k < 0))
         return 0.0;
     
     return (1 - p) * binomial(N - 1, k, p) + p * binomial(N - 1, k - 1, p);
@@ -1217,7 +1217,7 @@ public static double binomial(int N, int k, double p) {
 **to compute binomial(100, 50, 0.25). Develop a better implementation that is based on saving
 computed values after the sort.**
 
-Again, like in exercise 1.1.25, we need some background about what is a Binomial Distribution to understand the code solution:
+Again, like in exercise 1.1.25, we need some background to understand the code solution. Let's see a definition of what is a "Binomial Distribution":
 
 > The binomial distribution is a discrete probability distribution that models the number of successes
 > in a fixed number of independent trials, where each trial has a constant probability of success.
