@@ -1252,6 +1252,52 @@ Again, like in exercise 1.1.25, we need some background to understand the code s
 > 
 > The binomial distribution is a fundamental concept in statistics and probability theory, and it's
 > widely used in many fields, including business, medicine, social sciences, and engineering.
+> 
+> A recursive algorithm to calculate the binomial distribution using the following formula:
+> 
+> P(X = k) = (n/k) * p * P(X = k-1) / q + (1 - (n/k) * p / q) * P(X = k)
+> 
+> where:
+> - P(X = k) is the probability of k successes
+> - n is the number of trials
+> - k is the number of successes
+> - nCk is the number of combinations of n items taken k at a time (binomial coefficient)
+> - p is the probability of successes
+> - q is the probability of failure (q = 1 - p)
+> 
+> However, this approach is not efficient. A better approach is to calculate the binomial coefficients 
+> recursively and then use them to calculate the binomial distribution.
+> 
+> Calculating the binomial coefficients recursively using the following formula:
+> 
+> nCk = n - 1Ck - 1 + n - 1Ck
+> 
+> In java code:
+>
+>```java
+>public static double binomialCoefficient(int n, int k) {
+>    // Base case
+>    if((k == 0) || (k == n))
+>        return 1;
+>    else // Recursive case
+>        return binomialCoefficient(n-1, k-1) + binomialCoefficient(n-1, k);
+>}   
+>```
+> And then using this function to calculate the binomial distribution:
+>
+>```java
+>public static double binomialDistribution(int n, int k, double p) {
+>    
+>    double q = 1 - p;
+>    
+>    double coefficient = binomialCoefficient(n, k);
+>    
+>    double probability = coefficient * (p ^ k) * (q ^ (n - k));
+>    
+>    return probability;        
+>}
+>```
+
 
 # References
 
