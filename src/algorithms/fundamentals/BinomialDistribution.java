@@ -37,22 +37,32 @@ public class BinomialDistribution {
      */
     public static double calculate(int trials, int probabilityOfSuccessInEachTrial, double numberOfSuccesses) {
 
+        double probabilityOfFailure = 1 - numberOfSuccesses;
+
+        double coefficient = calculateBinomialCoefficient(trials, probabilityOfSuccessInEachTrial);
+
+        return coefficient * (Math.pow(numberOfSuccesses, probabilityOfSuccessInEachTrial)) * (Math.pow(probabilityOfFailure, (trials - probabilityOfSuccessInEachTrial)));
+    }
+
+    /**
+     * @param trials                          The number of trials
+     * @param probabilityOfSuccessInEachTrial The probability of success in each trial
+     * @return the binomial coefficient from trials with probability of success
+     */
+    private static double calculateBinomialCoefficient(int trials, int probabilityOfSuccessInEachTrial) {
+
         StdOut.println(
                 String.format(
-                        "%s - calculate(trials: %s, probabilityOfSuccessInEachTrial: %s, numberOfSuccesses: %s)",
+                        "%s - calculateBinomialCoefficient(n: %s, k: %s)",
                         ++called,
                         trials,
-                        probabilityOfSuccessInEachTrial,
-                        numberOfSuccesses
+                        probabilityOfSuccessInEachTrial
                 )
         );
-
-        if ((trials == 0) && (probabilityOfSuccessInEachTrial == 0))
-            return 1.0;
-
-        if ((trials < 0) || (probabilityOfSuccessInEachTrial < 0))
-            return 0.0;
-
-        return (1 - numberOfSuccesses) * calculate(trials - 1, probabilityOfSuccessInEachTrial, numberOfSuccesses) + numberOfSuccesses * calculate(trials - 1, probabilityOfSuccessInEachTrial - 1, numberOfSuccesses);
+        // Base case
+        if ((probabilityOfSuccessInEachTrial == 0) || (probabilityOfSuccessInEachTrial == trials))
+            return 1;
+        else // Recursive case
+            return calculateBinomialCoefficient(trials - 1, probabilityOfSuccessInEachTrial - 1) + calculateBinomialCoefficient(trials - 1, probabilityOfSuccessInEachTrial);
     }
 }
