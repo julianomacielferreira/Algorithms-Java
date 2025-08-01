@@ -1292,7 +1292,7 @@ Again, like in exercise 1.1.25, we need some background to understand the code s
 >    
 >    double coefficient = binomialCoefficient(n, k);
 >    
->    double probability = coefficient * (p ^ k) * (q ^ (n - k));
+>    double probability = coefficient * (Math.pow(p, k)) * (Math.pow(q, (n - k)));
 >    
 >    return probability;        
 >}
