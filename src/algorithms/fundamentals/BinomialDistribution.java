@@ -25,9 +25,13 @@ package algorithms.fundamentals;
 
 import edu.princeton.cs.algs4.StdOut;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class BinomialDistribution {
 
     private static int called;
+    private static final Map<String, Double> COEFFICIENTS_CACHE = new HashMap<>();
 
     /**
      * @param trials                          The number of trials
@@ -59,10 +63,28 @@ public class BinomialDistribution {
                         probabilityOfSuccessInEachTrial
                 )
         );
+
+        final String CACHE_KEY = String.format("%s-%s", trials, probabilityOfSuccessInEachTrial);
+
+        // If we cached the value, then return it
+        if (COEFFICIENTS_CACHE.containsKey(CACHE_KEY)) {
+            return COEFFICIENTS_CACHE.get(CACHE_KEY);
+        }
+
         // Base case
-        if ((probabilityOfSuccessInEachTrial == 0) || (probabilityOfSuccessInEachTrial == trials))
-            return 1;
-        else // Recursive case
-            return calculateBinomialCoefficient(trials - 1, probabilityOfSuccessInEachTrial - 1) + calculateBinomialCoefficient(trials - 1, probabilityOfSuccessInEachTrial);
+        if ((probabilityOfSuccessInEachTrial == 0) || (probabilityOfSuccessInEachTrial == trials)) {
+
+            COEFFICIENTS_CACHE.put(CACHE_KEY, 1.0);
+
+            return 1.0;
+        }
+
+        // Recursive case
+        double binomialCoefficient = calculateBinomialCoefficient(trials - 1, probabilityOfSuccessInEachTrial - 1) + calculateBinomialCoefficient(trials - 1, probabilityOfSuccessInEachTrial);
+
+        // Cache the value and return it
+        COEFFICIENTS_CACHE.put(CACHE_KEY, binomialCoefficient);
+
+        return binomialCoefficient;
     }
 }
