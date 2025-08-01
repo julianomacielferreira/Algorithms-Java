@@ -1275,26 +1275,36 @@ Again, like in exercise 1.1.25, we need some background to understand the code s
 > In java code:
 >
 >```java
->public static double binomialCoefficient(int n, int k) {
->    // Base case
->    if((k == 0) || (k == n))
->        return 1;
->    else // Recursive case
->        return binomialCoefficient(n-1, k-1) + binomialCoefficient(n-1, k);
->}   
+>/**
+>* @param trials                          The number of trials
+>* @param probabilityOfSuccessInEachTrial The probability of success in each trial
+>* @return the binomial coefficient from trials with probability of success
+>*/
+>private static double calculateBinomialCoefficient(int trials, int probabilityOfSuccessInEachTrial) {
+>
+>   // Base case
+>   if ((probabilityOfSuccessInEachTrial == 0) || (probabilityOfSuccessInEachTrial == trials))
+>      return 1;
+>   else // Recursive case
+>      return calculateBinomialCoefficient(trials - 1, probabilityOfSuccessInEachTrial - 1) + calculateBinomialCoefficient(trials - 1, probabilityOfSuccessInEachTrial);
+>}  
 >```
 > And then using this function to calculate the binomial distribution:
 >
 >```java
->public static double binomialDistribution(int n, int k, double p) {
->    
->    double q = 1 - p;
->    
->    double coefficient = binomialCoefficient(n, k);
->    
->    double probability = coefficient * (Math.pow(p, k)) * (Math.pow(q, (n - k)));
->    
->    return probability;        
+>/**
+>* @param trials                          The number of trials
+>* @param probabilityOfSuccessInEachTrial The probability of success in each trial
+>* @param numberOfSuccesses               The number of successes
+>* @return the number of successes in a fixed number of independent trials
+>*/
+>public static double calculate(int trials, int probabilityOfSuccessInEachTrial, double numberOfSuccesses) {
+>
+>     double probabilityOfFailure = 1 - numberOfSuccesses;
+>
+>     double coefficient = calculateBinomialCoefficient(trials, probabilityOfSuccessInEachTrial);
+>
+>     return coefficient * (Math.pow(numberOfSuccesses, probabilityOfSuccessInEachTrial)) * (Math.pow(probabilityOfFailure, (trials - probabilityOfSuccessInEachTrial)));
 >}
 >```
 
