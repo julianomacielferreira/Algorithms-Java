@@ -23,9 +23,17 @@
  */
 package algorithms;
 
+import algorithms.data.abstraction.StaticSetOfInts;
 import algorithms.fundamentals.*;
+import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
+
+import java.math.BigDecimal;
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 /**
  * Entry point class (contains the main() method). It could be called Main.java,
@@ -40,13 +48,74 @@ public class Algorithms {
      */
     public static void main(final String[] args) {
 
-        decimalToBinary();
-        booleanArray();
-        fibonacci();
-        factorial();
-        compareNumbers();
-        division();
-        drawing();
+//        decimalToBinary();
+//        booleanArray();
+//        fibonacci();
+//        factorial();
+//        compareNumbers();
+//        division();
+//        drawing();
+//        staticSetOfInts();
+
+        final List<BigDecimal> prices = Arrays.asList(
+                new BigDecimal("10"), new BigDecimal("30"), new BigDecimal("17"),
+                new BigDecimal("20"), new BigDecimal("15"), new BigDecimal("18"),
+                new BigDecimal("45"), new BigDecimal("12")
+        );
+
+        final BigDecimal totalDiscountedPrices = prices.stream().
+                filter(price -> price.compareTo(BigDecimal.valueOf(20)) > 0).
+                map(price -> price.multiply(BigDecimal.valueOf(0.9))).
+                reduce(BigDecimal.ZERO, BigDecimal::add);
+
+        StdOut.println("Total discounted price: " + totalDiscountedPrices);
+
+        final List<String> friends = Arrays.asList("Brian", "Nate", "Neal", "Raju", "Sara", "Scott");
+
+        friends.forEach((final String name) -> StdOut.println(name));
+
+        friends.forEach(StdOut::println);
+
+        friends.stream().map(String::toUpperCase).forEach(name -> StdOut.println(name));
+
+        final List<String> startsWithNFriends = friends.stream().
+                filter(checkStartsWith("N")).
+                collect(Collectors.toList());
+
+        StdOut.println(String.format("Found %d names starting with N:", startsWithNFriends.size()));
+        StdOut.println(startsWithNFriends);
+
+        final List<String> editors = Arrays.asList("Brian", "Jackie", "John", "Mike");
+
+        final List<String> startsWithB = editors.stream().
+                filter(checkStartsWith("B")).
+                collect(Collectors.toList());
+
+        StdOut.println(String.format("Found %d names starting with B:", startsWithB.size()));
+        StdOut.println(startsWithB);
+
+        int[] numbers = getNumbersFromFile("4Kints.txt");
+        int[] numbersToFind = getNumbersFromFile("1Kints.txt");
+
+        Arrays.sort(numbers);
+        Arrays.sort(numbersToFind);
+
+        printNumbersThatAreInWhitelist(numbers, numbersToFind);
+        printNumbersThatAreNotInWhiteList(numbers, numbersToFind);
+
+        int gcd = EuclidsGCD.compute(105, 24);
+        StdOut.println(String.format("greatest common divisor of 105 and 24 is %s", gcd));
+
+        gcd = EuclidsGCD.compute(1111111, 1234567);
+        StdOut.println(String.format("greatest common divisor of 1111111 and 1234567 is %s", gcd));
+
+        double binomialDistribution = BinomialDistribution.calculate(100, 50, 0.25);
+
+        StdOut.println(String.format("The Binomial Distribution of (%s, %s) with number of successes %s is %s", 100, 50, 0.25, String.format("%.10f", binomialDistribution)));
+    }
+
+    public static Predicate<String> checkStartsWith(final String letter) {
+        return name -> name.startsWith(letter);
     }
 
     private static void drawing() {
@@ -105,4 +174,55 @@ public class Algorithms {
         Division.print();
     }
 
+    private static void staticSetOfInts() {
+
+        int[] numbers = getNumbersFromFile("8Kints.txt");
+        int[] numbersToFind = getNumbersFromFile("4Kints.txt");
+
+        StaticSetOfInts setOfIntegers = new StaticSetOfInts(numbers);
+
+        for (int i = 0; i < numbersToFind.length; i++) {
+
+            int value = numbersToFind[i];
+
+            if (setOfIntegers.contains(value)) {
+                StdOut.println(String.format("Found: %s", value));
+            } else StdOut.println(String.format("Not found: %s", value));
+
+        }
+
+    }
+
+    private static void printNumbersThatAreInWhitelist(final int[] numbers, int[] numbersToFind) {
+
+        BinarySearch binarySearch = new BinarySearch(numbers);
+
+        for (Integer number : numbersToFind) {
+
+            int index = binarySearch.findIndexOf(number);
+
+            if (index > -1) {
+                StdOut.println(String.format("The number %s is at the list", number));
+            }
+        }
+
+    }
+
+    private static void printNumbersThatAreNotInWhiteList(final int[] numbers, int[] numbersToFind) {
+
+        BinarySearch binarySearch = new BinarySearch(numbers);
+
+        for (Integer number : numbersToFind) {
+
+            int index = binarySearch.findIndexOf(number);
+
+            if (index == -1) {
+                StdOut.println(String.format("The number %s is not in the list", number));
+            }
+        }
+    }
+
+    private static int[] getNumbersFromFile(final String file) {
+        return In.readInts("./data/" + file);
+    }
 }

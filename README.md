@@ -6,6 +6,8 @@ by implementing algorithms and solving proposed problems from the [books](https:
 I choose Java&trade; as the implementation language because I purchase a copy of the book ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)
 and its [book site](https://algs4.cs.princeton.edu/home/) is full of resources for learning and practicing.
 
+![Algorithms 4th Edition](algorithms-book.jpg)
+
 # Table of contents
 
 - [Technologies](#technologies)
