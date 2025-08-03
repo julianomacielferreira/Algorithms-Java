@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package algorithms.data.abstraction;
+package algorithms.data_abstraction;
 
 import algorithms.fundamentals.BinarySearch;
 

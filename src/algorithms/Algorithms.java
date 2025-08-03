@@ -23,7 +23,7 @@
  */
 package algorithms;
 
-import algorithms.data.abstraction.StaticSetOfInts;
+import algorithms.data_abstraction.StaticSetOfInts;
 import algorithms.fundamentals.*;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdIn;
