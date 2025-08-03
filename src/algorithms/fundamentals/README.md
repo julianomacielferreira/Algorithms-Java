@@ -1272,84 +1272,89 @@ Again, like in exercise 1.1.25, we need some background to understand the code s
 > 
 > nCk = n - 1Ck - 1 + n - 1Ck
 > 
-> In java code:
->
->```java
->/**
->* @param trials                          The number of trials
->* @param probabilityOfSuccessInEachTrial The probability of success in each trial
->* @return the binomial coefficient from trials with probability of success
->*/
->private static double calculateBinomialCoefficient(int trials, int probabilityOfSuccessInEachTrial) {
->
->   // Base case
->   if ((probabilityOfSuccessInEachTrial == 0) || (probabilityOfSuccessInEachTrial == trials))
->      return 1;
->   else // Recursive case
->      return calculateBinomialCoefficient(trials - 1, probabilityOfSuccessInEachTrial - 1) + calculateBinomialCoefficient(trials - 1, probabilityOfSuccessInEachTrial);
->}  
->```
-> And then using this function to calculate the binomial distribution:
->
->```java
->/**
->* @param trials                          The number of trials
->* @param probabilityOfSuccessInEachTrial The probability of success in each trial
->* @param numberOfSuccesses               The number of successes
->* @return the number of successes in a fixed number of independent trials
->*/
->public static double calculate(int trials, int probabilityOfSuccessInEachTrial, double numberOfSuccesses) {
->
->     double probabilityOfFailure = 1 - numberOfSuccesses;
->
->     double coefficient = calculateBinomialCoefficient(trials, probabilityOfSuccessInEachTrial);
->
->     return coefficient * (Math.pow(numberOfSuccesses, probabilityOfSuccessInEachTrial)) * (Math.pow(probabilityOfFailure, (trials - probabilityOfSuccessInEachTrial)));
->}
->```
->But the above recursive algorithm has a really high time complexity due to the repeated calculations of binomial coefficients.
-> 
-> It's possible to optimize it using the dynamic programming techniques called memoization, to store and reuse previously calculated binomial coefficients.
-> 
-> In java code we just start to use a Map for cache the already computed values:
->```java
-> private static final Map<String, Double> COEFFICIENTS_CACHE = new HashMap();
->
->/**
->* @param trials                          The number of trials
->* @param probabilityOfSuccessInEachTrial The probability of success in each trial
->* @return the binomial coefficient from trials with probability of success
->*/
->private static double calculateBinomialCoefficient(int trials, int probabilityOfSuccessInEachTrial) {
->
->       final String CACHE_KEY = String.format("%s-%s", trials, probabilityOfSuccessInEachTrial);
->
->        // If we cached the value, then return it
->        if (COEFFICIENTS_CACHE.containsKey(CACHE_KEY)) {
->            return COEFFICIENTS_CACHE.get(CACHE_KEY);
->        }
->
->        // Base case
->        if ((probabilityOfSuccessInEachTrial == 0) || (probabilityOfSuccessInEachTrial == trials)) {
->
->            COEFFICIENTS_CACHE.put(CACHE_KEY, 1.0);
->
->            return 1.0;
->        }
->
->        // Recursive case
->        double binomialCoefficient = calculateBinomialCoefficient(trials - 1, probabilityOfSuccessInEachTrial - 1) + calculateBinomialCoefficient(trials - 1, probabilityOfSuccessInEachTrial);
->
->        // Cache the value and return it
->        COEFFICIENTS_CACHE.put(CACHE_KEY, binomialCoefficient);
->
->        return binomialCoefficient;
->}  
->
->```
->
-> 
 
+In java code:
+
+```java
+/**
+* @param trials                          The number of trials
+* @param probabilityOfSuccessInEachTrial The probability of success in each trial
+* @return the binomial coefficient from trials with probability of success
+*/
+private static double calculateBinomialCoefficient(int trials, int probabilityOfSuccessInEachTrial) {
+
+   // Base case
+   if ((probabilityOfSuccessInEachTrial == 0) || (probabilityOfSuccessInEachTrial == trials))
+      return 1;
+   else // Recursive case
+      return calculateBinomialCoefficient(trials - 1, probabilityOfSuccessInEachTrial - 1) + calculateBinomialCoefficient(trials - 1, probabilityOfSuccessInEachTrial);
+}  
+```
+ And then using this function to calculate the binomial distribution:
+
+```java
+/**
+* @param trials                          The number of trials
+* @param probabilityOfSuccessInEachTrial The probability of success in each trial
+* @param numberOfSuccesses               The number of successes
+* @return the number of successes in a fixed number of independent trials
+*/
+public static double calculate(int trials, int probabilityOfSuccessInEachTrial, double numberOfSuccesses) {
+
+     double probabilityOfFailure = 1 - numberOfSuccesses;
+
+     double coefficient = calculateBinomialCoefficient(trials, probabilityOfSuccessInEachTrial);
+
+     return coefficient * (Math.pow(numberOfSuccesses, probabilityOfSuccessInEachTrial)) * (Math.pow(probabilityOfFailure, (trials - probabilityOfSuccessInEachTrial)));
+}
+```
+But the above recursive algorithm has a really high time complexity due to the repeated calculations of binomial coefficients.
+ 
+It's possible to optimize it using the dynamic programming techniques called memoization, to store and reuse previously calculated binomial coefficients.
+ 
+In java code we just start to use a Map for cache the already computed values:
+
+```java
+ private static final Map<String, Double> COEFFICIENTS_CACHE = new HashMap();
+
+/**
+* @param trials                          The number of trials
+* @param probabilityOfSuccessInEachTrial The probability of success in each trial
+* @return the binomial coefficient from trials with probability of success
+*/
+private static double calculateBinomialCoefficient(int trials, int probabilityOfSuccessInEachTrial) {
+
+       final String CACHE_KEY = String.format("%s-%s", trials, probabilityOfSuccessInEachTrial);
+
+        // If we cached the value, then return it
+        if (COEFFICIENTS_CACHE.containsKey(CACHE_KEY)) {
+            return COEFFICIENTS_CACHE.get(CACHE_KEY);
+        }
+
+        // Base case
+        if ((probabilityOfSuccessInEachTrial == 0) || (probabilityOfSuccessInEachTrial == trials)) {
+
+            COEFFICIENTS_CACHE.put(CACHE_KEY, 1.0);
+
+            return 1.0;
+        }
+
+        // Recursive case
+        double binomialCoefficient = calculateBinomialCoefficient(trials - 1, probabilityOfSuccessInEachTrial - 1) + calculateBinomialCoefficient(trials - 1, probabilityOfSuccessInEachTrial);
+
+        // Cache the value and return it
+        COEFFICIENTS_CACHE.put(CACHE_KEY, binomialCoefficient);
+
+        return binomialCoefficient;
+}
+```
+
+**1.1.28 _Remove duplicates_. Modify the test client in BinarySearch to remove any duplicate keys in the whitelist after the sort.**
+
+Decomposing the input and output:
+
+    - Input: two integers from the command line.
+    - Output: greatest common divisor, printing out two arguments for each call on the recursive method.
 
 # References
 
