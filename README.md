@@ -1,4 +1,4 @@
-# Algorithms in Java (SIDE PROJECT)
+# Algorithms in Java $${\color{red}[in \space progress]}$$
 
 The intention of this repository is to have fun and improve my skills on Algorithm Analysis and Design, 
 by implementing algorithms and solving proposed problems from the [books](https://github.com/julianomacielferreira/Algorithms-Java#references).
