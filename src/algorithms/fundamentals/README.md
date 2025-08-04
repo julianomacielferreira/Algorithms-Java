@@ -1184,7 +1184,7 @@ The solution is just textual with mathematics symbology and logic:
 > 
 > This concludes the inductive step.
 >
-> <ins>**Conslusion**</ins>
+> <ins>**Conclusion**</ins>
 > 
 > By mathematical induction, Euclid's algorithm computes the greatest common divisor of any pair of non-negative integers **_p_** and **_q_**.
 > 
