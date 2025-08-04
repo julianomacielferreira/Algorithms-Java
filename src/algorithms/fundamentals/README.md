@@ -1356,6 +1356,15 @@ Decomposing the input and output:
     - Input:
     - Output:
 
+**1.1.30 _Array exercise_. Write a code fragment that creates an N-by-N boolean array a[][] such that a[i][j] is true
+if i and j are relatively prime (have no common factors), and false otherwise.**
+
+Decomposing the input and output:
+
+    - Input:
+    - Output:
+
+
 # References
 
 - ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)
