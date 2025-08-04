@@ -1305,7 +1305,7 @@ It's possible to optimize it using the dynamic programming techniques called mem
 In java code we just start to use a Map for cache the already computed values:
 
 ```java
- private static final Map<String, Double> COEFFICIENTS_CACHE = new HashMap();
+private static final Map<String, Double> COEFFICIENTS_CACHE = new HashMap();
 
 /**
 * @param trials                          The number of trials
@@ -1343,8 +1343,10 @@ private static double calculateBinomialCoefficient(int trials, int probabilityOf
 
 Decomposing the input and output:
 
-    - Input: two integers from the command line.
-    - Output: greatest common divisor, printing out two arguments for each call on the recursive method.
+    - Input:
+    - Output:
+
+
 
 # References
 
