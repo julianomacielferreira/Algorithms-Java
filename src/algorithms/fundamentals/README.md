@@ -1357,6 +1357,7 @@ Decomposing the input and output:
 - [Wikipedia Memoization definition](https://en.wikipedia.org/wiki/Memoization)
 - [Fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number)
 - [Factorial](https://en.wikipedia.org/wiki/Factorial)
+- [Binomial Distribution](https://en.wikipedia.org/wiki/Binomial_distribution)
 
 # License
 
