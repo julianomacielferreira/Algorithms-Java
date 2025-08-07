@@ -25,8 +25,7 @@ package algorithms.data_abstraction;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.*;
 
 /**
  *
@@ -41,5 +40,58 @@ public class StaticSetOfIntsTest {
         assertFalse(set.contains(1));
         assertFalse(set.contains(0));
         assertFalse(set.contains(-1));
+    }
+
+    @Test
+    public void singleElementSet() {
+        int[] keys = {5};
+        StaticSetOfInts set = new StaticSetOfInts(keys);
+        assertTrue(set.contains(5));
+        assertFalse(set.contains(1));
+        assertFalse(set.contains(0));
+        assertFalse(set.contains(-1));
+    }
+
+    @Test
+    public void multipleElementSet() {
+        int[] keys = {1, 2, 3, 4, 5};
+        StaticSetOfInts set = new StaticSetOfInts(keys);
+
+        for (int key : keys) {
+            assertTrue(set.contains(key));
+        }
+
+        assertFalse(set.contains(0));
+        assertFalse(set.contains(7));
+    }
+
+    @Test
+    public void testDuplicateElements() {
+        int[] keys = {1, 2, 2, 3, 3, 3};
+        StaticSetOfInts set = new StaticSetOfInts(keys);
+
+        assertTrue(set.contains(1));
+        assertTrue(set.contains(2));
+        assertTrue(set.contains(3));
+        assertFalse(set.contains(0));
+        assertFalse(set.contains(4));
+    }
+
+    @Test
+    public void testNegativeNumbers() {
+        int[] keys = {-5, -2, 0, 2, 5};
+        StaticSetOfInts set = new StaticSetOfInts(keys);
+
+        for (int key : keys) {
+            assertTrue(set.contains(key));
+        }
+
+        assertFalse(set.contains(-7));
+        assertFalse(set.contains(-4));
+    }
+
+    @Test
+    public void testNullInput() {
+        assertThrows(NullPointerException.class, () -> new StaticSetOfInts(null));
     }
 }
