@@ -49,6 +49,16 @@ public class BinomialDistribution {
      */
     public static double calculate(int trials, double probabilityOfSuccessInEachTrial, int numberOfSuccesses) {
 
+        if (trials < 0) {
+            throw new IllegalArgumentException("Number of trials must be non-negative");
+        }
+        if (probabilityOfSuccessInEachTrial < 0 || probabilityOfSuccessInEachTrial > 1) {
+            throw new IllegalArgumentException("Probability of success must be between 0 and 1");
+        }
+        if (numberOfSuccesses < 0 || numberOfSuccesses > trials) {
+            throw new IllegalArgumentException("Number of successes must be between 0 and the number of trials");
+        }
+
         double probabilityOfFailure = 1 - probabilityOfSuccessInEachTrial;
 
         double coefficient = calculateBinomialCoefficient(trials, numberOfSuccesses);
