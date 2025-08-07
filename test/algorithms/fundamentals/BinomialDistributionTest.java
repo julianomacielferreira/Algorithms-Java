@@ -35,7 +35,7 @@ public class BinomialDistributionTest {
     @Test
     public void testCalculate() {
 
-        double binomialDistribution = BinomialDistribution.calculate(10, 5, 0.25);
+        double binomialDistribution = BinomialDistribution.calculate(10, 0.25, 5);
 
         assertEquals("0,06", String.format("%.2f", binomialDistribution));
 
