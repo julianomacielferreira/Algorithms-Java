@@ -26,8 +26,21 @@ package algorithms.fundamentals;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class BinomialDistributionTest {
+
+    @Test
+    public void testCalculateProbability() {
+
+        int trials = 10;
+        double probabilityOfSuccess = 0.5;
+        int numberOfSuccesses = 5;
+
+        double probability = BinomialDistribution.calculate(trials, probabilityOfSuccess, numberOfSuccesses);
+
+        assertTrue(probability > 0);
+    }
 
     @Test
     public void testCalculate() {
