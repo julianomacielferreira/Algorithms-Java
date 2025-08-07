@@ -27,15 +27,8 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-/**
- *
- * @author juliano
- */
 public class BinomialDistributionTest {
 
-    /**
-     * Test of calculate method of class BinomialDistribution.
-     */
     @Test
     public void testCalculate() {
 

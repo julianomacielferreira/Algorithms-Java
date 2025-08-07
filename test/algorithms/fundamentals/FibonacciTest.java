@@ -26,15 +26,8 @@ package algorithms.fundamentals;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-/**
- *
- * @author juliano
- */
 public class FibonacciTest {
 
-    /**
-     * Test of F method, of class Fibonacci.
-     */
     @Test
     public void testF() {
 

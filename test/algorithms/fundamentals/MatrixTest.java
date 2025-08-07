@@ -24,17 +24,11 @@
 package algorithms.fundamentals;
 
 import static org.junit.Assert.assertArrayEquals;
+
 import org.junit.Test;
 
-/**
- *
- * @author juliano
- */
 public class MatrixTest {
 
-    /**
-     * Test of transposition method, of class Matrix.
-     */
     @Test
     public void testTranspositionOf() {
 

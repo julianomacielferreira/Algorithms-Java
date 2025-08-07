@@ -25,17 +25,11 @@ package algorithms.fundamentals;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
+
 import org.junit.Test;
 
-/**
- *
- * @author juliano
- */
 public class BooleanArrayTest {
 
-    /**
-     * Test of format method, of class BooleanArray.
-     */
     @Test
     public void testFormat() {
 

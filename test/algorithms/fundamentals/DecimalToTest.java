@@ -24,17 +24,11 @@
 package algorithms.fundamentals;
 
 import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
-/**
- *
- * @author juliano
- */
 public class DecimalToTest {
 
-    /**
-     * Test of binary method, of class DecimalTo.
-     */
     @Test
     public void testBinary() {
         assertEquals("0", DecimalTo.binary(0));
@@ -45,9 +39,6 @@ public class DecimalToTest {
         assertEquals("111010110111100110100010101", DecimalTo.binary(123456789));
     }
 
-    /**
-     * Test of binary method, of class DecimalTo, compared to the Java API.
-     */
     @Test
     public void testBinaryWithJavaAPI() {
         assertEquals(Integer.toBinaryString(0), DecimalTo.binary(0));

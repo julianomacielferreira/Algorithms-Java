@@ -26,15 +26,8 @@ package algorithms.fundamentals;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-/**
- *
- * @author juliano
- */
 public class LargestIntegerTest {
 
-    /**
-     * Test of lg method, of class LargestInteger.
-     */
     @Test
     public void testLg() {
 

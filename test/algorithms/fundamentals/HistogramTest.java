@@ -24,17 +24,11 @@
 package algorithms.fundamentals;
 
 import static org.junit.Assert.assertArrayEquals;
+
 import org.junit.Test;
 
-/**
- *
- * @author juliano
- */
 public class HistogramTest {
 
-    /**
-     * Test of numberOfTimesIAppearedIn method, of class Histogram.
-     */
     @Test
     public void testNumberOfTimesIAppearedIn() {
 
