@@ -21,27 +21,25 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package algorithms.fundamentals;
+package algorithms.data_abstraction;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 /**
  *
  * @author juliano
  */
-public class BinomialDistributionTest {
+public class StaticSetOfIntsTest {
 
-    /**
-     * Test of calculate method of class BinomialDistribution.
-     */
     @Test
-    public void testCalculate() {
-
-        double binomialDistribution = BinomialDistribution.calculate(10, 0.25, 5);
-
-        assertEquals("0,06", String.format("%.2f", binomialDistribution));
-
+    public void testEmptySet() {
+        int[] keys = {};
+        StaticSetOfInts set = new StaticSetOfInts(keys);
+        assertFalse(set.contains(1));
+        assertFalse(set.contains(0));
+        assertFalse(set.contains(-1));
     }
 }
