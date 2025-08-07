@@ -77,7 +77,7 @@ public class BinomialDistribution {
      * @param numberOfSuccesses the number of successes (k)
      * @return the binomial coefficient (n choose k)
      */
-    private static double calculateBinomialCoefficient(int trials, int numberOfSuccesses) {
+    public static double calculateBinomialCoefficient(int trials, int numberOfSuccesses) {
 
         StdOut.println(
                 String.format(
