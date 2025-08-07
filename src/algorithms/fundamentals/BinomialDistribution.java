@@ -28,59 +28,68 @@ import edu.princeton.cs.algs4.StdOut;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Represents a binomial distribution, which models the probability of obtaining
+ * exactly k successes in n independent trials, each with a constant probability
+ * of success.
+ */
 public class BinomialDistribution {
 
     private static int called;
     private static final Map<String, Double> COEFFICIENTS_CACHE = new HashMap<>();
 
     /**
-     * @param trials                          The number of trials
-     * @param probabilityOfSuccessInEachTrial The probability of success in each trial
-     * @param numberOfSuccesses               The number of successes
-     * @return the number of successes in a fixed number of independent trials
+     * Calculates the probability of obtaining exactly k successes in n independent
+     * trials, each with a probability p of success.
+     *
+     * @param trials                          the number of trials (n)
+     * @param probabilityOfSuccessInEachTrial the probability of success in each trial (p)
+     * @param numberOfSuccesses               the number of successes (k)
+     * @return the probability of obtaining exactly k successes
      */
-    public static double calculate(int trials, int probabilityOfSuccessInEachTrial, double numberOfSuccesses) {
+    public static double calculate(int trials, double probabilityOfSuccessInEachTrial, int numberOfSuccesses) {
 
-        double probabilityOfFailure = 1 - numberOfSuccesses;
+        double probabilityOfFailure = 1 - probabilityOfSuccessInEachTrial;
 
-        double coefficient = calculateBinomialCoefficient(trials, probabilityOfSuccessInEachTrial);
+        double coefficient = calculateBinomialCoefficient(trials, numberOfSuccesses);
 
-        return coefficient * (Math.pow(numberOfSuccesses, probabilityOfSuccessInEachTrial)) * (Math.pow(probabilityOfFailure, (trials - probabilityOfSuccessInEachTrial)));
+        return coefficient * Math.pow(probabilityOfSuccessInEachTrial, numberOfSuccesses) * Math.pow(probabilityOfFailure, trials - numberOfSuccesses);
     }
 
     /**
-     * @param trials                          The number of trials
-     * @param probabilityOfSuccessInEachTrial The probability of success in each trial
-     * @return the binomial coefficient from trials with probability of success
+     * Calculates the binomial coefficient (n choose k) using memoization to cache
+     * previously computed values.
+     *
+     * @param trials            the number of trials (n)
+     * @param numberOfSuccesses the number of successes (k)
+     * @return the binomial coefficient (n choose k)
      */
-    private static double calculateBinomialCoefficient(int trials, int probabilityOfSuccessInEachTrial) {
+    private static double calculateBinomialCoefficient(int trials, int numberOfSuccesses) {
 
         StdOut.println(
                 String.format(
                         "%s - calculateBinomialCoefficient(n: %s, k: %s)",
                         ++called,
                         trials,
-                        probabilityOfSuccessInEachTrial
+                        numberOfSuccesses
                 )
         );
 
-        final String CACHE_KEY = String.format("%s-%s", trials, probabilityOfSuccessInEachTrial);
+        final String CACHE_KEY = String.format("%s-%s", trials, numberOfSuccesses);
 
         // If we cached the value, then return it
         if (COEFFICIENTS_CACHE.containsKey(CACHE_KEY)) {
             return COEFFICIENTS_CACHE.get(CACHE_KEY);
         }
 
+        double binomialCoefficient;
+
         // Base case
-        if ((probabilityOfSuccessInEachTrial == 0) || (probabilityOfSuccessInEachTrial == trials)) {
-
-            COEFFICIENTS_CACHE.put(CACHE_KEY, 1.0);
-
-            return 1.0;
+        if (numberOfSuccesses == 0 || numberOfSuccesses == trials) {
+            binomialCoefficient = 1.0;
+        } else {
+            binomialCoefficient = calculateBinomialCoefficient(trials - 1, numberOfSuccesses - 1) + calculateBinomialCoefficient(trials - 1, numberOfSuccesses);
         }
-
-        // Recursive case
-        double binomialCoefficient = calculateBinomialCoefficient(trials - 1, probabilityOfSuccessInEachTrial - 1) + calculateBinomialCoefficient(trials - 1, probabilityOfSuccessInEachTrial);
 
         // Cache the value and return it
         COEFFICIENTS_CACHE.put(CACHE_KEY, binomialCoefficient);
