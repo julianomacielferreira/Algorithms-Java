@@ -46,6 +46,9 @@ public class BinomialDistribution {
      * @param probabilityOfSuccessInEachTrial the probability of success in each trial (p)
      * @param numberOfSuccesses               the number of successes (k)
      * @return the probability of obtaining exactly k successes
+     * @throws IllegalArgumentException if the number of trials is negative,
+     *         the probability of success is not between 0 and 1,
+     *         or the number of successes is not between 0 and the number of trials
      */
     public static double calculate(int trials, double probabilityOfSuccessInEachTrial, int numberOfSuccesses) {
 
