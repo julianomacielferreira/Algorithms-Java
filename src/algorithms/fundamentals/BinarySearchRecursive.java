@@ -45,6 +45,15 @@ public class BinarySearchRecursive {
         return rank(key, arr, 0, arr.length - 1);
     }
 
+    /**
+     * Searches for a key in a sorted array using binary search.
+     *
+     * @param key the key to be searched
+     * @param arr the sorted array to search in
+     * @param lo  the lowest index of the current search range
+     * @param hi  the highest index of the current search range
+     * @return the index of the key in the array if found, -1 otherwise
+     */
     public static int rank(int key, int[] arr, int lo, int hi) {
 
         traceRecursiveCalls(lo, hi);
@@ -64,6 +73,13 @@ public class BinarySearchRecursive {
             return middle;
     }
 
+    /**
+     * Traces recursive calls by printing the current search range.
+     * This method is used for debugging purposes to visualize the recursive calls.
+     *
+     * @param lo the lowest index of the current search range
+     * @param hi the highest index of the current search range
+     */
     private static void traceRecursiveCalls(int lo, int hi) {
 
         depth++;
