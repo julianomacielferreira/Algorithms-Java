@@ -1373,6 +1373,18 @@ Decomposing the input and output:
     - Input:
     - Output:
 
+**1.1.32 _Histogram_. Suppose that the standard input stream is a sequence of double values. Write a program that takes
+an Integer ``N`` and two double values ``l`` and ``r`` from the command line and uses ``StdDraw`` to plot a histogram of 
+the count of the numbers in the standard input stream that fail in each of the N intervals defined by dividing (l, r) 
+into N equal-sized intervals.**
+
+Decomposing the input and output:
+
+    - Input:
+    - Output:
+
+
+
 # References
 
 - ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)
