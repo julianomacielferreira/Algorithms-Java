@@ -1429,6 +1429,24 @@ For each, the input comes from standard input and consists of _N_ real numbers b
 - Print the _N_ numbers in increasing order.
 - Print the _N_ numbers in random order.
 
+**1.1.35 _Dice simulations_. The following code computes the exact probability distribution for the sum of two dice:**
+
+```java
+int SIDES = 6;
+double[] dist = new  double[2 * SIDES + 1];
+
+for(int i = 1; i <= SIDES; i++)
+    for(int j = 1; j <= SIDES; j++)
+        dist[i+j] += 1.0;
+
+for(int k = 2; k <= 2 * SIDES; k++)
+    dist[k] /= 36.0;
+```
+
+The value dist[i] is the probability that the dice sum to k. Run experiments to validate this calculation simulating _N_ 
+dice throws, keeping track of the frequencies of occurrence of each value when you compute the sum of two random integers
+between 1 and 6. How large does _N_ have to be before your empirical results match the exact results to three decimal places?
+
 # References
 
 - ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)
