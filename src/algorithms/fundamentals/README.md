@@ -1443,9 +1443,20 @@ for(int k = 2; k <= 2 * SIDES; k++)
     dist[k] /= 36.0;
 ```
 
-The value dist[i] is the probability that the dice sum to k. Run experiments to validate this calculation simulating _N_ 
+The value ``dist[i]`` is the probability that the dice sum to ``k``. Run experiments to validate this calculation simulating ``N`` 
 dice throws, keeping track of the frequencies of occurrence of each value when you compute the sum of two random integers
-between 1 and 6. How large does _N_ have to be before your empirical results match the exact results to three decimal places?
+between 1 and 6. How large does ``N`` have to be before your empirical results match the exact results to three decimal places?
+
+**1.1.36 _Empirical shuffle check_. Run computational experiments to check that our shuffing code on page 32 works as 
+advertised. Write a program ``ShuffleTest`` that takes command-line arguments ``M`` and ``N``,
+does ``N`` shuffles of an array of size ``M`` that is initialized with ``a[i] = i`` before each shuffle,
+and prints an ``M-by-N`` table such that row ``i`` gives the number of times ``i``
+wound up in position ``j`` for all ``j``. All entries in the array should be close to ``N/M``.**
+
+Decomposing the input and output:
+
+    - Input:
+    - Output:
 
 # References
 
