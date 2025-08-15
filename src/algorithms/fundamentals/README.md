@@ -1383,7 +1383,51 @@ Decomposing the input and output:
     - Input:
     - Output:
 
+**1.1.33 _Matrix Library_. Write a library ``Matrix`` that implements the following API:**
 
+```java
+public class Matrix {
+    
+    // vector dot product
+    static double dot(double[] x, double[] y) {
+        ...
+    }
+    
+    // matrix-matrix product
+    static double[][] mult(double[][] a, double[][] b) {
+        ...
+    }
+    
+    // transpose
+    static double[][] transpose(double[][] a) {
+        ...
+    }
+    
+    // matrix-vector product
+    static double[] mult(double[][] a, double[] x) {
+        ...
+    }
+    
+    // vector-matrix product
+    static double[] multi(double[] y, double[][] a) {
+        ...
+    }
+    
+}
+```
+
+**1.1.34 _Filtering_. Which of the following require saving all the values from standard input (in an array, say), and which
+could be implemented as a filter using only a fixed number of variables and arrays of fixed size (not dependent on N)?
+For each, the input comes from standard input and consists of _N_ real numbers between 0 and 1.**
+
+- Print the maximum and minimum numbers.
+- Print the median of the numbers.
+- Print the _k_ th smallest value, for _k_ less than 100.
+- Print the sum of the squares of the numbers.
+- Print the average of the _N_ numbers.
+- Print the percentage of numbers greater than the average.
+- Print the _N_ numbers in increasing order.
+- Print the _N_ numbers in random order.
 
 # References
 
