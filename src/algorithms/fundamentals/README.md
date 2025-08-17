@@ -1460,9 +1460,9 @@ for(int k = 2; k <= 2 * SIDES; k++)
     dist[k] /= 36.0;
 ```
 
-The value ``dist[i]`` is the probability that the dice sum to ``k``. Run experiments to validate this calculation simulating ``N`` 
+**The value ``dist[i]`` is the probability that the dice sum to ``k``. Run experiments to validate this calculation simulating ``N`` 
 dice throws, keeping track of the frequencies of occurrence of each value when you compute the sum of two random integers
-between 1 and 6. How large does ``N`` have to be before your empirical results match the exact results to three decimal places?
+between 1 and 6. How large does ``N`` have to be before your empirical results match the exact results to three decimal places?**
 
 **1.1.36 _Empirical shuffle check_. Run computational experiments to check that our shuffing code on page 32 works as 
 advertised. Write a program ``ShuffleTest`` that takes command-line arguments ``M`` and ``N``,
@@ -1493,6 +1493,15 @@ Decomposing the input and output:
     - Input:
     - Output:
 
+**1.1.39 _Random matches_. Write a ``BinarySearch`` client that takes an ``int`` value ``T`` as command-line argument
+and runs ``T`` trials of the following experiment for N = 10<sup>3</sup>, 10<sup>4</sup>, 10<sup>5</sup>, and 10<sup>6</sup>:
+generate two arrays of ``N`` randomly generated positive six-digit ``int`` values, and find the number of values that appear in both
+arrays. Print a table giving the average value of this quantity over the ``T`` trials for each value of ``N``.**
+
+Decomposing the input and output:
+
+    - Input:
+    - Output:
 
 # References
 
