@@ -1475,6 +1475,17 @@ Decomposing the input and output:
     - Input:
     - Output:
 
+**1.1.37 _Bad Shuffling_. Suppose that you choose a random integer between ``0`` and ``N-1`` in our shuffling code instead of 
+one between ``i`` and ``N-1``. Show that the resulting order is not equally likely to be one of the ``N!`` possibilities. 
+Run the test of the previous exercise for this version.**
+
+Decomposing the input and output:
+
+    - Input:
+    - Output:
+
+
+
 # References
 
 - ["Algorithms, 4th Edition" by Robert Sedgewick and Kevin Wayne](https://algs4.cs.princeton.edu/home/)
