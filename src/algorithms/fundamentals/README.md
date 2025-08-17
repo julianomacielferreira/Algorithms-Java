@@ -1484,6 +1484,14 @@ Decomposing the input and output:
     - Input:
     - Output:
 
+**1.1.38 _Binary Search versus brute-force search_. Write a program ``BruteForceSearch`` that uses the brute-force search
+method given on page 48 and compare its running time on your computer with that of ``BinarySearch`` for ``largeW.txt``
+and ``largeT.txt``.**  
+
+Decomposing the input and output:
+
+    - Input:
+    - Output:
 
 
 # References
