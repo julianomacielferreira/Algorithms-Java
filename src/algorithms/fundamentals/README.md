@@ -1243,7 +1243,7 @@ Again, like in exercise 1.1.25, we need some background to understand the code s
 > 
 > The probability of getting exactly x successes in n trials is given by binomial probability formula:
 > 
-> P(X = x) = (n choose x) * p<sup>x</sup> * (1-p)<sup>(n-x)</sup>
+> P(X = x) = (n choose x) $\times$ p<sup>x</sup> $\times$ (1-p)<sup>(n-x)</sup>
 > 
 > The binomial distribution has many real-world applications, such as:
 > 
@@ -1262,7 +1262,7 @@ Again, like in exercise 1.1.25, we need some background to understand the code s
 > 
 > A recursive algorithm to calculate the binomial distribution using the following formula:
 > 
-> P(X = k) = (n/k) * p * P(X = k-1) / q + (1 - (n/k) * p / q) * P(X = k)
+> P(X = k) = ($\frac{n}{k}$) $\times$ p $\times$ P(X = k-1) $\div$ q + (1 - ($\frac{n}{k}$) $\times$ $\frac{p}{q}$) $\times$ P(X = k)
 > 
 > where:
 > - P(X = k) is the probability of k successes
