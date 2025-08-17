@@ -50,9 +50,9 @@ The book already provides a much simpler solution:
 ```java
 String s="";
 
-        for(int n=N;n>0;n/=2){
-            s=(n%2)+s;
-        }
+for(int n=N; n > 0 ; n /= 2) {
+  s = (n % 2) + s;
+}
 ```
 
 compared to
@@ -87,8 +87,8 @@ digits) multiplied by powers of 10.
 Reading the number 36, from right to left (units, dozens, etc.), increases the power of the base starting from 10 raised
 to 0 (i.e, 10<sup>0</sup>):
 
-> 36 = (6 x 10<sup>0</sup>) + (3 x 10<sup>1</sup>)<br>
-> 36 = (6 x 1) + (3 x 10)<br>
+> 36 = (6 $\times$ 10<sup>0</sup>) + (3 $\times$ 10<sup>1</sup>)<br>
+> 36 = (6 $\times$ 1) + (3 $\times$ 10)<br>
 > 36 = 6 + 30<br>
 > 36 = 36
 
@@ -102,8 +102,8 @@ So the base two, starting from 0 until (2 - 1) has { 0, 1 }.
 
 From right to left, the representation of the binary number 1010<sub>2</sub> in base ten is:
 
-> 1010<sub>2</sub> = (0 x 2<sup>0</sup>) + (1 x 2<sup>1</sup>) + (0 x 2<sup>2</sup>) + (1 x 2<sup>3</sup>)<br>
-> 1010<sub>2</sub> = (0 x 1) + (1 x 2) + (0 x 4) + (1 x 8)<br>
+> 1010<sub>2</sub> = (0 $\times$ 2<sup>0</sup>) + (1 $\times$ 2<sup>1</sup>) + (0 $\times$ 2<sup>2</sup>) + (1 $\times$ 2<sup>3</sup>)<br>
+> 1010<sub>2</sub> = (0 $\times$ 1) + (1 $\times$ 2) + (0 $\times$ 4) + (1 $\times$ 8)<br>
 > 1010<sub>2</sub> = 0 + 2 + 0 + 8<br>
 > 1010<sub>2</sub> = 10<br>
 
@@ -117,63 +117,80 @@ basics: **Euclid's Division Algorithm**.
 
 In summary, It's about multiples and divisors of integer numbers and states the follow:
 
-> Suppose _n_ is a natural number (i.e, 1, 2, 3, ..., etc.) not null (n > 0).<br>
-> If _m_ is a natural number, so _m_ is a multiple of _n_ OR is between two consecutive multiples of _m_.<br>
-> In algebraic notation: ( _m_ * q ) <= _n_ < _m_ * (q + 1)<br>
-> If (_m_ * q) <= _n_ (a multiple of _m_ is less than _n_), implies that there's a natural number r (remainder) such
-> that _n_ = ( _m_ * q ) + r (r < _m_).<br>
-> If r = 0, so _n_ = ( _m_ * q ), i.e, _m_ is multiple of _n_.
+> Suppose _n_ is a natural number, $n \in \mathbb{N}$ (i.e, 1, 2, 3, ..., etc.) not null (n $\gt$ 0).<br>
+>
+> If _m_ is a natural number, so _m_ is a multiple of _n_ OR it is between two consecutive multiples of _m_.<br>
+> 
+> In algebraic notation: ( _m_ $\times$ q ) $\leq$ _n_ $\lt$ _m_ $\times$ (q + 1)<br>
+>
+> If (_m_ $\times$ q) $\leq$ _n_ (a multiple of _m_ is less than _n_), implies that there's a natural number r (remainder) such
+> that: 
+> 
+> _n_ = ( _m_ $\times$ q ) + r , (r $\lt$ _m_).<br>
+> 
+> If r = 0, so _n_ = ( _m_ $\times$ q ), i.e, _m_ is multiple of _n_.
 
 The above explanation is the follow theorem:
 
-> For any natural numbers _n_ and _m_, with _m_ != 0 (not null), there exists only one pair of numbers _q_ and _r_ such
-> that _n_ = ( _m_ * q ) + r.
+> For any natural numbers _n_ and _m_, with _m_ $\ne$ 0 (not null), there exists only one pair of numbers _q_ and _r_ such
+> that:
+> 
+> _n_ = ( _m_ $\times$ q ) + r.
 
 Let's use numbers to see that:
 
-> Let: ( _m_ * q ) <= _n_ < _m_ * (q + 1)<br>
+> Let: ( _m_ $\times$ q ) $\leq$ _n_ $\lt$ _m_ $\times$ (q + 1)<br>
+> 
 > With: _n_ = 73 and _m_ = 5<br>
-> We have: (5 * q) <= 73 < 5 * (q + 1)<br>
-> Then: q = 14 and (5 * 14) <= 73 < 5 * (14 + 1)<br>
-> Is equal to: 70 <= 73 < 75<br>
-> The only natural numbers to represent the inequality are:<br>
-> q = 14, r = 73 - (5 * 14) = 3 (remember, r = _n_ - ( _m_ * q )).<br>
-> So: 73 = (5 * 14) + 3.
+> 
+> We have: (5 $\times$ q) $\leq$ 73 $\lt$ 5 $\times$ (q + 1)<br>
+> 
+> Then: q = 14 and (5 $\times$ 14) $\leq$ 73 $\lt$ 5 $\times$ (14 + 1)<br>
+> 
+> Is equal to: 70 $\leq$ 73 $\lt$ 75<br>
+> 
+> The only natural numbers to represent the inequality are:
+> 
+> q = 14, 
+> 
+> r = 73 - (5 $\times$ 14) = 3 [ remember, r = _n_ - ( _m_ $\times$ q ) ].
+> 
+> So: 73 = (5 $\times$ 14) + 3.
 
-These concepts show that any number __n__ (n > 1) in a base __b__, with __m__ being the numerals {0, 1, 2, ..., (b - 1)
+These concepts show that any number **n** (n $\gt$ 1) in a base **b**, with **m** being the numerals {0, 1, 2, ..., (b - 1)
 }, can be represented uniquely as:
 
-> __n__ = m<sub>0</sub> + m<sub>1</sub> * __b__<sup>1</sup> + m<sub>2</sub> * __b__<sup>2</sup> + ... + m<sub>i</sub> * __b__<sup>i</sup> ( i >= 0 and m<sub>i</sub> != 0)
+> **n** = m<sub>0</sub> + m<sub>1</sub> $\times$ **b**<sup>1</sup> + m<sub>2</sub> $\times$ **b**<sup>2</sup> + ... + m<sub>i</sub> $\times$ **b**<sup>i</sup> ( i $\geq$ 0 and m<sub>i</sub> $\neq$ 0)
 
 or
 
-> __n__ = ( __b__ * q ) + m<sub>0</sub>
+> __n__ = ( __b__ $\times$ q ) + m<sub>0</sub>
 
 representing ( __b__ * q ) as:
 
-> ( __b__ * q ) = m<sub>1</sub> * __b__<sup>1</sup> + m<sub>2</sub> * __b__<sup>2</sup> + ... + m<sub>i</sub> * __b__<sup>i</sup>
+> ( __b__ $\times$ q ) = m<sub>1</sub> $\times$ __b__<sup>1</sup> + m<sub>2</sub> $\times$ __b__<sup>2</sup> + ... + m<sub>i</sub> $\times$ __b__<sup>i</sup>
 
 using the **distributive property**:
 
-> m<sub>1</sub> * __b__<sup>1</sup> + m<sub>2</sub> * __b__<sup>2</sup> + ... + m<sub>i</sub> * __b__<sup>i</sup> = __b__ * (m<sub>1</sub> + m<sub>2</sub> * __b__<sup>1</sup> + m<sub>3</sub> * __b__<sup>2</sup> + ... + m<sub>i</sub> * __b__<sup>i - 1</sup>)
+> m<sub>1</sub> $\times$ __b__<sup>1</sup> + m<sub>2</sub> $\times$ __b__<sup>2</sup> + ... + m<sub>i</sub> $\times$ __b__<sup>i</sup> = __b__ $\times$ (m<sub>1</sub> + m<sub>2</sub> $\times$ __b__<sup>1</sup> + m<sub>3</sub> $\times$ __b__<sup>2</sup> + ... + m<sub>i</sub> $\times$ __b__<sup>i - 1</sup>)
 
 we reach the form:
 
-> __n__ = __b__ * (m<sub>1</sub> + m<sub>2</sub> * __b__<sup>1</sup> + m<sub>3</sub> * __b__<sup>2</sup> + ... + m<sub>i</sub> * __b__<sup>i - 1</sup>) + m<sub>0</sub>
+> __n__ = __b__ $\times$ (m<sub>1</sub> + m<sub>2</sub> $\times$ __b__<sup>1</sup> + m<sub>3</sub> $\times$ __b__<sup>2</sup> + ... + m<sub>i</sub> $\times$ __b__<sup>i - 1</sup>) + m<sub>0</sub>
 
 with all __m<sub>i</sub>__'s = {0, 1,..., (b - 1)}.
 
 Plugging the example numbers:
 
-> 36 = 10 * (3) + 6 {m<sub>0</sub>=6 and m<sub>1</sub>=3}
+> 36 = 10 $\times$ (3) + 6 {m<sub>0</sub>=6 and m<sub>1</sub>=3}
 
-> 365 = 10 * (6 + 3 * 10<sup>1</sup>) + 5 {m<sub>0</sub>=5, m<sub>1</sub>=6 and m<sub>2</sub>=3}
+> 365 = 10 $\times$ (6 + 3 $\times$ 10<sup>1</sup>) + 5 {m<sub>0</sub>=5, m<sub>1</sub>=6 and m<sub>2</sub>=3}
 
-> 1010<sub>2</sub> = 2 * (1 + 0 * 2<sup>1</sup> + 1 * 2<sup>2</sup>) + 0 {m<sub>0</sub>=0, m<sub>1</sub>=1, m<sub>2</sub>=0 and m<sub>3</sub>=1}
+> 1010<sub>2</sub> = 2 $\times$ (1 + 0 $\times$ 2<sup>1</sup> + 1 $\times$ 2<sup>2</sup>) + 0 {m<sub>0</sub>=0, m<sub>1</sub>=1, m<sub>2</sub>=0 and m<sub>3</sub>=1}
 
 So, to convert any number __n__ (written in base ten) to binary, it's necessary that its representation be of the form:
 
-__n__ = 2 * (m<sub>1</sub> + m<sub>2</sub> * __b__<sup>1</sup> + m<sub>3</sub> * __b__<sup>2</sup> + ... + m<sub>i</sub> * __b__<sup>i - 1</sup>) + m<sub>0</sub>
+__n__ = 2 $\times$ (m<sub>1</sub> + m<sub>2</sub> $\times$ __b__<sup>1</sup> + m<sub>3</sub> $\times$ __b__<sup>2</sup> + ... + m<sub>i</sub> $\times$ __b__<sup>i - 1</sup>) + m<sub>0</sub>
 
 with all __m<sub>i</sub>__'s = {0, 1}.
 
@@ -184,34 +201,34 @@ the last quotient until it's {0, 1}__:
 
 Start dividing by the base:
 
-> 36 / 2 = 18 (remainder=0, that's the m<sub>0</sub> digit)
+> 36 $\div$ 2 = 18 (remainder=0, that's the m<sub>0</sub> digit)
 
 The quotient is 18 not {0, 1}, keep dividing by the base:
 
-> 18 / 2 = 9 (remainder=0, that's the m<sub>1</sub> digit)
+> 18 $\div$ 2 = 9 (remainder=0, that's the m<sub>1</sub> digit)
 
 The quotient is 9 not {0, 1}, keep dividing by the base:
 
-> 9 / 2 = 4 (remainder=1, that's the m<sub>2</sub> digit)
+> 9 $\div$ 2 = 4 (remainder=1, that's the m<sub>2</sub> digit)
 
 The quotient is 4 not {0, 1}, keep dividing by the base:
 
-> 4 / 2 = 2 (remainder=0, that's the m<sub>3</sub> digit)
+> 4 $\div$ 2 = 2 (remainder=0, that's the m<sub>3</sub> digit)
 
 The quotient is 2 not {0, 1}, keep dividing by the base:
 
-> 2 / 2 = 1 (remainder=0, that's the m<sub>4</sub> digit)
+> 2 $\div$ 2 = 1 (remainder=0, that's the m<sub>4</sub> digit)
 
 Finally, the quotient is 1 (the m<sub>5</sub> digit).
 
 All the __m<sub>i</sub>__'s are m<sub>0</sub>=0, m<sub>1</sub>=0, m<sub>2</sub>=1, m<sub>3</sub>=0, m<sub>4</sub>=0,
 m<sub>5</sub>=1.
 
-> 36 = 2 * (m<sub>1</sub> + m<sub>2</sub> * 2<sup>1</sup> + m<sub>3</sub> * 2<sup>2</sup> + m<sub>4</sub> * 2<sup>
-> 3</sup> + m<sub>5</sub> * 2<sup>4</sup>) + m<sub>0</sub><br>
-> 36 = 2 * (0 + 1 * 2<sup>1</sup> + 0 * 2<sup>2</sup> + 0 * 2<sup>3</sup> + 1 * 2<sup>4</sup>) + 0<br>
-> 36 = 2 * (0 + 2 + 0 + 0 + 16) + 0<br>
-> 36 = 2 * (18) + 0<br>
+> 36 = 2 $\times$ (m<sub>1</sub> + m<sub>2</sub> $\times$ 2<sup>1</sup> + m<sub>3</sub> $\times$ 2<sup>2</sup> + m<sub>4</sub> $\times$ 2<sup>
+> 3</sup> + m<sub>5</sub> $\times$ 2<sup>4</sup>) + m<sub>0</sub><br>
+> 36 = 2 $\times$ (0 + 1 $\times$ 2<sup>1</sup> + 0 $\times$ 2<sup>2</sup> + 0 $\times$ 2<sup>3</sup> + 1 $\times$ 2<sup>4</sup>) + 0<br>
+> 36 = 2 $\times$ (0 + 2 + 0 + 0 + 16) + 0<br>
+> 36 = 2 $\times$ (18) + 0<br>
 > 36 = 36
 
 Representing as {0, 1} it's just a matter of concatenating all __m<sub>i</sub>__'s (from right to left):
