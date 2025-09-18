@@ -109,7 +109,7 @@ public class Algorithms {
         gcd = EuclidsGCD.compute(1111111, 1234567);
         StdOut.println(String.format("greatest common divisor of 1111111 and 1234567 is %s", gcd));
 
-        double binomialDistribution = BinomialDistribution.calculate(100, 50, 0.25);
+        double binomialDistribution = BinomialDistribution.calculate(100, 0.25, 50);
 
         StdOut.println(String.format("The Binomial Distribution of (%s, %s) with number of successes %s is %s", 100, 50, 0.25, String.format("%.10f", binomialDistribution)));
     }

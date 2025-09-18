@@ -1464,7 +1464,7 @@ for(int k = 2; k <= 2 * SIDES; k++)
 dice throws, keeping track of the frequencies of occurrence of each value when you compute the sum of two random integers
 between 1 and 6. How large does ``N`` have to be before your empirical results match the exact results to three decimal places?**
 
-**1.1.36 _Empirical shuffle check_. Run computational experiments to check that our shuffing code on page 32 works as 
+**1.1.36 _Empirical shuffle check_. Run computational experiments to check that our shuffling code on page 32 works as 
 advertised. Write a program ``ShuffleTest`` that takes command-line arguments ``M`` and ``N``,
 does ``N`` shuffles of an array of size ``M`` that is initialized with ``a[i] = i`` before each shuffle,
 and prints an ``M-by-N`` table such that row ``i`` gives the number of times ``i``
@@ -1472,8 +1472,34 @@ wound up in position ``j`` for all ``j``. All entries in the array should be clo
 
 Decomposing the input and output:
 
-    - Input:
-    - Output:
+    - Input: M The size of the array to be shuffled and N The number of times the array is shuffled.
+    - Output: an M-by-M table where each row i represents the element i in the original array, each column j represents the position j in the shuffled array. The value at row i and column j is the number of times element i ended up in position j after N shuffles.
+
+The shuffling code on page 32:
+
+```java
+import edu.princeton.cs.algs4.StdRandom;
+
+/**
+ * Shuffles the elements of the given array in place using the Fisher-Yates shuffle algorithm.
+ *
+ * This method randomly rearranges the elements of the array such that each permutation is 
+ * equally likely, ensuring an unbiased shuffle.
+ *
+ * @param a the array to be shuffled
+ */
+public static void shuffle(double[] a) {
+    int N = a.length;
+
+    for (int i = 0; i < N; i++) {
+        // Exchange a[i] with random element in a[i..N-1]
+        int r = i + StdRandom.uniform(N-i);
+        double temp = a[i];
+        a[i] = a[r];
+        a[r] = temp;        
+    }
+}
+```
 
 **1.1.37 _Bad Shuffling_. Suppose that you choose a random integer between ``0`` and ``N-1`` in our shuffling code instead of 
 one between ``i`` and ``N-1``. Show that the resulting order is not equally likely to be one of the ``N!`` possibilities. 
