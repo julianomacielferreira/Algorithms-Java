@@ -1501,6 +1501,59 @@ public static void shuffle(double[] a) {
 }
 ```
 
+Below is ``ShuffleTest`` program to perform computational experiments on the shuffling algorithm, likely referring to the
+Fisher-Yates shuffle.
+
+```java
+import edu.princeton.cs.algs4.StdOut;
+
+public class ShuffleTest {
+    public static void main(String args[]) {
+        int M = Integer.parseInt(args[0]); // array size
+        int N = Integer.parseInt(args[1]); // number of shuffles
+
+        int counts[][] = new int[M][N]; // counts[i][j] = #times i ended in position j
+
+        for (int n = 0; n < N; n++) {
+
+            int a[] = new int[M];
+
+            for (int i = 0; i < M; i++) a[i] = i; // initialize a[i] = i
+
+            shuffle(a);
+
+            for (int i = 0; i < M; i++) {
+                counts[i][a[i]]++; // counts where i ended up
+            }
+        }
+
+        // Print M-by-M table
+        for (int i = 0; i < M; i++) {
+            for (int j = 0; j < M; j++) {
+                StdOut.printf("%7d ", counts[i][j]);
+            }
+
+            StdOut.println();
+        }
+        
+        // Check if counts are close to M/N
+        double expected = (double) N / M;
+        
+        StdOut.println("\nExpected count per cell ≈ " + expected);
+
+        for (int i = 0; i < M; i++) {
+            for (int j = 0; j < M; j++) {
+                double deviation = Math.abs(counts[i][j] - expected) / expected;
+                
+                if(deviation > 0.2) { // arbitrary threshold
+                    StdOut.printf("Cell (%d, %d): count=%d, deviation=%.2f%%\n", i, j, counts[i][j], deviation * 100);
+                }
+            }            
+        }        
+    }
+}
+```
+
 **1.1.37 _Bad Shuffling_. Suppose that you choose a random integer between ``0`` and ``N-1`` in our shuffling code instead of 
 one between ``i`` and ``N-1``. Show that the resulting order is not equally likely to be one of the ``N!`` possibilities. 
 Run the test of the previous exercise for this version.**
