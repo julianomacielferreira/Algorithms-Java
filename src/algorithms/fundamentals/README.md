@@ -1465,7 +1465,7 @@ dice throws, keeping track of the frequencies of occurrence of each value when y
 between 1 and 6. How large does ``N`` have to be before your empirical results match the exact results to three decimal places?**
 
 **1.1.36 _Empirical shuffle check_. Run computational experiments to check that our shuffling code on page 32 works as 
-advertised. Write a program ``ShuffleTest`` that takes command-line arguments ``M`` and ``N``,
+advertised. Write a program ``ShuffleTestClient`` that takes command-line arguments ``M`` and ``N``,
 does ``N`` shuffles of an array of size ``M`` that is initialized with ``a[i] = i`` before each shuffle,
 and prints an ``M-by-N`` table such that row ``i`` gives the number of times ``i``
 wound up in position ``j`` for all ``j``. All entries in the array should be close to ``N/M``.**
@@ -1475,7 +1475,7 @@ Decomposing the input and output:
     - Input: M The size of the array to be shuffled and N The number of times the array is shuffled.
     - Output: an M-by-M table where each row i represents the element i in the original array, each column j represents the position j in the shuffled array. The value at row i and column j is the number of times element i ended up in position j after N shuffles.
 
-The shuffling code on page 32:
+The shuffling code on page 32 (the Fisher-Yates shuffle is an unbiased shuffling algorithm):
 
 ```java
 import edu.princeton.cs.algs4.StdRandom;
@@ -1501,13 +1501,13 @@ public static void shuffle(int[] a) {
 }
 ```
 
-Below is ``ShuffleTest`` program to perform computational experiments on the shuffling algorithm, likely referring to the
+Below is ``ShuffleTestClient`` program to perform computational experiments on the shuffling algorithm, likely referring to the
 Fisher-Yates shuffle.
 
 ```java
 import edu.princeton.cs.algs4.StdOut;
 
-public class ShuffleTest {
+public class ShuffleTestClient {
     public static void main(String args[]) {
         int M = Integer.parseInt(args[0]); // array size
         int N = Integer.parseInt(args[1]); // number of shuffles
@@ -1552,6 +1552,22 @@ public class ShuffleTest {
         }        
     }
 }
+```
+
+If you run:
+
+```bash
+java ShuffleTest 5 10000
+```
+
+```bash
+   2019    1973    2073    2014    1921 
+   1950    2025    2036    2001    1988 
+   2090    1954    1998    1996    1962 
+   1994    2030    1916    2011    2049 
+   1947    2018    1977    1978    2080 
+
+Expected count per cell ≈ 2000.0
 ```
 
 **1.1.37 _Bad Shuffling_. Suppose that you choose a random integer between ``0`` and ``N-1`` in our shuffling code instead of 

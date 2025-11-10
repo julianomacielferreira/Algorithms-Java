@@ -26,7 +26,7 @@ package algorithms.fundamentals;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 
-public class ShuffleTest {
+public class ShuffleTestClient {
 
     public static void main(String args[]) {
         int M = Integer.parseInt(args[0]); // array size
