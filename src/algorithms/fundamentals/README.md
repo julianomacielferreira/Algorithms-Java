@@ -1570,6 +1570,19 @@ java ShuffleTest 5 10000
 Expected count per cell ≈ 2000.0
 ```
 
+#### Notes
+ 
+- ```StdRandom.uniform(int n)```: Assumed to be available; provides a random int in ```[0, n-1]```.
+- The shuffle initializes the array ```a[i] = i``` before each shuffle.
+- Counts where each element ```i``` ends up in position ```j```.
+- Checks if counts are roughly ```N/M```, indicating a uniform distribution.
+
+#### Interpretation
+
+- **Uniform Shuffle**: Each element should appear in each position ≈ N/M times if shuffle is unbiased.
+- Deviations indicate potential non-uniformity; statistical tests could further analyze uniformity.
+
+
 **1.1.37 _Bad Shuffling_. Suppose that you choose a random integer between ``0`` and ``N-1`` in our shuffling code instead of 
 one between ``i`` and ``N-1``. Show that the resulting order is not equally likely to be one of the ``N!`` possibilities. 
 Run the test of the previous exercise for this version.**
