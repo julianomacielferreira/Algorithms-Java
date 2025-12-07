@@ -58,6 +58,7 @@ public class ShuffleTest {
 
     @Test
     public void shuffle_ArrayElementsAreReordered() {
+
         int[] array = {1, 2, 3, 4, 5};
         int[] original = array.clone();
 
@@ -68,6 +69,7 @@ public class ShuffleTest {
 
     @Test
     public void shuffle_EmptyArrayRemainsUnchanged() {
+
         int[] array = {};
         int[] original = array.clone();
 
@@ -78,6 +80,7 @@ public class ShuffleTest {
 
     @Test
     public void shuffle_SingleElementArrayRemainsUnchanged() {
+
         int[] array = {42};
         int[] original = array.clone();
 
@@ -88,13 +91,15 @@ public class ShuffleTest {
 
     @Test
     public void shuffle_ArrayContainsSameElementsAfterShuffle() {
+
         int[] array = {1, 2, 3, 4, 5};
         int[] original = array.clone();
 
         ShuffleTestClient.shuffle(array);
 
-        java.util.Arrays.sort(array);
-        java.util.Arrays.sort(original);
+        Arrays.sort(array);
+        Arrays.sort(original);
+        
         assertArrayEquals(original, array);
     }
 }
