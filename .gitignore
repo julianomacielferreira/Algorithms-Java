@@ -39,3 +39,8 @@ data/*
 
 # Output files
 out/*
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws

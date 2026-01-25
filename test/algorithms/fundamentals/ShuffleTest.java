@@ -42,7 +42,7 @@ public class ShuffleTest {
         boolean changed = false;
 
         for (int i = 0; i < 10; i++) {
-            ShuffleTestClient.shuffle(array);
+            Shuffle.doShuffle(array);
             if (!Arrays.equals(array, original)) {
                 changed = true;
                 break;
@@ -62,7 +62,7 @@ public class ShuffleTest {
         int[] array = {1, 2, 3, 4, 5};
         int[] original = array.clone();
 
-        ShuffleTestClient.shuffle(array);
+        Shuffle.doShuffle(array);
 
         assertNotEquals(Arrays.toString(original), Arrays.toString(array));
     }
@@ -73,7 +73,7 @@ public class ShuffleTest {
         int[] array = {};
         int[] original = array.clone();
 
-        ShuffleTestClient.shuffle(array);
+        Shuffle.doShuffle(array);
 
         assertArrayEquals(original, array);
     }
@@ -84,7 +84,7 @@ public class ShuffleTest {
         int[] array = {42};
         int[] original = array.clone();
 
-        ShuffleTestClient.shuffle(array);
+        Shuffle.doShuffle(array);
 
         assertArrayEquals(original, array);
     }
@@ -95,7 +95,7 @@ public class ShuffleTest {
         int[] array = {1, 2, 3, 4, 5};
         int[] original = array.clone();
 
-        ShuffleTestClient.shuffle(array);
+        Shuffle.doShuffle(array);
 
         Arrays.sort(array);
         Arrays.sort(original);
