@@ -1557,7 +1557,7 @@ public class ShuffleTestClient {
 If you run:
 
 ```bash
-java ShuffleTest 5 10000
+java ShuffleTest 5 1000
 ```
 
 ```bash
@@ -1589,8 +1589,81 @@ Run the test of the previous exercise for this version.**
 
 Decomposing the input and output:
 
-    - Input:
-    - Output:
+    - Input: M The size of the array to be shuffled and N The number of times the array is shuffled.
+    - Output: an M-by-M table where each row i represents the element i in the original array, each column j represents the position j in the shuffled array. The value at row i and column j is the number of times element i ended up in position j after N shuffles.
+
+A bad shuffling code based on page 32:
+
+```java
+import edu.princeton.cs.algs4.StdRandom;
+
+/**
+ * Shuffles the elements of the given array in place using a flawed algorithm that does not produce a uniform
+ * distribution of permutations.
+ * <p>
+ * This method randomly rearranges the elements of the array, but it does not ensure that each permutation is
+ * equally likely, resulting in a biased shuffle.
+ *
+ * @param a the array to be shuffled
+ */
+public static void badShuffle(int[] a) {
+    int N = a.length;
+
+    for (int i = 0; i < N; i++) {
+        // Exchange a[i] with random element in a[0..N-1]
+        int r = StdRandom.uniform(N);
+        swap(a, i, r);
+    }
+}
+
+private static void swap(int[] a, int i, int r) {
+    int temp = a[i];
+    a[i] = a[r];
+    a[r] = temp;
+}
+```
+
+If you run:
+
+```bash
+java ShuffleTest 5 1000
+```
+
+```bash
+Bad Shuffle with parameters 5 1000
+    195     246     201     174     184 
+    189     208     225     219     159 
+    203     182     199     217     199 
+    197     179     185     185     254 
+    216     185     190     205     204 
+
+Expected count per cell ≈ 200.0
+Cell (0, 1): count=246, deviation=23.00%
+Cell (1, 4): count=159, deviation=20.50%
+Cell (3, 4): count=254, deviation=27.00%
+```
+
+Why does badShuffle produce bias ?
+
+The code:
+
+```java
+for (int i = 0; i < N; i++) {
+    int r = StdRandom.uniform(N);
+    swap(a[i], a[r]);
+}
+```
+
+At every iteration, it selects a random index `r` from the entire array (0 to N-1) instead of from the remaining unshuffled portion (i to N-1). This means that elements that have already been shuffled can be swapped again, leading to a non-uniform distribution of permutations. Some permutations will be more likely than others, resulting in bias in the shuffle.
+
+In summary, the bias arises because:
+
+- You choose a random index from `0 to N-1`
+- You swap the current element with the randomly chosen index
+
+The core problem is that each position is allowed to be swapped multiple times, including positions
+that were already decided.
+That's create overlapping randomness. Some permutations becomes reachable through more execution paths than others.
 
 **1.1.38 _Binary Search versus brute-force search_. Write a program ``BruteForceSearch`` that uses the brute-force search
 method given on page 48 and compare its running time on your computer with that of ``BinarySearch`` for ``largeW.txt``

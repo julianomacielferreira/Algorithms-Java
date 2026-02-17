@@ -34,7 +34,7 @@ import static org.junit.Assert.assertNotEquals;
 public class ShuffleTest {
 
     @Test
-    public void testShuffle_ArrayIsShuffled() {
+    public void test_ArrayIsShuffled() {
 
         int[] array = {1, 2, 3, 4, 5};
         int[] original = array.clone();
@@ -57,7 +57,7 @@ public class ShuffleTest {
     }
 
     @Test
-    public void shuffle_ArrayElementsAreReordered() {
+    public void tes_ArrayElementsAreReordered() {
 
         int[] array = {1, 2, 3, 4, 5};
         int[] original = array.clone();
@@ -68,7 +68,7 @@ public class ShuffleTest {
     }
 
     @Test
-    public void shuffle_EmptyArrayRemainsUnchanged() {
+    public void test_EmptyArrayRemainsUnchanged() {
 
         int[] array = {};
         int[] original = array.clone();
@@ -79,7 +79,7 @@ public class ShuffleTest {
     }
 
     @Test
-    public void shuffle_SingleElementArrayRemainsUnchanged() {
+    public void test_SingleElementArrayRemainsUnchanged() {
 
         int[] array = {42};
         int[] original = array.clone();
@@ -90,7 +90,7 @@ public class ShuffleTest {
     }
 
     @Test
-    public void shuffle_ArrayContainsSameElementsAfterShuffle() {
+    public void test_ArrayContainsSameElementsAfterShuffle() {
 
         int[] array = {1, 2, 3, 4, 5};
         int[] original = array.clone();
@@ -99,7 +99,7 @@ public class ShuffleTest {
 
         Arrays.sort(array);
         Arrays.sort(original);
-        
+
         assertArrayEquals(original, array);
     }
 }

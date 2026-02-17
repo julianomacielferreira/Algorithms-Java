@@ -41,9 +41,32 @@ public class Shuffle {
         for (int i = 0; i < N; i++) {
             // Exchange a[i] with random element in a[i..N-1]
             int r = i + StdRandom.uniform(N - i);
-            int temp = a[i];
-            a[i] = a[r];
-            a[r] = temp;
+            swap(a, i, r);
         }
+    }
+
+    /**
+     * Shuffles the elements of the given array in place using a flawed algorithm that does not produce a uniform
+     * distribution of permutations.
+     * <p>
+     * This method randomly rearranges the elements of the array, but it does not ensure that each permutation is
+     * equally likely, resulting in a biased shuffle.
+     *
+     * @param a the array to be shuffled
+     */
+    public static void badShuffle(int[] a) {
+        int N = a.length;
+
+        for (int i = 0; i < N; i++) {
+            // Exchange a[i] with random element in a[0..N-1]
+            int r = StdRandom.uniform(N);
+            swap(a, i, r);
+        }
+    }
+    
+    private static void swap(int[] a, int i, int r) {
+        int temp = a[i];
+        a[i] = a[r];
+        a[r] = temp;
     }
 }

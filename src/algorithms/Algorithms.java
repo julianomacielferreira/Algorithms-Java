@@ -114,7 +114,10 @@ public class Algorithms {
         StdOut.println(String.format("The Binomial Distribution of (%s, %s) with number of successes %s is %s", 100, 50, 0.25, String.format("%.10f", binomialDistribution)));
 
         StdOut.println("Shuffle with parameters 5 1000");
-        shuffle(5, 10000);
+        shuffle(5, 1000);
+
+        StdOut.println("Bad Shuffle with parameters 5 1000");
+        badShuffle(5, 1000);
     }
 
     public static Predicate<String> checkStartsWith(final String letter) {
@@ -240,6 +243,48 @@ public class Algorithms {
             for (int i = 0; i < M; i++) a[i] = i; // initialize a[i] = i
 
             Shuffle.doShuffle(a);
+
+            for (int i = 0; i < M; i++) {
+                counts[i][a[i]]++; // counts where i ended up
+            }
+        }
+
+        // Print M-by-M table
+        for (int i = 0; i < M; i++) {
+            for (int j = 0; j < M; j++) {
+                StdOut.printf("%7d ", counts[i][j]);
+            }
+
+            StdOut.println();
+        }
+
+        // Check if counts are close to M/N
+        double expected = (double) N / M;
+
+        StdOut.println("\nExpected count per cell ≈ " + expected);
+
+        for (int i = 0; i < M; i++) {
+            for (int j = 0; j < M; j++) {
+                double deviation = Math.abs(counts[i][j] - expected) / expected;
+
+                if (deviation > 0.2) { // arbitrary threshold
+                    StdOut.printf("Cell (%d, %d): count=%d, deviation=%.2f%%\n", i, j, counts[i][j], deviation * 100);
+                }
+            }
+        }
+    }
+
+    public static void badShuffle(int M, int N) {
+
+        int counts[][] = new int[M][N]; // counts[i][j] = #times i ended in position j
+
+        for (int n = 0; n < N; n++) {
+
+            int a[] = new int[M];
+
+            for (int i = 0; i < M; i++) a[i] = i; // initialize a[i] = i
+
+            Shuffle.badShuffle(a);
 
             for (int i = 0; i < M; i++) {
                 counts[i][a[i]]++; // counts where i ended up
