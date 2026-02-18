@@ -1360,8 +1360,119 @@ private static double calculateBinomialCoefficient(int trials, int probabilityOf
 
 Decomposing the input and output:
 
-    - Input:
-    - Output:
+    - Input: The files `largeAllowlist.txt` and `largeText.txt`
+    - Output: Each number of the `largeAllowlist.txt` (without duplicated keys) that's in the `largeText.txt`
+
+The implementation of the solution:
+
+```java
+import java.util.Arrays;
+
+public class BinarySearchWithoutDuplicateKey {
+
+    private final int[] numbers;
+
+    public BinarySearchWithoutDuplicateKey(int[] numbers) {
+        this.numbers = numbers;
+    }
+
+    public int[] removeDuplicateKeys(int[] keys) {
+        return Arrays.stream(keys).distinct().toArray();
+    }
+
+    /**
+     * Searches for a specified value in a sorted array using the Binary Search algorithm.
+     * <p>
+     * This method repeatedly divides the search interval in half. It compares the target
+     * value with the element at the middle index of the current interval:
+     * <ul>
+     *     <li>If the value is smaller than the middle element, the search continues
+     *     in the left half of the array.</li>
+     *     <li>If the value is greater than the middle element, the search continues
+     *     in the right half of the array.</li>
+     *     <li>If the value matches the middle element, its index is returned.</li>
+     * </ul>
+     * The process continues until the value is found or the search interval becomes empty.
+     *
+     * <p><strong>Precondition:</strong> The array {@code numbers} must be sorted in ascending order.
+     *
+     * <p><strong>Time Complexity:</strong> O(log n), where n is the length of the array.
+     * <br>
+     * <strong>Space Complexity:</strong> O(1), since the search is performed iteratively
+     * using constant extra space.
+     *
+     * @param value the integer value to search for in the sorted array
+     * @return the index of the value if it exists in the array;
+     * -1 if the value is not present
+     */
+    public int findIndexOf(int value) {
+
+        int lo_index = 0;
+        int hi_index = this.numbers.length - 1;
+
+        while (lo_index <= hi_index) {
+
+            int mid_index = lo_index + (hi_index - lo_index) / 2;
+
+            if (value < this.numbers[mid_index]) {
+                hi_index = mid_index - 1;
+            } else if (value > this.numbers[mid_index]) {
+                lo_index = mid_index + 1;
+            } else {
+                return mid_index;
+            }
+        }
+
+        return -1;
+    }
+}
+```
+
+Running the following code:
+
+```java
+public class Algorithms {
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(final String[] args) {
+
+        int[] largeAllowlist = In.readInts("./data/largeAllowlist.txt");
+        int[] largeText = In.readInts("./data/largeText.txt");
+
+        Arrays.sort(largeAllowlist);
+        Arrays.sort(largeText);
+
+        StdOut.println("BinarySearch removing any duplicate keys in the whitelist after the sort\n\n");
+        printNumbersThatAreInWhitelistRemovingDuplicateKeys(largeAllowlist, largeText);
+    }
+
+    private static void printNumbersThatAreInWhitelistRemovingDuplicateKeys(final int[] numbers, int[] numbersToFind) {
+
+        BinarySearchWithoutDuplicateKey binarySearchWithoutDuplicateKey = new BinarySearchWithoutDuplicateKey(numbers);
+        StdOut.println(Arrays.equals(numbersToFind, binarySearchWithoutDuplicateKey.removeDuplicateKeys(numbersToFind)));
+        for (Integer number : binarySearchWithoutDuplicateKey.removeDuplicateKeys(numbersToFind)) {
+
+            int index = binarySearchWithoutDuplicateKey.findIndexOf(number);
+
+            if (index > -1) {
+                StdOut.println(String.format("The number %s is at the list", number));
+            }
+        }
+    }
+}
+```
+
+The output:
+
+```bash
+The number 949992 is at the list
+The number 949996 is at the list
+The number 949997 is at the list
+...
+The number 950022 is at the list
+The number 950024 is at the list
+```
 
 **1.1.29 _Equal keys_. Add to BinarySearch a static method rank() that takes a key and a sorted array of int values 
 (some of which may be equal) as arguments and returns the number of elements that are smaller than the key and a 
@@ -1729,7 +1840,7 @@ public class Algorithms {
         StdOut.println();
 
         Arrays.sort(largeAllowlist);
-        Arrays.sort(largeAllowlist);
+        Arrays.sort(largeText);
 
         Stopwatch timer2 = new Stopwatch();
         printNumbersThatAreInArrayByBinarySearch(largeAllowlist, largeText);

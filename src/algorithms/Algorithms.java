@@ -124,20 +124,22 @@ public class Algorithms {
         int[] largeAllowlist = getNumbersFromFile("largeAllowlist.txt");
         int[] largeText = getNumbersFromFile("largeText.txt");
 
-        StdOut.println("Brute-force search versus Binary Search\n\n");
-
-        Stopwatch timer1 = new Stopwatch();
-        printNumbersThatAreInArrayByBruteForce(tinyText, largeText);
-        StdOut.printf("\nThe elapsed time with brute force search was: %.2f seconds", timer1.elapsedTime());
-
-        StdOut.println();
-
-        Arrays.sort(tinyText);
+//        StdOut.println("Brute-force search versus Binary Search\n\n");
+//        Stopwatch timer1 = new Stopwatch();
+//        printNumbersThatAreInArrayByBruteForce(tinyText, largeText);
+//        StdOut.printf("\nThe elapsed time with brute force search was: %.2f seconds", timer1.elapsedTime());
+//
+//        StdOut.println();
+//
+        Arrays.sort(largeAllowlist);
         Arrays.sort(largeText);
+//
+//        Stopwatch timer2 = new Stopwatch();
+//        printNumbersThatAreInWhitelist(tinyText, largeText);
+//        StdOut.printf("\nThe elapsed time with binary search was: %.2f seconds", timer2.elapsedTime());
 
-        Stopwatch timer2 = new Stopwatch();
-        printNumbersThatAreInWhitelist(tinyText, largeText);
-        StdOut.printf("\nThe elapsed time with binary search was: %.2f seconds", timer2.elapsedTime());
+        StdOut.println("BinarySearch removing any duplicate keys in the whitelist after the sort\n\n");
+        printNumbersThatAreInWhitelistRemovingDuplicateKeys(largeAllowlist, largeText);
     }
 
     public static Predicate<String> checkStartsWith(final String letter) {
@@ -243,6 +245,20 @@ public class Algorithms {
 
             if (index == -1) {
                 StdOut.println(String.format("The number %s is not in the list", number));
+            }
+        }
+    }
+
+    private static void printNumbersThatAreInWhitelistRemovingDuplicateKeys(final int[] numbers, int[] numbersToFind) {
+
+        BinarySearchWithoutDuplicateKey binarySearchWithoutDuplicateKey = new BinarySearchWithoutDuplicateKey(numbers);
+        StdOut.println(Arrays.equals(numbersToFind, binarySearchWithoutDuplicateKey.removeDuplicateKeys(numbersToFind)));
+        for (Integer number : binarySearchWithoutDuplicateKey.removeDuplicateKeys(numbersToFind)) {
+
+            int index = binarySearchWithoutDuplicateKey.findIndexOf(number);
+
+            if (index > -1) {
+                StdOut.println(String.format("The number %s is at the list", number));
             }
         }
     }

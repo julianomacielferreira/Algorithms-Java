@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2025 juliano.
+ * Copyright 2026 juliano.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -23,12 +23,18 @@
  */
 package algorithms.fundamentals;
 
-public class BinarySearch {
+import java.util.Arrays;
+
+public class BinarySearchWithoutDuplicateKey {
 
     private final int[] numbers;
 
-    public BinarySearch(int[] numbers) {
+    public BinarySearchWithoutDuplicateKey(int[] numbers) {
         this.numbers = numbers;
+    }
+
+    public int[] removeDuplicateKeys(int[] keys) {
+        return Arrays.stream(keys).distinct().toArray();
     }
 
     /**
