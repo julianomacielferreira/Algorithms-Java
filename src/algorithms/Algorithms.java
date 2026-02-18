@@ -252,7 +252,7 @@ public class Algorithms {
     private static void printNumbersThatAreInWhitelistRemovingDuplicateKeys(final int[] numbers, int[] numbersToFind) {
 
         BinarySearchWithoutDuplicateKey binarySearchWithoutDuplicateKey = new BinarySearchWithoutDuplicateKey(numbers);
-        StdOut.println(Arrays.equals(numbersToFind, binarySearchWithoutDuplicateKey.removeDuplicateKeys(numbersToFind)));
+
         for (Integer number : binarySearchWithoutDuplicateKey.removeDuplicateKeys(numbersToFind)) {
 
             int index = binarySearchWithoutDuplicateKey.findIndexOf(number);
