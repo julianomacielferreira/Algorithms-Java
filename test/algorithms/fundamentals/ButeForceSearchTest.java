@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2025 juliano.
+ * Copyright 2026 juliano.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -25,29 +25,18 @@ package algorithms.fundamentals;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
-public class BinarySearchTest {
-
-    @Test
-    public void test_FindIndexOf() {
-
-        int[] numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-
-        BinarySearch binarySearch = new BinarySearch(numbers);
-
-        assertEquals(2, binarySearch.findIndexOf(2));
-        assertEquals(-1, binarySearch.findIndexOf(22));
-    }
+public class ButeForceSearchTest {
 
     @Test
     public void test_FindElementInMiddle() {
 
         int[] numbers = {10, 20, 30, 40, 50};
 
-        BinarySearch binarySearch = new BinarySearch(numbers);
+        BruteForceSearch search = new BruteForceSearch(numbers);
 
-        int index = binarySearch.findIndexOf(30);
+        int index = search.findIndexOf(30);
 
         assertEquals(2, index);
     }
@@ -57,9 +46,9 @@ public class BinarySearchTest {
 
         int[] numbers = {5, 10, 15};
 
-        BinarySearch binarySearch = new BinarySearch(numbers);
+        BruteForceSearch search = new BruteForceSearch(numbers);
 
-        int index = binarySearch.findIndexOf(5);
+        int index = search.findIndexOf(5);
 
         assertEquals(0, index);
     }
@@ -69,9 +58,9 @@ public class BinarySearchTest {
 
         int[] numbers = {1, 2, 3, 4};
 
-        BinarySearch binarySearch = new BinarySearch(numbers);
+        BruteForceSearch search = new BruteForceSearch(numbers);
 
-        int index = binarySearch.findIndexOf(4);
+        int index = search.findIndexOf(4);
 
         assertEquals(3, index);
     }
@@ -81,9 +70,9 @@ public class BinarySearchTest {
 
         int[] numbers = {2, 4, 6, 8};
 
-        BinarySearch binarySearch = new BinarySearch(numbers);
+        BruteForceSearch search = new BruteForceSearch(numbers);
 
-        int index = binarySearch.findIndexOf(5);
+        int index = search.findIndexOf(5);
 
         assertEquals(-1, index);
     }
@@ -91,13 +80,13 @@ public class BinarySearchTest {
     @Test
     public void test_ReturnFirstOccurrenceWhenDuplicatesExist() {
 
-        int[] numbers = {3, 7, 7, 9};
+        int[] numbers = {7, 3, 7, 9};
 
-        BinarySearch binarySearch = new BinarySearch(numbers);
+        BruteForceSearch search = new BruteForceSearch(numbers);
 
-        int index = binarySearch.findIndexOf(7);
+        int index = search.findIndexOf(7);
 
-        assertEquals(1, index);
+        assertEquals(0, index);
     }
 
     @Test
@@ -105,9 +94,9 @@ public class BinarySearchTest {
 
         int[] numbers = {-10, -5, 0, 5};
 
-        BinarySearch binarySearch = new BinarySearch(numbers);
+        BruteForceSearch search = new BruteForceSearch(numbers);
 
-        int index = binarySearch.findIndexOf(-5);
+        int index = search.findIndexOf(-5);
 
         assertEquals(1, index);
     }
@@ -117,9 +106,9 @@ public class BinarySearchTest {
 
         int[] numbers = {42};
 
-        BinarySearch binarySearch = new BinarySearch(numbers);
+        BruteForceSearch search = new BruteForceSearch(numbers);
 
-        int index = binarySearch.findIndexOf(42);
+        int index = search.findIndexOf(42);
 
         assertEquals(0, index);
     }
@@ -129,9 +118,9 @@ public class BinarySearchTest {
 
         int[] numbers = {42};
 
-        BinarySearch binarySearch = new BinarySearch(numbers);
+        BruteForceSearch search = new BruteForceSearch(numbers);
 
-        int index = binarySearch.findIndexOf(10);
+        int index = search.findIndexOf(10);
 
         assertEquals(-1, index);
     }
@@ -141,9 +130,9 @@ public class BinarySearchTest {
 
         int[] numbers = {};
 
-        BinarySearch binarySearch = new BinarySearch(numbers);
+        BruteForceSearch search = new BruteForceSearch(numbers);
 
-        int index = binarySearch.findIndexOf(1);
+        int index = search.findIndexOf(1);
 
         assertEquals(-1, index);
     }

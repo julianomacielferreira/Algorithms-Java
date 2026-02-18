@@ -1654,16 +1654,14 @@ for (int i = 0; i < N; i++) {
 }
 ```
 
-At every iteration, it selects a random index `r` from the entire array (0 to N-1) instead of from the remaining unshuffled portion (i to N-1). This means that elements that have already been shuffled can be swapped again, leading to a non-uniform distribution of permutations. Some permutations will be more likely than others, resulting in bias in the shuffle.
-
-In summary, the bias arises because:
-
-- You choose a random index from `0 to N-1`
-- You swap the current element with the randomly chosen index
-
-The core problem is that each position is allowed to be swapped multiple times, including positions
-that were already decided.
-That's create overlapping randomness. Some permutations becomes reachable through more execution paths than others.
+> At every iteration, it selects a random index `r` from the entire array (0 to N-1) instead of from the remaining unshuffled portion (i to N-1). This means that elements that have already been shuffled can be swapped again, leading to a non-uniform distribution of permutations. Some permutations will be more likely than others, resulting in bias in the shuffle.
+> In summary, the bias arises because:
+> - You choose a random index from `0 to N-1`
+> - You swap the current element with the randomly chosen index
+>
+> The core problem is that each position is allowed to be swapped multiple times, including positions
+> that were already decided. That's create overlapping randomness. Some permutations becomes reachable 
+> through more execution paths than others.
 
 **1.1.38 _Binary Search versus brute-force search_. Write a program ``BruteForceSearch`` that uses the brute-force search
 method given on page 48 and compare its running time on your computer with that of ``BinarySearch`` for ``largeW.txt``
@@ -1671,8 +1669,100 @@ and ``largeT.txt``.**
 
 Decomposing the input and output:
 
-    - Input:
-    - Output:
+    - Input: The files `tinyText.txt` and `largeText.txt`
+    - Output: Each number of the `tinyText.txt` that's in the `largeText.txt` and the elapsed time of running it
+
+The implementation of the brute force search (linear search, check every entry in the array) on page 48:
+
+```java
+public class BruteForceSearch {
+
+    private final int[] numbers;
+
+    public BruteForceSearch(int[] numbers) {
+        this.numbers = numbers;
+    }
+
+    /**
+     * Searches for a key in an array using brute force (linear search).
+     * This method sequentially examines each element of the array from left to right
+     * until it finds the key or exhausts all elements.
+     * <p>
+     * Time complexity: O(n) where n is the length of the array.
+     * Space complexity: O(1)
+     *
+     * @param key the integer value to search for in the array
+     * @return the index of the first occurrence of key in the array,
+     * or -1 if the key is not found
+     */
+    public int findIndexOf(int key) {
+
+        for (int i = 0; i < numbers.length; i++) {
+
+            if (numbers[i] == key)
+                return i;
+        }
+
+        return -1;
+    }
+} 
+```
+
+When running the following code:
+
+```java
+public class Algorithms {
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(final String[] args) {
+
+        int[] tinyText = In.readInts("./data/tinyText.txt");
+        int[] largeText = In.readInts("./data/largeText.txt");
+
+        StdOut.println("Brute-force search versus Binary Search\n\n");
+
+        Stopwatch timer1 = new Stopwatch();
+        printNumbersThatAreInArrayByBruteForce(tinyText, largeText);
+        StdOut.printf("\nThe elapsed time with brute force search was: %5.1f", timer1.elapsedTime());
+
+        StdOut.println();
+
+        Arrays.sort(tinyText);
+        Arrays.sort(largeAllowlist);
+
+        Stopwatch timer2 = new Stopwatch();
+        printNumbersThatAreInWhitelist(tinyText, largeText);
+        StdOut.printf("\nThe elapsed time with binary search was: %5.1f", timer2.elapsedTime());
+    }
+}
+```
+
+The output:
+
+```bash
+Brute-force search versus Binary Search
+
+The number 48 is at the list
+The number 18 is at the list
+The number 18 is at the list
+...
+The number 99 is at the list
+The number 99 is at the list
+The number 23 is at the list
+
+The elapsed time with brute force search was:   0.2
+
+The number 48 is at the list
+The number 18 is at the list
+The number 18 is at the list
+...
+The number 99 is at the list
+The number 99 is at the list
+The number 23 is at the list
+
+The elapsed time with binary search was:   0.4
+```
 
 **1.1.39 _Random matches_. Write a ``BinarySearch`` client that takes an ``int`` value ``T`` as command-line argument
 and runs ``T`` trials of the following experiment for N = 10<sup>3</sup>, 10<sup>4</sup>, 10<sup>5</sup>, and 10<sup>6</sup>:

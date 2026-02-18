@@ -28,6 +28,7 @@ import algorithms.fundamentals.*;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.Stopwatch;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
@@ -118,6 +119,25 @@ public class Algorithms {
 
         StdOut.println("Bad Shuffle with parameters 5 1000");
         badShuffle(5, 1000);
+
+        int[] tinyText = getNumbersFromFile("tinyText.txt");
+        int[] largeAllowlist = getNumbersFromFile("largeAllowlist.txt");
+        int[] largeText = getNumbersFromFile("largeText.txt");
+
+        StdOut.println("Brute-force search versus Binary Search\n\n");
+
+        Stopwatch timer1 = new Stopwatch();
+        printNumbersThatAreInArrayByBruteForce(tinyText, largeText);
+        StdOut.printf("\nThe elapsed time with brute force search was: %5.1f", timer1.elapsedTime());
+
+        StdOut.println();
+
+        Arrays.sort(tinyText);
+        Arrays.sort(largeAllowlist);
+
+        Stopwatch timer2 = new Stopwatch();
+        printNumbersThatAreInWhitelist(tinyText, largeText);
+        StdOut.printf("\nThe elapsed time with binary search was: %5.1f", timer2.elapsedTime());
     }
 
     public static Predicate<String> checkStartsWith(final String letter) {
@@ -314,5 +334,20 @@ public class Algorithms {
                 }
             }
         }
+    }
+
+    private static void printNumbersThatAreInArrayByBruteForce(final int[] numbers, int[] numbersToFind) {
+
+        BruteForceSearch bruteForceSearch = new BruteForceSearch(numbers);
+
+        for (Integer number : numbersToFind) {
+
+            int index = bruteForceSearch.findIndexOf(number);
+
+            if (index > -1) {
+                StdOut.println(String.format("The number %s is at the list", number));
+            }
+        }
+
     }
 }
