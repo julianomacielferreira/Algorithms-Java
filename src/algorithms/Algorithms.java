@@ -128,16 +128,16 @@ public class Algorithms {
 
         Stopwatch timer1 = new Stopwatch();
         printNumbersThatAreInArrayByBruteForce(tinyText, largeText);
-        StdOut.printf("\nThe elapsed time with brute force search was: %5.1f", timer1.elapsedTime());
+        StdOut.printf("\nThe elapsed time with brute force search was: %.2f seconds", timer1.elapsedTime());
 
         StdOut.println();
 
         Arrays.sort(tinyText);
-        Arrays.sort(largeAllowlist);
+        Arrays.sort(largeText);
 
         Stopwatch timer2 = new Stopwatch();
         printNumbersThatAreInWhitelist(tinyText, largeText);
-        StdOut.printf("\nThe elapsed time with binary search was: %5.1f", timer2.elapsedTime());
+        StdOut.printf("\nThe elapsed time with binary search was: %.2f seconds", timer2.elapsedTime());
     }
 
     public static Predicate<String> checkStartsWith(final String letter) {

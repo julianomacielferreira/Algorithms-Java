@@ -1717,23 +1717,23 @@ public class Algorithms {
      */
     public static void main(final String[] args) {
 
-        int[] tinyText = In.readInts("./data/tinyText.txt");
+        int[] largeAllowlist = In.readInts("./data/largeAllowlist.txt");
         int[] largeText = In.readInts("./data/largeText.txt");
 
         StdOut.println("Brute-force search versus Binary Search\n\n");
 
         Stopwatch timer1 = new Stopwatch();
-        printNumbersThatAreInArrayByBruteForce(tinyText, largeText);
-        StdOut.printf("\nThe elapsed time with brute force search was: %5.1f", timer1.elapsedTime());
+        printNumbersThatAreInArrayByBruteForce(largeAllowlist, largeText);
+        StdOut.printf("\nThe elapsed time with brute force search was: %.2f seconds", timer1.elapsedTime());
 
         StdOut.println();
 
-        Arrays.sort(tinyText);
+        Arrays.sort(largeAllowlist);
         Arrays.sort(largeAllowlist);
 
         Stopwatch timer2 = new Stopwatch();
-        printNumbersThatAreInWhitelist(tinyText, largeText);
-        StdOut.printf("\nThe elapsed time with binary search was: %5.1f", timer2.elapsedTime());
+        printNumbersThatAreInWhitelist(largeAllowlist, largeText);
+        StdOut.printf("\nThe elapsed time with binary search was: %.2f seconds", timer2.elapsedTime());
     }
 }
 ```
@@ -1751,7 +1751,7 @@ The number 99 is at the list
 The number 99 is at the list
 The number 23 is at the list
 
-The elapsed time with brute force search was:   0.2
+The elapsed time with brute force search was: Do not finish in my computer
 
 The number 48 is at the list
 The number 18 is at the list
@@ -1761,7 +1761,7 @@ The number 99 is at the list
 The number 99 is at the list
 The number 23 is at the list
 
-The elapsed time with binary search was:   0.4
+The elapsed time with binary search was: 21.67 seconds
 ```
 
 **1.1.39 _Random matches_. Write a ``BinarySearch`` client that takes an ``int`` value ``T`` as command-line argument
