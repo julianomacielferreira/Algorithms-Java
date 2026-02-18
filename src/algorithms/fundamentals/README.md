@@ -1732,8 +1732,36 @@ public class Algorithms {
         Arrays.sort(largeAllowlist);
 
         Stopwatch timer2 = new Stopwatch();
-        printNumbersThatAreInWhitelist(largeAllowlist, largeText);
+        printNumbersThatAreInArrayByBinarySearch(largeAllowlist, largeText);
         StdOut.printf("\nThe elapsed time with binary search was: %.2f seconds", timer2.elapsedTime());
+    }
+
+    private static void printNumbersThatAreInArrayByBruteForce(final int[] numbers, int[] numbersToFind) {
+
+        BruteForceSearch bruteForceSearch = new BruteForceSearch(numbers);
+
+        for (Integer number : numbersToFind) {
+
+            int index = bruteForceSearch.findIndexOf(number);
+
+            if (index > -1) {
+                StdOut.println(String.format("The number %s is at the list", number));
+            }
+        }
+    }
+
+    private static void printNumbersThatAreInArrayByBinarySearch(final int[] numbers, int[] numbersToFind) {
+
+        BinarySearch binarySearch = new BinarySearch(numbers);
+
+        for (Integer number : numbersToFind) {
+
+            int index = binarySearch.findIndexOf(number);
+
+            if (index > -1) {
+                StdOut.println(String.format("The number %s is at the list", number));
+            }
+        }
     }
 }
 ```

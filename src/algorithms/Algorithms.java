@@ -231,7 +231,6 @@ public class Algorithms {
                 StdOut.println(String.format("The number %s is at the list", number));
             }
         }
-
     }
 
     private static void printNumbersThatAreNotInWhiteList(final int[] numbers, int[] numbersToFind) {
@@ -348,6 +347,5 @@ public class Algorithms {
                 StdOut.println(String.format("The number %s is at the list", number));
             }
         }
-
     }
 }
