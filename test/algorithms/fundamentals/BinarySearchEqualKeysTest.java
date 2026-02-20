@@ -113,9 +113,9 @@ public class BinarySearchEqualKeysTest {
 
         int[] a = {10, 20, 30, 40, 50};
 
-        assertEquals(0, BinarySearchEqualKeys.firstIndex(10, a));
-        assertEquals(2, BinarySearchEqualKeys.firstIndex(30, a));
-        assertEquals(4, BinarySearchEqualKeys.firstIndex(50, a));
+        assertEquals(0, BinarySearchEqualKeys.indexAt(10, a, true));
+        assertEquals(2, BinarySearchEqualKeys.indexAt(30, a, true));
+        assertEquals(4, BinarySearchEqualKeys.indexAt(50, a, true));
     }
 
     @Test
@@ -123,9 +123,9 @@ public class BinarySearchEqualKeysTest {
 
         int[] a = {10, 20, 20, 30, 30, 30, 40, 50};
 
-        assertEquals(0, BinarySearchEqualKeys.firstIndex(10, a));
-        assertEquals(1, BinarySearchEqualKeys.firstIndex(20, a));
-        assertEquals(3, BinarySearchEqualKeys.firstIndex(30, a));
+        assertEquals(0, BinarySearchEqualKeys.indexAt(10, a, true));
+        assertEquals(1, BinarySearchEqualKeys.indexAt(20, a, true));
+        assertEquals(3, BinarySearchEqualKeys.indexAt(30, a, true));
     }
 
     @Test
@@ -133,7 +133,7 @@ public class BinarySearchEqualKeysTest {
 
         int[] a = {10, 20, 30};
 
-        assertEquals(-1, BinarySearchEqualKeys.firstIndex(5, a));
+        assertEquals(-1, BinarySearchEqualKeys.indexAt(5, a, true));
     }
 
     @Test
@@ -141,7 +141,7 @@ public class BinarySearchEqualKeysTest {
 
         int[] a = {10, 20, 30};
 
-        assertEquals(-1, BinarySearchEqualKeys.firstIndex(35, a));
+        assertEquals(-1, BinarySearchEqualKeys.indexAt(35, a, true));
     }
 
     @Test
@@ -149,7 +149,7 @@ public class BinarySearchEqualKeysTest {
 
         int[] a = {10, 20, 40, 50};
 
-        assertEquals(-1, BinarySearchEqualKeys.firstIndex(30, a));
+        assertEquals(-1, BinarySearchEqualKeys.indexAt(30, a, true));
     }
 
     @Test
@@ -157,7 +157,7 @@ public class BinarySearchEqualKeysTest {
 
         int[] a = {};
 
-        assertEquals(-1, BinarySearchEqualKeys.firstIndex(10, a));
+        assertEquals(-1, BinarySearchEqualKeys.indexAt(10, a, true));
     }
 
     @Test
@@ -165,7 +165,7 @@ public class BinarySearchEqualKeysTest {
 
         int[] a = {10};
 
-        assertEquals(0, BinarySearchEqualKeys.firstIndex(10, a));
+        assertEquals(0, BinarySearchEqualKeys.indexAt(10, a, true));
     }
 
     @Test
@@ -173,8 +173,8 @@ public class BinarySearchEqualKeysTest {
 
         int[] a = {10};
 
-        assertEquals(-1, BinarySearchEqualKeys.firstIndex(5, a));
-        assertEquals(-1, BinarySearchEqualKeys.firstIndex(15, a));
+        assertEquals(-1, BinarySearchEqualKeys.indexAt(5, a, true));
+        assertEquals(-1, BinarySearchEqualKeys.indexAt(15, a, true));
     }
 
     @Test
@@ -182,9 +182,9 @@ public class BinarySearchEqualKeysTest {
 
         int[] a = {10, 20, 30, 40, 50};
 
-        assertEquals(0, BinarySearchEqualKeys.lastIndex(10, a));
-        assertEquals(2, BinarySearchEqualKeys.lastIndex(30, a));
-        assertEquals(4, BinarySearchEqualKeys.lastIndex(50, a));
+        assertEquals(0, BinarySearchEqualKeys.indexAt(10, a, false));
+        assertEquals(2, BinarySearchEqualKeys.indexAt(30, a, false));
+        assertEquals(4, BinarySearchEqualKeys.indexAt(50, a, false));
     }
 
     @Test
@@ -192,9 +192,9 @@ public class BinarySearchEqualKeysTest {
 
         int[] a = {10, 20, 20, 30, 30, 30, 40, 50};
 
-        assertEquals(0, BinarySearchEqualKeys.lastIndex(10, a));
-        assertEquals(2, BinarySearchEqualKeys.lastIndex(20, a)); // Last index of 20
-        assertEquals(5, BinarySearchEqualKeys.lastIndex(30, a)); // Last index of 30
+        assertEquals(0, BinarySearchEqualKeys.indexAt(10, a, false));
+        assertEquals(2, BinarySearchEqualKeys.indexAt(20, a, false)); // Last index of 20
+        assertEquals(5, BinarySearchEqualKeys.indexAt(30, a, false)); // Last index of 30
     }
 
     @Test
@@ -202,7 +202,7 @@ public class BinarySearchEqualKeysTest {
 
         int[] a = {10, 20, 30};
 
-        assertEquals(-1, BinarySearchEqualKeys.lastIndex(5, a));
+        assertEquals(-1, BinarySearchEqualKeys.indexAt(5, a, false));
     }
 
     @Test
@@ -210,7 +210,7 @@ public class BinarySearchEqualKeysTest {
 
         int[] a = {10, 20, 30};
 
-        assertEquals(-1, BinarySearchEqualKeys.lastIndex(35, a));
+        assertEquals(-1, BinarySearchEqualKeys.indexAt(35, a, false));
     }
 
     @Test
@@ -218,7 +218,7 @@ public class BinarySearchEqualKeysTest {
 
         int[] a = {10, 20, 40, 50};
 
-        assertEquals(-1, BinarySearchEqualKeys.lastIndex(30, a));
+        assertEquals(-1, BinarySearchEqualKeys.indexAt(30, a, false));
     }
 
     @Test
@@ -226,7 +226,7 @@ public class BinarySearchEqualKeysTest {
 
         int[] a = {};
 
-        assertEquals(-1, BinarySearchEqualKeys.lastIndex(10, a));
+        assertEquals(-1, BinarySearchEqualKeys.indexAt(10, a, false));
     }
 
     @Test
@@ -234,7 +234,7 @@ public class BinarySearchEqualKeysTest {
 
         int[] a = {10};
 
-        assertEquals(0, BinarySearchEqualKeys.lastIndex(10, a));
+        assertEquals(0, BinarySearchEqualKeys.indexAt(10, a, false));
     }
 
     @Test
@@ -242,8 +242,8 @@ public class BinarySearchEqualKeysTest {
 
         int[] a = {10};
 
-        assertEquals(-1, BinarySearchEqualKeys.lastIndex(5, a));
-        assertEquals(-1, BinarySearchEqualKeys.lastIndex(15, a));
+        assertEquals(-1, BinarySearchEqualKeys.indexAt(5, a, false));
+        assertEquals(-1, BinarySearchEqualKeys.indexAt(15, a, false));
     }
 
     @Test

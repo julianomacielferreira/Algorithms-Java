@@ -49,17 +49,17 @@ public class BinarySearchEqualKeys {
 
     public static int count(int key, int[] a) {
 
-        int first = firstIndex(key, a);
+        int first = indexAt(key, a, true);
 
         if (first < 0)
             return 0;
 
-        int last = lastIndex(key, a);
+        int last = indexAt(key, a, false);
 
         return last - first + 1;
     }
 
-    public static int firstIndex(int key, int[] a) {
+    public static int indexAt(int key, int[] a, boolean first) {
 
         int lo = 0;
         int hi = a.length - 1;
@@ -75,30 +75,11 @@ public class BinarySearchEqualKeys {
                 hi = mid - 1;
             } else {
                 result = mid;
-                hi = mid - 1; // keep searching left
-            }
-        }
-
-        return result;
-    }
-
-    public static int lastIndex(int key, int[] a) {
-
-        int lo = 0;
-        int hi = a.length - 1;
-        int result = -1;
-
-        while (lo <= hi) {
-
-            int mid = lo + (hi - lo) / 2;
-
-            if (a[mid] < key) {
-                lo = mid + 1;
-            } else if (a[mid] > key) {
-                hi = mid - 1;
-            } else {
-                result = mid;
-                lo = mid + 1; // keep searching right
+                if (first) {
+                    hi = mid - 1; // keep searching left
+                } else {
+                    lo = mid + 1; // keep searching right
+                }
             }
         }
 
