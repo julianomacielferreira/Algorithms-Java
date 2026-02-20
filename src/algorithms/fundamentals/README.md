@@ -1481,8 +1481,159 @@ by rank(key, a) and count(key, a) respectively, then a[i..i+j-1] are the values 
 
 Decomposing the input and output:
 
-    - Input:
-    - Output:
+    - Input: an integer key and a sorted array of int values (some of which may be equal)
+    - Output: the number of elements that are smaller than the key and a the number of elements equal to the key
+
+Below is an implementation of Binary search variants that find boundaries:
+
+```java
+public class BinarySearchEqualKeys {
+
+    public static int rank(int key, int[] a) {
+
+        // Array must be sorted
+        int lo = 0;
+        int hi = a.length - 1;
+        int result = a.length; // default if key greater than all
+
+        while (lo <= hi) {
+
+            int mid = lo + (hi - lo) / 2;
+
+            if (a[mid] >= key) {
+                result = mid;
+                hi = mid - 1;
+            } else {
+                lo = mid + 1;
+            }
+        }
+
+        return result;
+    }
+
+    public static int count(int key, int[] a) {
+
+        int first = firstIndex(key, a);
+
+        if (first < 0)
+            return 0;
+
+        int last = lastIndex(key, a);
+
+        return last - first + 1;
+    }
+
+    public static int firstIndex(int key, int[] a) {
+
+        int lo = 0;
+        int hi = a.length - 1;
+        int result = -1;
+
+        while (lo <= hi) {
+
+            int mid = lo + (hi - lo) / 2;
+
+            if (a[mid] < key) {
+                lo = mid + 1;
+            } else if (a[mid] > key) {
+                hi = mid - 1;
+            } else {
+                result = mid;
+                hi = mid - 1; // keep searching left
+            }
+        }
+
+        return result;
+    }
+
+    public static int lastIndex(int key, int[] a) {
+
+        int lo = 0;
+        int hi = a.length - 1;
+        int result = -1;
+
+        while (lo <= hi) {
+
+            int mid = lo + (hi - lo) / 2;
+
+            if (a[mid] < key) {
+                lo = mid + 1;
+            } else if (a[mid] > key) {
+                hi = mid - 1;
+            } else {
+                result = mid;
+                lo = mid + 1; // keep searching right
+            }
+        }
+
+        return result;
+    }
+}
+```
+
+If you run, for example with the array:
+
+```
+[1, 2, 2, 2, 3, 4]
+```
+
+And search for the `key = 2`:
+
+```
+firstIndex → 1
+lastIndex → 3
+rank → 1
+count → 3
+```
+
+The Time Complexity of each function is `O(log n)`, so:
+
+```
+rank → O(log n)
+count → O(log n)
+```
+
+The main reasonings in this exercise is to realize that the `rank(key)` is not searching for a value.
+It's searching for a boundary between two regions:
+
+``` 
+< key   >= key
+```
+
+For `key=2`:
+
+```
+[1 | 2 | 2 | 2 | 3 | 4]
+   ^
+boundary  
+```
+
+While, binary search finds:
+
+```
+First index where a[i] ≥ key.
+```
+
+That boundary index equals:
+
+```
+Number of elements strictly less than key.
+```
+
+Now, with `count(key)`, think of two boundaries:
+
+```
+< key | == key | > key
+```
+
+That's defining:
+
+```
+Left boundary → first occurrence
+Right boundary → last occurrence
+```
+
+So, the distance between them gives count.
 
 **1.1.30 _Array exercise_. Write a code fragment that creates an N-by-N boolean array a[][] such that a[i][j] is true
 if i and j are relatively prime (have no common factors), and false otherwise.**
