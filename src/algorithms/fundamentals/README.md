@@ -1616,13 +1616,27 @@ Right boundary → last occurrence
 
 So, the distance between them gives count.
 
-**1.1.30 _Array exercise_. Write a code fragment that creates an N-by-N boolean array a[][] such that a[i][j] is true
-if i and j are relatively prime (have no common factors), and false otherwise.**
+**1.1.30 _Array exercise_. Write a code fragment that creates an `N-by-N` boolean array a[][] such that `a[i][j]` is true
+if `i` and `j` are relatively prime (have no common factors), and false otherwise.**
 
 Decomposing the input and output:
 
-    - Input:
-    - Output:
+    - Input: N (Integer), the size of the square boolean array. It will determine the dimensions of the output array (N rows by N columns).
+    - Output: a[][] (N-by-N Boolean Array), a two-dimensional array where each element a will be either true or false.
+
+Some constraints / assumptions are:
+
+- `N` is expected to be a positive integer (e.g., `N` >= 1).
+- The problem implies indices `i` and `j` will range from `0` to `N-1` (standard array indexing).
+
+Key definition `Relative prime`: Two integers `i` and `j` are relative prime (or coprime) if their only positive common
+divisor is 1. This means their Greatest Common Divisor (GCD) is 1 `GCD(i, j) = 1`.
+
+The edge cases for GCD (Greatest Common Divisor):
+
+- `GCD(x, 0)` is typically `x` (or `abs(x)`) .
+- `GCD(0, 0)` is often undefined or 0, but for "relative prime" it's usually considered `GCD(0, x)=x`, so `0` isn't 
+relatively prime to anything but `1` (which itself is only relatively prime to `1` by strict definition).
 
 **1.1.31 _Random connections_. Write a program that takes as command-line arguments an integer N and a double
 value p (between 0 and 1), plots N equally spaced dots of size .05 on the circumference of circle, and then,
