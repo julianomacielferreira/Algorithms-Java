@@ -1629,7 +1629,7 @@ Some constraints / assumptions are:
 - `N` is expected to be a positive integer (e.g., `N` >= 1).
 - The problem implies indices `i` and `j` will range from `0` to `N-1` (standard array indexing).
 
-Key definition `Relative prime`: Two integers `i` and `j` are relative prime (or coprime) if their only positive common
+Key definition of `Relative prime`: Two integers `i` and `j` are relative prime (or coprime) if their only positive common
 divisor is 1. This means their Greatest Common Divisor (GCD) is 1 `GCD(i, j) = 1`.
 
 The edge cases for GCD (Greatest Common Divisor):
