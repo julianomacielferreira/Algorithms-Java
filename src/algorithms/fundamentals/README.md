@@ -1638,6 +1638,90 @@ The edge cases for GCD (Greatest Common Divisor):
 - `GCD(0, 0)` is often undefined or 0, but for "relative prime" it's usually considered `GCD(0, x)=x`, so `0` isn't 
 relatively prime to anything but `1` (which itself is only relatively prime to `1` by strict definition).
 
+An implementation of the solution:
+
+```java
+public class RelativelyPrimeArray {
+
+    /**
+     * Creates an N-by-N boolean array where a[i][j] is true if i and j are relatively prime (coprime),
+     * and false otherwise.
+     * <p>
+     * Note: For this exercise, consider indices starting from 1 for the concept of "relatively prime".
+     * If N is less than 1, an empty array is returned.
+     *
+     * @param N The dimension of the square array (N-by-N).
+     * @return An N-by-N boolean array.
+     * @throws IllegalArgumentException if N is negative.
+     */
+    public static boolean[][] createRelativelyPrimeArray(int N) {
+
+        if (N < 0) {
+            throw new IllegalArgumentException("Array dimension N cannot be negative");
+        }
+
+        boolean[][] a = new boolean[N][N];
+
+        // If N is 0, array a will be 0x0 and the loops won't run, which is correct.
+        // If N is 1, array a will be 1x1. a[0][0] corresponds to (1,1) if we map.
+        // We'll treat i and j as (i+1) and (j+1) for GCD calculation.
+        // For array indices 0...N-1, we consider numbers 1...N.
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                // To check relative primality for numbers (i+1) and (j+1)
+                // (e.g., if N=3, we check 1,2,3 against 1,2,3)
+                int p = i + 1;
+                int q = j + 1;
+                a[i][j] = (gcd(p, q) == 1);
+            }
+        }
+
+        return a;
+    }
+
+    /**
+     * Computes the greatest common divisor (GCD) of two non-negative integers using the Euclidean algorithm.
+     *
+     * @param p The first non-negative integer.
+     * @param q The second non-negative integer.
+     * @return The GCD of p and q.
+     * @throws IllegalArgumentException if p or q is negative.
+     */
+    public static int gcd(int p, int q) {
+        if (p < 0 || q < 0) {
+            throw new IllegalArgumentException("GCD inputs must be non-negative");
+        }
+
+        if (q == 0) {
+            return p;
+        }
+
+        int r = p % q;
+
+        return gcd(q, r);
+    }
+}
+```
+Running with the value 5:
+
+```java
+public static void main(final String[] args) {
+    
+    StdOut.println(BooleanArray.format(RelativelyPrimeArray.createRelativelyPrimeArray(5)));
+}
+```
+
+The output is:
+
+```
+    1 2 3 4 5 
+1 | * * * * * |
+2 | *   *   * |
+3 | * *   * * |
+4 | *   *   * |
+5 | * * * *   |
+```
+
 **1.1.31 _Random connections_. Write a program that takes as command-line arguments an integer N and a double
 value p (between 0 and 1), plots N equally spaced dots of size .05 on the circumference of circle, and then,
 with probability p for each pair of points draws a gray line connecting them.**
