@@ -120,9 +120,9 @@ public class Algorithms {
         StdOut.println("Bad Shuffle with parameters 5 1000");
         badShuffle(5, 1000);
 
-        int[] tinyText = getNumbersFromFile("tinyText.txt");
+//        int[] tinyText = getNumbersFromFile("tinyText.txt");
         int[] largeAllowlist = getNumbersFromFile("largeAllowlist.txt");
-        int[] largeText = getNumbersFromFile("largeText.txt");
+//        int[] largeText = getNumbersFromFile("largeText.txt");
 
 //        StdOut.println("Brute-force search versus Binary Search\n\n");
 //        Stopwatch timer1 = new Stopwatch();
@@ -132,14 +132,26 @@ public class Algorithms {
 //        StdOut.println();
 //
         Arrays.sort(largeAllowlist);
-        Arrays.sort(largeText);
+//        Arrays.sort(largeText);
 //
 //        Stopwatch timer2 = new Stopwatch();
 //        printNumbersThatAreInWhitelist(tinyText, largeText);
 //        StdOut.printf("\nThe elapsed time with binary search was: %.2f seconds", timer2.elapsedTime());
 
-        StdOut.println("BinarySearch removing any duplicate keys in the whitelist after the sort\n\n");
-        printNumbersThatAreInWhitelistRemovingDuplicateKeys(largeAllowlist, largeText);
+//        StdOut.println("BinarySearch removing any duplicate keys in the whitelist after the sort\n\n");
+//        printNumbersThatAreInWhitelistRemovingDuplicateKeys(largeAllowlist, largeText);
+
+        int key = 4304;
+        int[] a = {0, 1, 2, 2, 3, 3, 3, 4, 5, 6};
+
+        StdOut.println(String.format("Equal keys: returns the number of elements that are smaller than the key {%d}:", key));
+        StdOut.println(BinarySearchEqualKeys.rank(key, largeAllowlist));
+
+        StdOut.println(String.format("Equal keys: returns the number of elements equal to the key {%d}:", key));
+        StdOut.println(BinarySearchEqualKeys.count(key, largeAllowlist));
+
+        StdOut.println(String.format("Array exercise: returns a two-dimensional array (%d by %d) where each element a will be either true or false:", 5, 5));
+        StdOut.println(BooleanArray.format(RelativelyPrimeArray.createRelativelyPrimeArray(5)));
     }
 
     public static Predicate<String> checkStartsWith(final String letter) {
